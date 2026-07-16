@@ -12,35 +12,79 @@ const SITES = [
 
 const NTFY_TOPIC = process.env.NTFY_TOPIC; // set as a GitHub repo secret
 const STATE_FILE = path.join(__dirname, 'state.json');
+const HISTORY_FILE = path.join(__dirname, 'history.md');
 const PAGE_DELAY_MS = 1000;
 const SITE_DELAY_MS = 1500;
+
+// Optional filters — leave as-is to catch everything, tighten later if you want fewer alerts.
+const BRAND_WATCHLIST = []; // e.g. ['Shauran', 'Creed'] — empty array = notify for all brands
+const MIN_DISCOUNT_PCT = 0; // e.g. 20 = only notify price drops of 20% or more; 0 = notify any drop
 
 function sleep(ms) {
   return new Promise((resolve) => setTimeout(resolve, ms));
 }
 
-async function notify(title, body, url, imageUrl) {
-  console.log(`NOTIFY: ${title} — ${body}`);
+function passesFilters(brand, discountPct) {
+  if (BRAND_WATCHLIST.length > 0) {
+    const allowed = BRAND_WATCHLIST.some(
+      (b) => b.toLowerCase() === (brand || '').toLowerCase()
+    );
+    if (!allowed) return false;
+  }
+  if (discountPct !== null && discountPct < MIN_DISCOUNT_PCT) return false;
+  return true;
+}
+
+async function sendDigest(events) {
+  if (events.length === 0) {
+    console.log('No qualifying changes this run — no notification sent.');
+    return;
+  }
+  const counts = events.reduce((acc, e) => {
+    acc[e.type] = (acc[e.type] || 0) + 1;
+    return acc;
+  }, {});
+  const summaryParts = Object.entries(counts).map(([type, n]) => `${n} ${type}`);
+  const title = `Fragrance Alert: ${summaryParts.join(', ')}`;
+
+  const MAX_LINES = 15;
+  const lines = events.slice(0, MAX_LINES).map((e) => `• ${e.summary}`);
+  if (events.length > MAX_LINES) {
+    lines.push(`…and ${events.length - MAX_LINES} more — see history.md in the repo`);
+  }
+  const body = lines.join('\n');
+
+  console.log(`NOTIFY: ${title}\n${body}`);
+
   if (!NTFY_TOPIC) {
     console.warn('NTFY_TOPIC not set — skipping push notification.');
     return;
   }
   try {
-    const headers = {
-      Title: title,
-      Click: url || '',
-    };
-    if (imageUrl) {
-      headers.Attach = imageUrl;
-    }
     await fetch(`https://ntfy.sh/${NTFY_TOPIC}`, {
       method: 'POST',
-      headers,
+      headers: { Title: title },
       body: body,
     });
   } catch (err) {
     console.error('Failed to send ntfy notification:', err.message);
   }
+}
+
+function appendHistory(events) {
+  if (events.length === 0) return;
+  const timestamp = new Date().toISOString().replace('T', ' ').slice(0, 19) + ' UTC';
+  const lines = [`## ${timestamp}`, ''];
+  events.forEach((e) => {
+    lines.push(`- **${e.type}** — [${e.summary}](${e.url})`);
+  });
+  lines.push('');
+  const block = lines.join('\n') + '\n';
+
+  const existing = fs.existsSync(HISTORY_FILE)
+    ? fs.readFileSync(HISTORY_FILE, 'utf8')
+    : '# Fragrance Monitor History\n\n';
+  fs.writeFileSync(HISTORY_FILE, existing + block);
 }
 
 async function fetchAllProducts(domain) {
@@ -83,7 +127,7 @@ function saveState(state) {
   fs.writeFileSync(STATE_FILE, JSON.stringify(state, null, 2));
 }
 
-async function checkSite(domain, state) {
+async function checkSite(domain, state, events) {
   const products = await fetchAllProducts(domain);
   if (products === null) {
     console.warn(`[${domain}] SKIPPED this cycle (fetch failed)`);
@@ -102,10 +146,16 @@ async function checkSite(domain, state) {
 
     const prevProduct = prevData[p.id];
     const productUrl = `https://${domain}/products/${p.handle}`;
-    const imageUrl = (p.image && p.image.src) || (p.images && p.images[0] && p.images[0].src) || null;
+    const brand = (p.vendor || '').trim();
 
     if (!state.firstRun && !prevProduct) {
-      await notify('New Arrival', `${domain}: ${p.title}`, productUrl, imageUrl);
+      if (passesFilters(brand, null)) {
+        events.push({
+          type: 'New Arrival',
+          summary: `${domain}: ${p.title}`,
+          url: productUrl,
+        });
+      }
     }
 
     if (prevProduct) {
@@ -113,16 +163,23 @@ async function checkSite(domain, state) {
         const prevVariant = prevProduct.variants[variantId];
         if (prevVariant) {
           if (!prevVariant.available && v.available) {
-            await notify('Restocked', `${domain}: ${p.title}`, productUrl, imageUrl);
+            if (passesFilters(brand, null)) {
+              events.push({
+                type: 'Restocked',
+                summary: `${domain}: ${p.title}`,
+                url: productUrl,
+              });
+            }
           }
           if (v.price < prevVariant.price) {
             const pct = Math.round((1 - v.price / prevVariant.price) * 100);
-            await notify(
-              `${pct}% Price Drop`,
-              `${domain}: ${p.title} — $${prevVariant.price} to $${v.price}`,
-              productUrl,
-              imageUrl
-            );
+            if (passesFilters(brand, pct)) {
+              events.push({
+                type: `${pct}% Price Drop`,
+                summary: `${domain}: ${p.title} — $${prevVariant.price} to $${v.price}`,
+                url: productUrl,
+              });
+            }
           }
         }
       }
@@ -134,10 +191,11 @@ async function checkSite(domain, state) {
 
 (async function main() {
   const state = loadState();
+  const events = [];
 
   for (const domain of SITES) {
     console.log(`Checking ${domain}...`);
-    await checkSite(domain, state);
+    await checkSite(domain, state, events);
     await sleep(SITE_DELAY_MS);
   }
 
@@ -145,7 +203,9 @@ async function checkSite(domain, state) {
     console.log('Baseline established. Notifications start from the next run onward.');
     state.firstRun = false;
   } else {
-    console.log('Check complete.');
+    console.log(`Check complete. ${events.length} qualifying event(s) found.`);
+    await sendDigest(events);
+    appendHistory(events);
   }
 
   saveState(state);
