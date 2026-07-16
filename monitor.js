@@ -19,19 +19,23 @@ function sleep(ms) {
   return new Promise((resolve) => setTimeout(resolve, ms));
 }
 
-async function notify(title, body, url) {
+async function notify(title, body, url, imageUrl) {
   console.log(`NOTIFY: ${title} — ${body}`);
   if (!NTFY_TOPIC) {
     console.warn('NTFY_TOPIC not set — skipping push notification.');
     return;
   }
   try {
+    const headers = {
+      Title: title,
+      Click: url || '',
+    };
+    if (imageUrl) {
+      headers.Attach = imageUrl;
+    }
     await fetch(`https://ntfy.sh/${NTFY_TOPIC}`, {
       method: 'POST',
-      headers: {
-        Title: title,
-        Click: url || '',
-      },
+      headers,
       body: body,
     });
   } catch (err) {
@@ -98,9 +102,10 @@ async function checkSite(domain, state) {
 
     const prevProduct = prevData[p.id];
     const productUrl = `https://${domain}/products/${p.handle}`;
+    const imageUrl = (p.image && p.image.src) || (p.images && p.images[0] && p.images[0].src) || null;
 
     if (!state.firstRun && !prevProduct) {
-      await notify('New Arrival', `${domain}: ${p.title}`, productUrl);
+      await notify('New Arrival', `${domain}: ${p.title}`, productUrl, imageUrl);
     }
 
     if (prevProduct) {
@@ -108,14 +113,15 @@ async function checkSite(domain, state) {
         const prevVariant = prevProduct.variants[variantId];
         if (prevVariant) {
           if (!prevVariant.available && v.available) {
-            await notify('Restocked', `${domain}: ${p.title}`, productUrl);
+            await notify('Restocked', `${domain}: ${p.title}`, productUrl, imageUrl);
           }
           if (v.price < prevVariant.price) {
             const pct = Math.round((1 - v.price / prevVariant.price) * 100);
             await notify(
               `${pct}% Price Drop`,
               `${domain}: ${p.title} — $${prevVariant.price} to $${v.price}`,
-              productUrl
+              productUrl,
+              imageUrl
             );
           }
         }
