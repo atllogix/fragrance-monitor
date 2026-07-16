@@ -13112,3 +13112,7 @@
 - **New Arrival** — [jomashop.com: Gritti Rialto Extrait de Parfum Spray 3.4 oz Fragrance 8052204137145](https://www.jomashop.com/gritti-rialto-extrait-de-parfum-spray-3-4-oz-fragrance-8052204137145.html)
 - **New Arrival** — [jomashop.com: Parfums De Marly Ladies Valaya Mist 2.5 oz Fragrances 3700578505958](https://www.jomashop.com/parfums-de-marly-ladies-valaya-mist-2-5-oz-fragrances-3700578505958.html)
 
+## 2026-07-16 22:36:15 UTC
+
+- **Restocked** — [fragrapedia.com: Ya'E Parfum - Hind Al Oud](https://fragrapedia.com/products/yae-parfum-hind-al-oud)
+
