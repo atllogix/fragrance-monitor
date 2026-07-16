@@ -12431,3 +12431,20 @@
 - **New Arrival** — [jomashop.com: Initio Parfums Prives Side Effect EDP Spray 0.16 oz Fragrances 3701415902046](https://www.jomashop.com/initio-parfums-prives-side-effect-edp-spray-0-16-oz-fragrances-3701415902046.html)
 - **New Arrival** — [jomashop.com: Dolce and Gabbana Velvet Zafferano EDP Spray 3.4 oz Fragrances 8054754400137](https://www.jomashop.com/dolce-and-gabbana-velvet-zafferano-edp-spray-3-4-oz-fragrances-8054754400137.html)
 
+## 2026-07-16 16:06:18 UTC
+
+- **New Arrival** — [olfactoryfactoryllc.com: Filippo Sorcinelli - Notre Dame 15.4.2019 - Extrait de parfum](https://olfactoryfactoryllc.com/products/filippo-sorcinelli-notre-dame-15-4-2019-extrait-de-parfum)
+- **Restocked** — [olfactoryfactoryllc.com: Parfums de Marly - Kalan](https://olfactoryfactoryllc.com/products/parfums-de-marly-kalan)
+- **Restocked** — [olfactoryfactoryllc.com: Nicolai - Saint Honore](https://olfactoryfactoryllc.com/products/nicolai-saint-honore)
+- **Restocked** — [olfactoryfactoryllc.com: Dolce & Gabbana - Light Blue EDT](https://olfactoryfactoryllc.com/products/dolce-gabbana-light-blue-edt)
+- **Restocked** — [olfactoryfactoryllc.com: Simone Andreoli - Fico Nero intense](https://olfactoryfactoryllc.com/products/simone-andreoli-fico-nero-intense)
+- **Restocked** — [olfactoryfactoryllc.com: Xerjoff Discovery Set: Cruz Del Sur II - Erba Pura - Uden Overdose](https://olfactoryfactoryllc.com/products/xerjoff-discovery-set-cruz-del-sur-ii-erba-pura-uden-overdose)
+- **Restocked** — [olfactoryfactoryllc.com: Reinvented Parfums - Ethereal Soul - Extrait De Parfum](https://olfactoryfactoryllc.com/products/reinvented-parfums-ethereal-soul)
+- **Restocked** — [olfactoryfactoryllc.com: Xerjoff - Torino 23 - Edp](https://olfactoryfactoryllc.com/products/xerjoff-atp-torino-23-edp)
+- **Restocked** — [olfactoryfactoryllc.com: Lorenzo Pazzaglia - Van Py Rhum](https://olfactoryfactoryllc.com/products/lorenzo-pazzaglia-van-py-rhum)
+- **Restocked** — [olfactoryfactoryllc.com: Initio Narcotic Delight Edp](https://olfactoryfactoryllc.com/products/initio-narcotic-delight-edp-90ml-flacon)
+- **Restocked** — [olfactoryfactoryllc.com: Juliette has a Gun - Not a Perfume - Superdose](https://olfactoryfactoryllc.com/products/juliette-has-a-gun-not-a-perfume-superdose)
+- **New Arrival** — [venbafragrance.com: Xerjoff Torino24 EDP](https://venbafragrance.com/products/xerjoff-torino24-edp)
+- **Restocked** — [venbafragrance.com: Byredo Parfums Mojave Ghost Absolu](https://venbafragrance.com/products/byredo-parfums-mojave-ghost-absolu)
+- **4% Price Drop** — [venbafragrance.com: Maison Crivelli Tubereuse Astrale Extrait — $259.99 to $249.99](https://venbafragrance.com/products/maison-crivelli-tubereuse-astrale-extrait)
+
