@@ -12829,3 +12829,18 @@
 - **6% Price Drop** — [venbafragrance.com: Bvlgari Tygar Extrait — $359.99 to $339.99](https://venbafragrance.com/products/sample-bvlgari-tygar-extrait)
 - **3% Price Drop** — [venbafragrance.com: Bvlgari Tygar EDP — $399.99 to $389.99](https://venbafragrance.com/products/sample-bvlgari-tygar-edp)
 
+## 2026-07-16 21:41:00 UTC
+
+- **Restocked** — [olfactoryfactoryllc.com: Maison Francis Kurkdjian - Oud Satin Mood Body Lotion](https://olfactoryfactoryllc.com/products/maison-francis-kurkdjian-oud-satin-mood-body-lotion)
+- **6% Price Drop** — [aurafragrance.com: Valentino Uomo Born in Roma Extradose for Men EDP — $84.98 to $79.98](https://aurafragrance.com/products/valentino-uomo-born-in-roma-extradose-for-men-edp)
+- **10% Price Drop** — [aurafragrance.com: La Bomba for Women by Carolina Herrera EDP — $127.98 to $114.98](https://aurafragrance.com/products/la-bomba-for-women-by-carolina-herrera-edp)
+- **14% Price Drop** — [aurafragrance.com: La Bomba for Women by Carolina Herrera EDP — $34.98 to $29.98](https://aurafragrance.com/products/la-bomba-for-women-by-carolina-herrera-edp)
+- **17% Price Drop** — [aurafragrance.com: Valentino Donna Born in Roma Extradose for Women EDP — $119.98 to $99.98](https://aurafragrance.com/products/valentino-donna-born-in-roma-extradose-for-women-edp)
+- **3% Price Drop** — [aurafragrance.com: Valentino Uomo Born in Roma Green Stravaganza for Men EDT — $92.98 to $89.98](https://aurafragrance.com/products/valentino-uomo-born-in-roma-green-stravaganza-for-men-edt)
+- **Restocked** — [aurafragrance.com: Acqua di Gio Profondo Parfum for Men EDP](https://aurafragrance.com/products/acqua-di-gio-profondo-parfum-for-men-edp)
+- **2% Price Drop** — [aurafragrance.com: La Vie est Belle for Women by Lancome EDP — $96.98 to $94.98](https://aurafragrance.com/products/la-vie-est-belle-for-women-by-lancome-ep-2-5-oz-tester)
+- **6% Price Drop** — [aurafragrance.com: Lacoste Essential for Men by Lacoste EDT — $31.98 to $29.98](https://aurafragrance.com/products/lacoste-essential-for-men-by-lacoste-edt-4-2-oz)
+- **Restocked** — [aurafragrance.com: Myslf Yves Saint Laurent Men EDP](https://aurafragrance.com/products/myslf-yves-saint-laurent-men-edp)
+- **21% Price Drop** — [aurafragrance.com: Invictus Aqua (2025) Paco Rabanne for Men EDT — $86.98 to $68.98](https://aurafragrance.com/products/invictusaquaformenedt)
+- **Restocked** — [aurafragrance.com: Dolce & Gabbana Light Blue for Women EDT](https://aurafragrance.com/products/dolce-gabbana-light-blue-for-women-edt-3-3-oz-tester)
+
