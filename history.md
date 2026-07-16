@@ -12399,3 +12399,9 @@
 - **20% Price Drop** — [fragrapedia.com: Cashmere Beige Eau de Parfum - M.INT PARFUMS — $107.5 to $86](https://fragrapedia.com/products/cashmere-beige-edp-m-int-parfums)
 - **20% Price Drop** — [fragrapedia.com: Azure Haze Eau de Parfum - M.INT PARFUMS — $107.5 to $86](https://fragrapedia.com/products/azure-haze-eau-de-parfum-m-int-parfums)
 
+## 2026-07-16 14:51:45 UTC
+
+- **Restocked** — [olfactoryfactoryllc.com: Byredo - Alto Astral](https://olfactoryfactoryllc.com/products/byredo-alto-astral)
+- **5% Price Drop** — [venbafragrance.com: Sospiro Vibranna EDP — $199.99 to $189.99](https://venbafragrance.com/products/sospiro-vibranna-edp)
+- **Restocked** — [venbafragrance.com: Initio Parfums Musk Therapy Extrait](https://venbafragrance.com/products/initio-parfums-musk-therapy-extrait)
+
