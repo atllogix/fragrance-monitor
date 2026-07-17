@@ -30,6 +30,7 @@ jobs:
           git config user.name "fragrance-monitor-bot"
           git config user.email "actions@github.com"
           git add jomashop-state.json
-          if [ -f history.md ]; then git add history.md; fi
+          if [ -d history ]; then git add history; fi
+          if [ -f price-history.csv ]; then git add price-history.csv; fi
           git diff --quiet --cached || git commit -m "Update jomashop state [skip ci]"
           git push || (git pull --rebase && git push)
