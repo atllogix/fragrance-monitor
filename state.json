@@ -191,7 +191,7 @@
         "handle": "christian-provenzano-guanabana",
         "variants": {
           "43777053392955": {
-            "available": true,
+            "available": false,
             "price": 285
           }
         }
@@ -671,7 +671,7 @@
             "price": 199
           },
           "41893731532859": {
-            "available": true,
+            "available": false,
             "price": 249
           },
           "42283128520763": {
