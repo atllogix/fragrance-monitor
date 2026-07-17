@@ -13137,3 +13137,9 @@
 - **New Arrival** — [jomashop.com: Bvlgari Unisex Le Gemme Amunae EDP Spray 4.2 oz Fragrances 783320424885](https://www.jomashop.com/bvlgari-unisex-le-gemme-amunae-edp-spray-4-2-oz-fragrances-783320424885.html)
 - **New Arrival** — [jomashop.com: Dolce and Gabbana Men's Devotion Pour Homme Parfum 3.4 oz (Tester) Fragrances 8054754403183](https://www.jomashop.com/dolce-and-gabbana-mens-devotion-pour-homme-parfum-3-4-oz-tester-fragrances-8054754403183.html)
 
+## 2026-07-17 01:03:48 UTC
+
+- **8% Price Drop** — [aurafragrance.com: Nishane Hacivat X Extrait de Parfum EDP Unisex — $119.98 to $109.98](https://aurafragrance.com/products/nishane-hacivat-x-extrait-de-parfum-edp-unisex)
+- **Restocked** — [aurafragrance.com: Side Effect Initio Unisex EDP](https://aurafragrance.com/products/side-effect-initio-unisex-edp)
+- **Restocked** — [aurafragrance.com: Layton Parfums de Marly for Men EDP](https://aurafragrance.com/products/layton-for-men-edp)
+
