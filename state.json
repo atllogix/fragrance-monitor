@@ -9092,6 +9092,18 @@
           "48437433598174": {
             "available": true,
             "price": 200
+          },
+          "48445644996830": {
+            "available": false,
+            "price": 200
+          },
+          "48445645881566": {
+            "available": false,
+            "price": 200
+          },
+          "48445647651038": {
+            "available": false,
+            "price": 200
           }
         }
       },
@@ -9111,6 +9123,18 @@
         "variants": {
           "48375506534622": {
             "available": true,
+            "price": 200
+          },
+          "48445671145694": {
+            "available": false,
+            "price": 200
+          },
+          "48445671276766": {
+            "available": false,
+            "price": 200
+          },
+          "48445671407838": {
+            "available": false,
             "price": 200
           }
         }
@@ -9142,6 +9166,18 @@
           "48375293575390": {
             "available": true,
             "price": 200
+          },
+          "48445663183070": {
+            "available": false,
+            "price": 200
+          },
+          "48445663248606": {
+            "available": false,
+            "price": 200
+          },
+          "48445664821470": {
+            "available": false,
+            "price": 200
           }
         }
       },
@@ -9152,6 +9188,18 @@
           "48375232659678": {
             "available": true,
             "price": 200
+          },
+          "48445682548958": {
+            "available": false,
+            "price": 200
+          },
+          "48445682778334": {
+            "available": false,
+            "price": 200
+          },
+          "48445683531998": {
+            "available": false,
+            "price": 200
           }
         }
       },
@@ -9161,6 +9209,18 @@
         "variants": {
           "48375173873886": {
             "available": true,
+            "price": 200
+          },
+          "48445621436638": {
+            "available": false,
+            "price": 200
+          },
+          "48445622321374": {
+            "available": false,
+            "price": 200
+          },
+          "48445623238878": {
+            "available": false,
             "price": 200
           }
         }
@@ -9322,7 +9382,7 @@
         "handle": "le-persona-lp02-peacock-feather-edp",
         "variants": {
           "48422304481502": {
-            "available": false,
+            "available": true,
             "price": 5.99
           },
           "48422304514270": {
@@ -9340,7 +9400,7 @@
         "handle": "le-persona-lp01-mystic-rose-edp",
         "variants": {
           "48422268567774": {
-            "available": false,
+            "available": true,
             "price": 5.99
           },
           "48422268600542": {
@@ -9358,7 +9418,7 @@
         "handle": "le-persona-lp04-golden-gem-edp",
         "variants": {
           "48422242484446": {
-            "available": false,
+            "available": true,
             "price": 5.99
           },
           "48422242517214": {
@@ -9376,7 +9436,7 @@
         "handle": "le-persona-lp03-edp",
         "variants": {
           "48422228066526": {
-            "available": false,
+            "available": true,
             "price": 5.99
           },
           "48422228099294": {
@@ -9394,7 +9454,7 @@
         "handle": "le-persona-salty-skin-extrait",
         "variants": {
           "48422213583070": {
-            "available": false,
+            "available": true,
             "price": 5.99
           },
           "48422213615838": {
@@ -9412,7 +9472,7 @@
         "handle": "le-persona-masquerade-ball-extrait",
         "variants": {
           "48422175277278": {
-            "available": false,
+            "available": true,
             "price": 5.99
           },
           "48422175310046": {
@@ -9434,7 +9494,7 @@
             "price": 299.99
           },
           "48422168985822": {
-            "available": false,
+            "available": true,
             "price": 9.99
           },
           "48422169313502": {
@@ -9452,7 +9512,7 @@
         "handle": "les-indemodables-cafe-arabesque-edp",
         "variants": {
           "48417606631646": {
-            "available": false,
+            "available": true,
             "price": 5.99
           },
           "48417606664414": {
@@ -9470,7 +9530,7 @@
         "handle": "les-indemodables-chypre-azural-edp",
         "variants": {
           "48417593589982": {
-            "available": false,
+            "available": true,
             "price": 5.99
           },
           "48417593622750": {
@@ -9488,7 +9548,7 @@
         "handle": "amouage-elsewhere-edp",
         "variants": {
           "48417468088542": {
-            "available": false,
+            "available": true,
             "price": 16.99
           },
           "48417468121310": {
@@ -10640,7 +10700,7 @@
             "price": 218
           },
           "48413095592158": {
-            "available": false,
+            "available": true,
             "price": 5.99
           },
           "48413096149214": {
@@ -10666,7 +10726,7 @@
             "price": 218
           },
           "48413149987038": {
-            "available": false,
+            "available": true,
             "price": 5.99
           },
           "48413155819742": {
@@ -10692,7 +10752,7 @@
             "price": 218
           },
           "48413361209566": {
-            "available": false,
+            "available": true,
             "price": 5.99
           },
           "48413365534942": {
@@ -10710,7 +10770,7 @@
         "handle": "ex-nihilo-speed-legends-edp",
         "variants": {
           "48411380089054": {
-            "available": false,
+            "available": true,
             "price": 6.99
           },
           "48411380121822": {
@@ -10800,7 +10860,7 @@
         "handle": "xerjoff-fierezza-parfum",
         "variants": {
           "48392457126110": {
-            "available": false,
+            "available": true,
             "price": 10.99
           },
           "48392457158878": {
@@ -10818,7 +10878,7 @@
         "handle": "xerjoff-perseveranza-parfum",
         "variants": {
           "48392153006302": {
-            "available": false,
+            "available": true,
             "price": 10.99
           },
           "48392153039070": {
@@ -10836,7 +10896,7 @@
         "handle": "xerjoff-avanguardia-parfum",
         "variants": {
           "48391415267550": {
-            "available": false,
+            "available": true,
             "price": 10.99
           },
           "48391415300318": {
@@ -11364,7 +11424,7 @@
             "price": 275
           },
           "48422364446942": {
-            "available": false,
+            "available": true,
             "price": 5.99
           },
           "48422368575710": {
@@ -11386,7 +11446,7 @@
             "price": 275
           },
           "48422379913438": {
-            "available": false,
+            "available": true,
             "price": 5.99
           },
           "48422382272734": {
