@@ -13116,3 +13116,24 @@
 
 - **Restocked** — [fragrapedia.com: Ya'E Parfum - Hind Al Oud](https://fragrapedia.com/products/yae-parfum-hind-al-oud)
 
+## 2026-07-17 00:06:36 UTC
+
+- **New Arrival** — [jomashop.com: Juicy Couture Ladies Viva La Juicy EDP 0.17 oz Fragrances 719346139687](https://www.jomashop.com/liz-claiborne-ladies-viva-la-juicy-edp-0-17-oz-fragrances-719346139687.html)
+- **New Arrival** — [jomashop.com: Creed Men's Creed Aventus Cologne EDC Spray 3.4 oz (Tester) Fragrances 3508441001299](https://www.jomashop.com/creed-mens-aventus-cologne-edp-spray-3-4-oz-tester-fragrances-3508441001299.html)
+- **New Arrival** — [jomashop.com: Kenneth Cole Men's Reaction Deodorant Stick 2.6 oz Fragrances 608940585511](https://www.jomashop.com/kenneth-cole-mens-reaction-deodorant-stick-2-6-oz-fragrances-608940585511.html)
+- **New Arrival** — [jomashop.com: Issey Miyake Men / Issey Miyake Set (M)](https://www.jomashop.com/issey-miyake-men-issey-miyake-set-m-3423478971356.html)
+- **New Arrival** — [jomashop.com: Loewe Ladies Loewe 001 EDT Spray 1.7 oz Fragrances 8426017063043](https://www.jomashop.com/loewe-ladies-loewe-001-edt-spray-1-7-oz-fragrances-8426017063043.html)
+- **New Arrival** — [jomashop.com: Elizabeth Taylor Ladies Forever EDP Spray 3.4 oz (Tester) Fragrances 719346966740](https://www.jomashop.com/elizabeth-taylor-ladies-forever-edp-spray-3-4-oz-tester-fragrances-719346966740.html)
+- **New Arrival** — [jomashop.com: Bond No.9 Unisex Dubai Gold EDP Spray 3.4 oz Fragrances 888874005846](https://www.jomashop.com/bond-no-9-unisex-dubai-gold-edp-spray-3-4-oz-fragrances-888874005846.html)
+- **New Arrival** — [jomashop.com: Amouage Unisex Opus VII Reckless Leather EDP 3.4 oz Fragrances 701666410522](https://www.jomashop.com/amouage-unisex-library-collection-opus-vii-reckless-leather-edp-3-4-oz-fragrances-701666410522.html)
+- **New Arrival** — [jomashop.com: Boucheron Ladies Boucheron Gift Set Fragrances 3386460136242](https://www.jomashop.com/boucheron-ladies-boucheron-gift-set-fragrances-3386460136242.html)
+- **New Arrival** — [jomashop.com: Givenchy Men's Gentleman Society Extreme EDP Spray 3.4 oz (Tester) Fragrances 3274872467972](https://www.jomashop.com/givenchy-mens-gentleman-society-extreme-edp-spray-3-4-oz-tester-fragrances-3274872467972.html)
+- **New Arrival** — [jomashop.com: Initio Parfums Prives Unisex Musk Therapy Extrait de Parfum Spray 1.6 oz Fragrances 3701415902565](https://www.jomashop.com/initio-parfums-prives-unisex-musk-therapy-extrait-de-parfum-spray-1-6-oz-fragrances-3701415902565.html)
+- **New Arrival** — [jomashop.com: Nishane Men's Hacivat Extrait de Parfum Spray 3.38 oz (Tester) Fragrances 8683608071232](https://www.jomashop.com/nishane-unisex-hacivat-extrait-de-parfum-spray-3-38-oz-tester-fragrances-8683608071232.html)
+- **New Arrival** — [jomashop.com: Versace Men's Eros Energy Gift Set Fragrances 8011003900077](https://www.jomashop.com/versace-mens-eros-energy-gift-set-fragrances-8011003900077.html)
+- **New Arrival** — [jomashop.com: Paris Corner Unisex Mawj Appletini EDP Spray 3.4 oz Fragrances 6291853599757](https://www.jomashop.com/paris-corner-unisex-mawj-appletini-edp-spray-3-4-oz-fragrances-6291853599757.html)
+- **New Arrival** — [jomashop.com: Lacoste Ladies Original EDP Spray 3.4 oz (Tester) Fragrances 3386460169677](https://www.jomashop.com/lacoste-ladies-original-edp-spray-3-4-oz-tester-fragrances-3386460169677.html)
+- **New Arrival** — [jomashop.com: Bvlgari Men's Le Gemme Yasep EDP Spray 4.2 oz (Tester) Fragrances 783320421907](https://www.jomashop.com/bvlgari-mens-le-gemme-yasep-edp-spray-4-2-oz-tester-fragrances-783320421907.html)
+- **New Arrival** — [jomashop.com: Bvlgari Unisex Le Gemme Amunae EDP Spray 4.2 oz Fragrances 783320424885](https://www.jomashop.com/bvlgari-unisex-le-gemme-amunae-edp-spray-4-2-oz-fragrances-783320424885.html)
+- **New Arrival** — [jomashop.com: Dolce and Gabbana Men's Devotion Pour Homme Parfum 3.4 oz (Tester) Fragrances 8054754403183](https://www.jomashop.com/dolce-and-gabbana-mens-devotion-pour-homme-parfum-3-4-oz-tester-fragrances-8054754403183.html)
+
