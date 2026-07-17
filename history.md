@@ -13143,3 +13143,9 @@
 - **Restocked** — [aurafragrance.com: Side Effect Initio Unisex EDP](https://aurafragrance.com/products/side-effect-initio-unisex-edp)
 - **Restocked** — [aurafragrance.com: Layton Parfums de Marly for Men EDP](https://aurafragrance.com/products/layton-for-men-edp)
 
+## 2026-07-17 03:47:38 UTC
+
+- **New Arrival** — [jomashop.com: Etro Unisex Patchouly EDT Spray 3.4 oz Fragrances 8026247603028](https://www.jomashop.com/etro-unisex-patchouly-edt-spray-3-4-oz-fragrances-8026247603028.html)
+- **New Arrival** — [jomashop.com: Floraiku Paris Unisex One Umbrella For Two EDP Spray 0.33 oz Fragrances 3701123000348](https://www.jomashop.com/floraiku-paris-unisex-one-umbrella-for-two-edp-spray-0-33-oz-fragrances-3701123000348.html)
+- **New Arrival** — [jomashop.com: Hugo Boss Men's The Collection Vigorous Cologne EDP Spray 3.4 oz Fragrances 3614229824773](https://www.jomashop.com/hugo-boss-mens-the-collection-vigorous-cologne-edp-spray-3-4-oz-fragrances-3614229824773.html)
+
