@@ -961,7 +961,7 @@
         "handle": "roja-aoud-extraordinaire-parfum",
         "variants": {
           "42127195504699": {
-            "available": true,
+            "available": false,
             "price": 175
           },
           "42295839227963": {
@@ -9114,6 +9114,18 @@
           "48375555162334": {
             "available": true,
             "price": 200
+          },
+          "48445687070942": {
+            "available": false,
+            "price": 200
+          },
+          "48445687431390": {
+            "available": false,
+            "price": 200
+          },
+          "48445687726302": {
+            "available": false,
+            "price": 200
           }
         }
       },
@@ -9146,6 +9158,10 @@
           "48375436935390": {
             "available": true,
             "price": 200
+          },
+          "48445971595486": {
+            "available": false,
+            "price": 200
           }
         }
       },
@@ -9155,6 +9171,18 @@
         "variants": {
           "48375396368606": {
             "available": true,
+            "price": 200
+          },
+          "48445765779678": {
+            "available": false,
+            "price": 200
+          },
+          "48445769023710": {
+            "available": false,
+            "price": 200
+          },
+          "48445771251934": {
+            "available": false,
             "price": 200
           }
         }
@@ -9231,6 +9259,18 @@
         "variants": {
           "48375108993246": {
             "available": true,
+            "price": 200
+          },
+          "48445875847390": {
+            "available": false,
+            "price": 200
+          },
+          "48445916905694": {
+            "available": false,
+            "price": 200
+          },
+          "48445928407262": {
+            "available": false,
             "price": 200
           }
         }
