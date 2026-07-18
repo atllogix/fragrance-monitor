@@ -4838,7 +4838,7 @@
         "handle": "cartier-declaration-parfum-for-men",
         "variants": {
           "43351142662207": {
-            "available": false,
+            "available": true,
             "price": 89.98
           },
           "43351142694975": {
