@@ -113,7 +113,7 @@
         "handle": "hermes-terre-dhermes-eau-givree-edp",
         "variants": {
           "43798162341947": {
-            "available": true,
+            "available": false,
             "price": 69.99
           }
         }
@@ -4291,7 +4291,7 @@
           },
           "43461339054143": {
             "available": true,
-            "price": 111.49
+            "price": 109.98
           },
           "43461339086911": {
             "available": false,
@@ -4665,19 +4665,11 @@
         "variants": {
           "43392837812287": {
             "available": false,
-            "price": 47.98
+            "price": 86.98
           },
           "43392837845055": {
             "available": true,
             "price": 76.98
-          },
-          "43392837877823": {
-            "available": false,
-            "price": 34.98
-          },
-          "43392837910591": {
-            "available": false,
-            "price": 58.98
           },
           "43392837943359": {
             "available": false,
@@ -4949,7 +4941,7 @@
         "variants": {
           "43270313410623": {
             "available": true,
-            "price": 31.98
+            "price": 29.98
           },
           "43270313443391": {
             "available": false,
@@ -5263,6 +5255,10 @@
         "title": "Bharara King for Men EDP",
         "handle": "bharara-king-for-men-edp",
         "variants": {
+          "43293071474751": {
+            "available": true,
+            "price": 44.98
+          },
           "43215561228351": {
             "available": false,
             "price": 59.98
@@ -5270,10 +5266,6 @@
           "43215561261119": {
             "available": true,
             "price": 10.98
-          },
-          "43293071474751": {
-            "available": true,
-            "price": 44.98
           }
         }
       },
@@ -5785,13 +5777,13 @@
             "available": false,
             "price": 95.98
           },
-          "43142270681151": {
-            "available": false,
-            "price": 24.98
-          },
           "43142270713919": {
             "available": true,
             "price": 84.98
+          },
+          "43142270681151": {
+            "available": false,
+            "price": 24.98
           }
         }
       },
@@ -6567,7 +6559,7 @@
         "variants": {
           "42969926172735": {
             "available": true,
-            "price": 47.98
+            "price": 39.98
           },
           "42969926205503": {
             "available": false,
@@ -6705,7 +6697,7 @@
         "variants": {
           "42933215363135": {
             "available": true,
-            "price": 189.98
+            "price": 179.98
           },
           "42933215395903": {
             "available": false,
@@ -7259,7 +7251,7 @@
           },
           "42760737685567": {
             "available": false,
-            "price": 37.98
+            "price": 68.98
           },
           "42760737718335": {
             "available": true,
@@ -7269,13 +7261,13 @@
             "available": false,
             "price": 21.98
           },
-          "42760737783871": {
-            "available": false,
-            "price": 9.98
-          },
           "42760737816639": {
             "available": false,
             "price": 58.98
+          },
+          "42760737783871": {
+            "available": false,
+            "price": 9.98
           }
         }
       },
@@ -7881,17 +7873,17 @@
             "available": false,
             "price": 179.98
           },
-          "42502681985087": {
+          "42514683494463": {
             "available": false,
-            "price": 29.98
+            "price": 154.98
           },
           "42502682017855": {
             "available": false,
             "price": 29.98
           },
-          "42514683494463": {
+          "42502681985087": {
             "available": false,
-            "price": 154.98
+            "price": 29.98
           }
         }
       },
@@ -8405,7 +8397,7 @@
         "variants": {
           "48023022010590": {
             "available": true,
-            "price": 249.99
+            "price": 239.99
           }
         }
       },
@@ -8415,7 +8407,7 @@
         "variants": {
           "48023017521374": {
             "available": true,
-            "price": 249.99
+            "price": 239.99
           }
         }
       },
@@ -8425,7 +8417,7 @@
         "variants": {
           "48023014703326": {
             "available": true,
-            "price": 249.99
+            "price": 239.99
           }
         }
       },
@@ -8435,7 +8427,7 @@
         "variants": {
           "48023009099998": {
             "available": true,
-            "price": 249.99
+            "price": 239.99
           }
         }
       },
@@ -8445,7 +8437,7 @@
         "variants": {
           "48023004774622": {
             "available": true,
-            "price": 249.99
+            "price": 239.99
           }
         }
       },
@@ -8455,7 +8447,7 @@
         "variants": {
           "48023000875230": {
             "available": true,
-            "price": 249.99
+            "price": 239.99
           }
         }
       },
@@ -8465,7 +8457,7 @@
         "variants": {
           "48022982164702": {
             "available": true,
-            "price": 249.99
+            "price": 239.99
           }
         }
       },
@@ -8705,7 +8697,7 @@
         "variants": {
           "47946517151966": {
             "available": true,
-            "price": 249.99
+            "price": 269.99
           }
         }
       },
@@ -10605,7 +10597,7 @@
         "variants": {
           "48413029695710": {
             "available": true,
-            "price": 169.99
+            "price": 159.99
           },
           "48422479364318": {
             "available": true,
