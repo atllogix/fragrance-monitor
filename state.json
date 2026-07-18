@@ -3649,7 +3649,7 @@
             "price": 139
           },
           "43543788322875": {
-            "available": true,
+            "available": false,
             "price": 139
           }
         }
@@ -4649,13 +4649,13 @@
             "available": false,
             "price": 29.69
           },
-          "43392843808831": {
-            "available": false,
-            "price": 9.98
-          },
           "43392843841599": {
             "available": true,
             "price": 44.98
+          },
+          "43392843808831": {
+            "available": false,
+            "price": 9.98
           }
         }
       },
@@ -5059,17 +5059,17 @@
         "title": "Dolce & Gabbana The One Parfum for Men",
         "handle": "dolce-gabbana-the-one-parfum-for-men",
         "variants": {
-          "43269752193087": {
-            "available": false,
-            "price": 37.98
-          },
           "43269752225855": {
             "available": true,
             "price": 81.98
           },
           "43269752258623": {
             "available": false,
-            "price": 44.98
+            "price": 68.98
+          },
+          "43269752193087": {
+            "available": false,
+            "price": 59.98
           },
           "43269752291391": {
             "available": false,
@@ -5123,7 +5123,7 @@
           },
           "43255201562687": {
             "available": true,
-            "price": 109.98
+            "price": 104.98
           },
           "43255201595455": {
             "available": false,
@@ -5283,7 +5283,7 @@
         "variants": {
           "43206896746559": {
             "available": true,
-            "price": 44.98
+            "price": 39.98
           },
           "43206896779327": {
             "available": false,
@@ -5297,7 +5297,7 @@
         "variants": {
           "43206894714943": {
             "available": true,
-            "price": 44.98
+            "price": 39.98
           },
           "43206894747711": {
             "available": false,
@@ -5311,7 +5311,7 @@
         "variants": {
           "43206889144383": {
             "available": true,
-            "price": 43.98
+            "price": 39.98
           },
           "43206889177151": {
             "available": false,
@@ -5409,7 +5409,7 @@
         "variants": {
           "43200433782847": {
             "available": true,
-            "price": 112.98
+            "price": 109.98
           },
           "43200433815615": {
             "available": false,
@@ -5985,17 +5985,17 @@
         "title": "Valentino Donna Born in Roma Purple Melancholia for Women EDP",
         "handle": "valentino-donna-born-in-roma-purple-melancholia-for-women-edp",
         "variants": {
-          "43067308539967": {
-            "available": false,
-            "price": 119.98
-          },
           "43067308572735": {
             "available": false,
             "price": 139.98
           },
+          "43067308539967": {
+            "available": false,
+            "price": 119.98
+          },
           "43067308605503": {
             "available": true,
-            "price": 116.98
+            "price": 109.98
           },
           "43067308638271": {
             "available": false,
@@ -6581,7 +6581,7 @@
         "variants": {
           "42969923813439": {
             "available": true,
-            "price": 39.98
+            "price": 34.98
           },
           "42969923846207": {
             "available": false,
@@ -6611,13 +6611,13 @@
         "title": "Very Irresistible (2025) for Women by Givenchy EDP",
         "handle": "very-irresistible-2025-for-women-by-givenchy-edp",
         "variants": {
+          "42958856323135": {
+            "available": true,
+            "price": 49.98
+          },
           "42958856290367": {
             "available": true,
             "price": 18.98
-          },
-          "42958856323135": {
-            "available": true,
-            "price": 59.98
           }
         }
       },
@@ -6625,13 +6625,13 @@
         "title": "Very Irresistible (2025) for Women by Givenchy EDT",
         "handle": "very-irresistible-2025-for-women-by-givenchy-edt",
         "variants": {
+          "42958854520895": {
+            "available": true,
+            "price": 49.98
+          },
           "42958854488127": {
             "available": true,
             "price": 18.98
-          },
-          "42958854520895": {
-            "available": true,
-            "price": 56.98
           }
         }
       },
@@ -7165,7 +7165,7 @@
         "variants": {
           "42761556721727": {
             "available": true,
-            "price": 79.98
+            "price": 68.98
           },
           "42761556754495": {
             "available": false,
@@ -7415,7 +7415,7 @@
         "variants": {
           "42687635619903": {
             "available": true,
-            "price": 79.98
+            "price": 68.98
           },
           "42687635652671": {
             "available": false,
@@ -8524,7 +8524,7 @@
         "handle": "ex-nihilo-midnight-special-edp-tester",
         "variants": {
           "48422716637406": {
-            "available": true,
+            "available": false,
             "price": 299.99
           }
         }
@@ -8544,7 +8544,7 @@
         "handle": "ex-nihilo-vesper-glitz-edp-tester",
         "variants": {
           "48422478971102": {
-            "available": true,
+            "available": false,
             "price": 249.99
           }
         }
