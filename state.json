@@ -8546,7 +8546,7 @@
         "handle": "ex-nihilo-explicite-edp-tester",
         "variants": {
           "48422473072862": {
-            "available": true,
+            "available": false,
             "price": 249.99
           }
         }
