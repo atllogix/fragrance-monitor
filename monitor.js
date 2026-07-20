@@ -1,6 +1,9 @@
 const fs = require('fs');
 const path = require('path');
 const fetch = require('node-fetch');
+const { getMaxProducts } = require("./maxIntegration.js");
+
+
 
 // ---- CONFIG ----
 const SITES = [
@@ -432,6 +435,75 @@ function recordPriceHistory(rows) {
     await checkSite(domain, state, events, priceHistoryRows);
     await sleep(SITE_DELAY_MS);
   }
+
+    // ---- MAXAROMA ----
+  console.log("Checking MaxAroma...");
+  try {
+    const maxProducts = await getMaxProducts(); // returns parsed products
+
+    const prevMax = state.sites["max"] || {};
+    const newMax = {};
+    const timestamp = new Date().toISOString();
+
+    for (const p of maxProducts) {
+      const sku = p.sku;
+      const prev = prevMax[sku];
+
+      newMax[sku] = {
+        price: p.price,
+        out_of_stock: p.out_of_stock || false,
+        timestamp
+      };
+
+      // NEW ARRIVAL
+      if (!state.firstRun && !prev) {
+        events.push({
+          type: "New Arrival",
+          domain: "max",
+          brand: p.brand,
+          title: p.name,
+          oldPrice: null,
+          newPrice: p.price,
+          discountPct: null,
+          url: p.url
+        });
+      }
+
+      // RESTOCK
+      if (prev && prev.out_of_stock && !p.out_of_stock) {
+        events.push({
+          type: "Restocked",
+          domain: "max",
+          brand: p.brand,
+          title: p.name,
+          oldPrice: null,
+          newPrice: p.price,
+          discountPct: null,
+          url: p.url
+        });
+      }
+
+      // PRICE DROP
+      if (prev && p.price < prev.price) {
+        const pct = Math.round((1 - p.price / prev.price) * 100);
+        events.push({
+          type: `${pct}% Price Drop`,
+          domain: "max",
+          brand: p.brand,
+          title: p.name,
+          oldPrice: prev.price,
+          newPrice: p.price,
+          discountPct: pct,
+          url: p.url
+        });
+      }
+    }
+
+    state.sites["max"] = newMax;
+  } catch (err) {
+    console.error("MaxAroma failed:", err.message);
+  }
+
 
   recordPriceHistory(priceHistoryRows);
 
