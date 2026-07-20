@@ -4632,7 +4632,7 @@
         "handle": "gisada-ambassador-intense-for-men-edp",
         "variants": {
           "43402266148927": {
-            "available": false,
+            "available": true,
             "price": 68.98
           },
           "43402266181695": {
@@ -5154,7 +5154,7 @@
         "handle": "coach-new-york-for-men-edp",
         "variants": {
           "43255138943039": {
-            "available": false,
+            "available": true,
             "price": 59.98
           },
           "43255138975807": {
@@ -5264,7 +5264,7 @@
             "price": 84.98
           },
           "43216538927167": {
-            "available": true,
+            "available": false,
             "price": 14.98
           }
         }
@@ -6342,7 +6342,7 @@
         "handle": "power-of-you-giorgio-armani-for-women-edp",
         "variants": {
           "43065555386431": {
-            "available": false,
+            "available": true,
             "price": 119.98
           },
           "43065555419199": {
@@ -10246,7 +10246,7 @@
         "handle": "the-house-of-oud-dates-delight-tester-copy",
         "variants": {
           "48041655763166": {
-            "available": true,
+            "available": false,
             "price": 109.99
           }
         }
