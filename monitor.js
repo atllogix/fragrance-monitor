@@ -1,5 +1,6 @@
 const fs = require('fs');
 const path = require('path');
+const fetch = require('node-fetch');
 
 // ---- CONFIG ----
 const SITES = [
@@ -8,7 +9,8 @@ const SITES = [
   'aurafragrance.com',
   'venbafragrance.com',
   'fragrapedia.com',
-  'theparfums.com'
+  'theparfums.com',
+  'jomashop.com' // unified includes joma here
 ];
 
 const NTFY_TOPIC = process.env.NTFY_TOPIC; // set as a GitHub repo secret
@@ -24,6 +26,7 @@ const SKIP_PRICE_MONITORING = ['olfactoryfactoryllc.com', 'aurafragrance.com'];
 const EVENTS_FILE = path.join(__dirname, 'events.json');
 const PRICE_HISTORY_FILE = path.join(__dirname, 'price-history.csv');
 
+// ---- UTIL ----
 function sleep(ms) {
   return new Promise((resolve) => setTimeout(resolve, ms));
 }
@@ -55,12 +58,6 @@ function eventSummary(e) {
   return `${e.domain}: ${e.title}`;
 }
 
-function currentHistoryFileName(ext) {
-  const now = new Date();
-  const ym = `${now.getUTCFullYear()}-${String(now.getUTCMonth() + 1).padStart(2, '0')}`;
-  return `history/${ym}.${ext}`;
-}
-
 function githubPagesUrl() {
   const repoFull = process.env.GITHUB_REPOSITORY;
   if (!repoFull) return null;
@@ -68,11 +65,146 @@ function githubPagesUrl() {
   return `https://${owner}.github.io/${name}/`;
 }
 
+// ---- DATE + HISTORY PATHS ----
+function getDateParts() {
+  const now = new Date();
+  return {
+    year: String(now.getUTCFullYear()),
+    month: String(now.getUTCMonth() + 1).padStart(2, '0'),
+    day: String(now.getUTCDate()).padStart(2, '0'),
+  };
+}
+
+// global: history/global/YYYY/MM/YYYY-MM-DD.md
+function getGlobalHistoryPath() {
+  const { year, month, day } = getDateParts();
+  const folder = path.join(__dirname, 'history', 'global', year, month);
+  const fileMd = path.join(folder, `${year}-${month}-${day}.md`);
+  return { folder, fileMd };
+}
+
+// per-site: history/<siteKey>/YYYY/MM/YYYY-MM-DD.{md,csv}
+// jomashop → "joma"
+function siteKeyFromDomain(domain) {
+  if (domain === 'jomashop.com') return 'joma';
+  return domain;
+}
+
+function getSiteHistoryPaths(domain) {
+  const key = siteKeyFromDomain(domain);
+  const { year, month, day } = getDateParts();
+  const folder = path.join(__dirname, 'history', key, year, month);
+  const fileMd = path.join(folder, `${year}-${month}-${day}.md`);
+  const fileCsv = path.join(folder, `${year}-${month}-${day}.csv`);
+  return { folder, fileMd, fileCsv };
+}
+
+// ---- HISTORY WRITERS ----
+function appendGlobalHistory(events) {
+  if (!events.length) return;
+
+  const { folder, fileMd } = getGlobalHistoryPath();
+  if (!fs.existsSync(folder)) fs.mkdirSync(folder, { recursive: true });
+
+  const timestamp = new Date().toISOString().replace('T', ' ').slice(0, 19) + ' UTC';
+  const lines = [`## ${timestamp}`, ''];
+  events.forEach((e) => {
+    lines.push(`- **${e.type}** — [${eventSummary(e)}](${e.url})`);
+  });
+  lines.push('');
+
+  const block = lines.join('\n') + '\n';
+
+  let existing = '';
+  if (fs.existsSync(fileMd)) {
+    existing = fs.readFileSync(fileMd, 'utf8');
+  }
+
+  const header = `# Fragrance Monitor Global History — newest first\n\n`;
+  fs.writeFileSync(fileMd, header + block + existing);
+}
+
+function appendSiteHistory(domain, events) {
+  if (!events.length) return;
+
+  const { folder, fileMd, fileCsv } = getSiteHistoryPaths(domain);
+  if (!fs.existsSync(folder)) fs.mkdirSync(folder, { recursive: true });
+
+  const timestamp = new Date().toISOString().replace('T', ' ').slice(0, 19) + ' UTC';
+
+  // MD
+  const mdLines = [`## ${timestamp}`, ''];
+  events.forEach((e) => {
+    mdLines.push(`- **${e.type}** — [${eventSummary(e)}](${e.url})`);
+  });
+  mdLines.push('');
+  const mdBlock = mdLines.join('\n') + '\n';
+
+  let existingMd = '';
+  if (fs.existsSync(fileMd)) {
+    existingMd = fs.readFileSync(fileMd, 'utf8');
+  }
+  const mdHeader = `# ${siteKeyFromDomain(domain)} history — newest first\n\n`;
+  fs.writeFileSync(fileMd, mdHeader + mdBlock + existingMd);
+
+  // CSV
+  const csvHeader =
+    'Timestamp,Type,Domain,Brand,Title,OldPrice,NewPrice,DiscountPct,URL';
+  const newRows = events.map((e) =>
+    [
+      new Date().toISOString(),
+      e.type,
+      e.domain,
+      e.brand || '',
+      e.title,
+      e.oldPrice ?? '',
+      e.newPrice ?? '',
+      e.discountPct ?? '',
+      e.url,
+    ]
+      .map(csvEscape)
+      .join(',')
+  );
+
+  if (!fs.existsSync(fileCsv)) {
+    fs.writeFileSync(fileCsv, [csvHeader, ...newRows].join('\n') + '\n');
+  } else {
+    fs.appendFileSync(fileCsv, newRows.join('\n') + '\n');
+  }
+}
+
+// ---- EVENTS.JSON ----
+function appendEventsJson(events) {
+  if (!events || !events.length) return;
+
+  let existing = [];
+  if (fs.existsSync(EVENTS_FILE)) {
+    try {
+      const raw = fs.readFileSync(EVENTS_FILE, 'utf8');
+      const parsed = JSON.parse(raw);
+      if (Array.isArray(parsed)) existing = parsed;
+    } catch {
+      existing = [];
+    }
+  }
+
+  const timestamp = new Date().toISOString();
+  const enriched = events.map((e) => ({ ...e, timestamp }));
+
+  const all = [...enriched, ...existing];
+  const MAX_EVENTS = 5000;
+  const trimmed = all.slice(0, MAX_EVENTS);
+
+  fs.writeFileSync(EVENTS_FILE, JSON.stringify(trimmed, null, 2));
+}
+
+// ---- NTFY ----
 async function sendDigest(events) {
-  if (events.length === 0) {
+  if (!events.length) {
     console.log('No qualifying changes this run — no notification sent.');
     return;
   }
+
   const counts = events.reduce((acc, e) => {
     acc[e.type] = (acc[e.type] || 0) + 1;
     return acc;
@@ -83,12 +215,12 @@ async function sendDigest(events) {
   const MAX_LINES = 15;
   const lines = events.slice(0, MAX_LINES).map((e) => `• ${eventSummary(e)}`);
   if (events.length > MAX_LINES) {
-    const repoFull = process.env.GITHUB_REPOSITORY;
-    const historyPath = currentHistoryFileName('md');
-    const historyUrl = repoFull
-      ? `https://github.com/${repoFull}/blob/main/${historyPath}`
-      : `the ${historyPath} file in your repo`;
-    lines.push(`…and ${events.length - MAX_LINES} more — full list: ${historyUrl}`);
+    const pagesUrl = githubPagesUrl();
+    lines.push(
+      `…and ${events.length - MAX_LINES} more — see dashboard: ${
+        pagesUrl || 'GitHub Pages'
+      }`
+    );
   }
   const body = lines.join('\n');
 
@@ -98,6 +230,7 @@ async function sendDigest(events) {
     console.warn('NTFY_TOPIC not set — skipping push notification.');
     return;
   }
+
   try {
     const headers = { Title: title };
 
@@ -116,110 +249,26 @@ async function sendDigest(events) {
     await fetch(`https://ntfy.sh/${NTFY_TOPIC}`, {
       method: 'POST',
       headers,
-      body: body,
+      body,
     });
   } catch (err) {
     console.error('Failed to send ntfy notification:', err.message);
   }
 }
 
-function appendHistoryMarkdown(events) {
-  if (events.length === 0) return;
-  const MAX_HISTORY_LINES = 100;
-  const capped = events.slice(0, MAX_HISTORY_LINES);
-
-  const fileName = currentHistoryFileName('md');
-  const filePath = path.join(__dirname, fileName);
-  const dir = path.dirname(filePath);
-  if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
-
-  const timestamp = new Date().toISOString().replace('T', ' ').slice(0, 19) + ' UTC';
-  const lines = [`## ${timestamp}`, ''];
-  capped.forEach((e) => {
-    lines.push(`- **${e.type}** — [${eventSummary(e)}](${e.url})`);
-  });
-  if (events.length > MAX_HISTORY_LINES) {
-    lines.push(
-      `- …and ${events.length - MAX_HISTORY_LINES} more this run (not logged — check the Actions run log)`
-    );
+// ---- STATE ----
+function loadState() {
+  if (fs.existsSync(STATE_FILE)) {
+    return JSON.parse(fs.readFileSync(STATE_FILE, 'utf8'));
   }
-  lines.push('');
-  const newBlock = lines.join('\n') + '\n';
-
-  const monthLabel = fileName.replace('history/', '').replace('.md', '');
-  const header = `# Fragrance Monitor History — ${monthLabel} (newest first)\n\n`;
-
-  let existingBody = '';
-  if (fs.existsSync(filePath)) {
-    const existing = fs.readFileSync(filePath, 'utf8');
-    const firstSectionIdx = existing.indexOf('## ');
-    existingBody = firstSectionIdx >= 0 ? existing.slice(firstSectionIdx) : '';
-  }
-
-  fs.writeFileSync(filePath, header + newBlock + existingBody);
+  return { firstRun: true, sites: {} };
 }
 
-function appendHistoryCsv(events) {
-  if (events.length === 0) return;
-  const fileName = currentHistoryFileName('csv');
-  const filePath = path.join(__dirname, fileName);
-  const dir = path.dirname(filePath);
-  if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
-
-  const timestamp = new Date().toISOString();
-  const headerRow = 'Timestamp,Type,Domain,Brand,Title,OldPrice,NewPrice,DiscountPct,URL';
-  const newRows = events.map((e) =>
-    [
-      timestamp,
-      e.type,
-      e.domain,
-      e.brand || '',
-      e.title,
-      e.oldPrice ?? '',
-      e.newPrice ?? '',
-      e.discountPct ?? '',
-      e.url,
-    ]
-      .map(csvEscape)
-      .join(',')
-  );
-
-  let existingRows = [];
-  if (fs.existsSync(filePath)) {
-    existingRows = fs.readFileSync(filePath, 'utf8').split('\n').filter(Boolean).slice(1);
-  }
-
-  const allRows = [headerRow, ...newRows, ...existingRows];
-  fs.writeFileSync(filePath, allRows.join('\n') + '\n');
+function saveState(state) {
+  fs.writeFileSync(STATE_FILE, JSON.stringify(state, null, 2));
 }
 
-function appendEventsJson(events) {
-  if (!events || events.length === 0) return;
-
-  let existing = [];
-  if (fs.existsSync(EVENTS_FILE)) {
-    try {
-      const raw = fs.readFileSync(EVENTS_FILE, 'utf8');
-      const parsed = JSON.parse(raw);
-      if (Array.isArray(parsed)) existing = parsed;
-    } catch {
-      existing = [];
-    }
-  }
-
-  const timestamp = new Date().toISOString();
-  const enriched = events.map((e) => ({
-    ...e,
-    timestamp,
-  }));
-
-  const all = [...enriched, ...existing];
-  const MAX_EVENTS = 5000;
-  const trimmed = all.slice(0, MAX_EVENTS);
-
-  fs.writeFileSync(EVENTS_FILE, JSON.stringify(trimmed, null, 2));
-}
-
+// ---- SHOPIFY FETCH ----
 async function fetchAllProducts(domain) {
   const products = [];
   let url = `https://${domain}/products.json?limit=250`;
@@ -242,7 +291,7 @@ async function fetchAllProducts(domain) {
     }
     const data = await res.json();
     const items = data.products || [];
-    if (items.length === 0) break;
+    if (!items.length) break;
     products.push(...items);
 
     const linkHeader = res.headers.get('link');
@@ -267,17 +316,7 @@ async function fetchAllProducts(domain) {
   return products;
 }
 
-function loadState() {
-  if (fs.existsSync(STATE_FILE)) {
-    return JSON.parse(fs.readFileSync(STATE_FILE, 'utf8'));
-  }
-  return { firstRun: true, sites: {} };
-}
-
-function saveState(state) {
-  fs.writeFileSync(STATE_FILE, JSON.stringify(state, null, 2));
-}
-
+// ---- SITE CHECK ----
 async function checkSite(domain, state, events, priceHistoryRows) {
   const products = await fetchAllProducts(domain);
   if (products === null) {
@@ -303,7 +342,8 @@ async function checkSite(domain, state, events, priceHistoryRows) {
     const currentPrice = firstVariant ? parseFloat(firstVariant.price) : null;
 
     if (priceHistoryRows && currentPrice !== null && !SKIP_PRICE_MONITORING.includes(domain)) {
-      const prevFirstVariant = prevProduct && firstVariant ? prevProduct.variants[firstVariant.id] : null;
+      const prevFirstVariant =
+        prevProduct && firstVariant ? prevProduct.variants[firstVariant.id] : null;
       const isNew = !prevProduct;
       const changed = prevFirstVariant && prevFirstVariant.price !== currentPrice;
       if (isNew || changed) {
@@ -367,8 +407,9 @@ async function checkSite(domain, state, events, priceHistoryRows) {
   state.sites[domain] = newData;
 }
 
+// ---- PRICE HISTORY CSV (GLOBAL) ----
 function recordPriceHistory(rows) {
-  if (!rows || rows.length === 0) return;
+  if (!rows || !rows.length) return;
   const headerRow = 'Timestamp,Domain,Brand,Title,Price,URL';
   const newLines = rows.map((r) => r.map(csvEscape).join(','));
 
@@ -380,6 +421,7 @@ function recordPriceHistory(rows) {
   console.log(`Price history: ${rows.length} new price point(s) recorded.`);
 }
 
+// ---- MAIN ----
 (async function main() {
   const state = loadState();
   const events = [];
@@ -398,10 +440,23 @@ function recordPriceHistory(rows) {
     state.firstRun = false;
   } else {
     console.log(`Check complete. ${events.length} qualifying event(s) found.`);
-    await sendDigest(events);
-    appendHistoryMarkdown(events);
-    appendHistoryCsv(events);
-    appendEventsJson(events);
+
+    if (events.length) {
+      await sendDigest(events);
+
+      // per-site history
+      const byDomain = events.reduce((acc, e) => {
+        (acc[e.domain] ||= []).push(e);
+        return acc;
+      }, {});
+      for (const [domain, siteEvents] of Object.entries(byDomain)) {
+        appendSiteHistory(domain, siteEvents);
+      }
+
+      // global history + dashboard
+      appendGlobalHistory(events);
+      appendEventsJson(events);
+    }
   }
 
   saveState(state);
