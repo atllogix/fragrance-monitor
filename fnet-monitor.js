@@ -1,6 +1,6 @@
 const fs = require("fs");
 const path = require("path");
-const fetch = require("node-fetch");
+
 
 const STATE_FILE = path.join(__dirname, "state-fnet.json");
 const EVENTS_FILE = path.join(__dirname, "events-fnet.json");
