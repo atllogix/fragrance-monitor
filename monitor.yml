@@ -1,4 +1,4 @@
-name: Fragrance Monitor
+name: Unified Fragrance Monitor
 
 on:
   schedule:
@@ -11,6 +11,7 @@ permissions:
 jobs:
   check:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4
@@ -20,17 +21,21 @@ jobs:
         with:
           node-version: 24
 
-      - name: Run monitor script
+      - name: Run unified monitor
         env:
           NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
         run: node monitor.js
 
-      - name: Commit updated state
+      - name: Commit updated state + history
         run: |
           git config user.name "fragrance-monitor-bot"
           git config user.email "actions@github.com"
+
           git add state.json
+          git add events.json
+
           if [ -d history ]; then git add history; fi
           if [ -f price-history.csv ]; then git add price-history.csv; fi
-          git diff --quiet --cached || git commit -m "Update state [skip ci]"
+
+          git diff --quiet --cached || git commit -m "Unified monitor update [skip ci]"
           git push || (git pull --rebase && git push)
