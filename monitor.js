@@ -16,13 +16,13 @@ const STATE_FILE = path.join(__dirname, 'state.json');
 const PAGE_DELAY_MS = 1000;
 const SITE_DELAY_MS = 1500;
 
-// Optional filters — leave as-is to catch everything, tighten later if you want fewer alerts.
-const BRAND_WATCHLIST = []; // e.g. ['Shauran', 'Creed'] — empty array = notify for all brands
-const MIN_DISCOUNT_PCT = 5; // filters out cent-level rounding noise being flagged as a "drop"
+const BRAND_WATCHLIST = [];
+const MIN_DISCOUNT_PCT = 5;
 
-// Sites known to run apps that periodically rewrite their own product prices
-// (e.g. fee/surcharge widgets), which creates false "price drop" noise.
 const SKIP_PRICE_MONITORING = ['olfactoryfactoryllc.com', 'aurafragrance.com'];
+
+const EVENTS_FILE = path.join(__dirname, 'events.json');
+const PRICE_HISTORY_FILE = path.join(__dirname, 'price-history.csv');
 
 function sleep(ms) {
   return new Promise((resolve) => setTimeout(resolve, ms));
@@ -61,6 +61,13 @@ function currentHistoryFileName(ext) {
   return `history/${ym}.${ext}`;
 }
 
+function githubPagesUrl() {
+  const repoFull = process.env.GITHUB_REPOSITORY;
+  if (!repoFull) return null;
+  const [owner, name] = repoFull.split('/');
+  return `https://${owner}.github.io/${name}/`;
+}
+
 async function sendDigest(events) {
   if (events.length === 0) {
     console.log('No qualifying changes this run — no notification sent.');
@@ -93,7 +100,9 @@ async function sendDigest(events) {
   }
   try {
     const headers = { Title: title };
-    headers.Click = events[0].url;
+
+    const pagesUrl = githubPagesUrl();
+    headers.Click = pagesUrl || events[0].url;
 
     const actionEvents = events.slice(0, 3);
     const actions = actionEvents
@@ -116,7 +125,7 @@ async function sendDigest(events) {
 
 function appendHistoryMarkdown(events) {
   if (events.length === 0) return;
-  const MAX_HISTORY_LINES = 100; // hard safety cap — prevents one bad run from exploding file size
+  const MAX_HISTORY_LINES = 100;
   const capped = events.slice(0, MAX_HISTORY_LINES);
 
   const fileName = currentHistoryFileName('md');
@@ -130,7 +139,9 @@ function appendHistoryMarkdown(events) {
     lines.push(`- **${e.type}** — [${eventSummary(e)}](${e.url})`);
   });
   if (events.length > MAX_HISTORY_LINES) {
-    lines.push(`- …and ${events.length - MAX_HISTORY_LINES} more this run (not logged — check the Actions run log)`);
+    lines.push(
+      `- …and ${events.length - MAX_HISTORY_LINES} more this run (not logged — check the Actions run log)`
+    );
   }
   lines.push('');
   const newBlock = lines.join('\n') + '\n';
@@ -178,8 +189,35 @@ function appendHistoryCsv(events) {
     existingRows = fs.readFileSync(filePath, 'utf8').split('\n').filter(Boolean).slice(1);
   }
 
-  const allRows = [headerRow, ...newRows, ...existingRows]; // newest first
+  const allRows = [headerRow, ...newRows, ...existingRows];
   fs.writeFileSync(filePath, allRows.join('\n') + '\n');
+}
+
+function appendEventsJson(events) {
+  if (!events || events.length === 0) return;
+
+  let existing = [];
+  if (fs.existsSync(EVENTS_FILE)) {
+    try {
+      const raw = fs.readFileSync(EVENTS_FILE, 'utf8');
+      const parsed = JSON.parse(raw);
+      if (Array.isArray(parsed)) existing = parsed;
+    } catch {
+      existing = [];
+    }
+  }
+
+  const timestamp = new Date().toISOString();
+  const enriched = events.map((e) => ({
+    ...e,
+    timestamp,
+  }));
+
+  const all = [...enriched, ...existing];
+  const MAX_EVENTS = 5000;
+  const trimmed = all.slice(0, MAX_EVENTS);
+
+  fs.writeFileSync(EVENTS_FILE, JSON.stringify(trimmed, null, 2));
 }
 
 async function fetchAllProducts(domain) {
@@ -264,8 +302,6 @@ async function checkSite(domain, state, events, priceHistoryRows) {
     const firstVariant = (p.variants || [])[0];
     const currentPrice = firstVariant ? parseFloat(firstVariant.price) : null;
 
-    // Price-history: one row when a product is first seen (baseline point),
-    // and one row every time its price genuinely changes — not every run.
     if (priceHistoryRows && currentPrice !== null && !SKIP_PRICE_MONITORING.includes(domain)) {
       const prevFirstVariant = prevProduct && firstVariant ? prevProduct.variants[firstVariant.id] : null;
       const isNew = !prevProduct;
@@ -331,8 +367,6 @@ async function checkSite(domain, state, events, priceHistoryRows) {
   state.sites[domain] = newData;
 }
 
-const PRICE_HISTORY_FILE = path.join(__dirname, 'price-history.csv');
-
 function recordPriceHistory(rows) {
   if (!rows || rows.length === 0) return;
   const headerRow = 'Timestamp,Domain,Brand,Title,Price,URL';
@@ -367,6 +401,7 @@ function recordPriceHistory(rows) {
     await sendDigest(events);
     appendHistoryMarkdown(events);
     appendHistoryCsv(events);
+    appendEventsJson(events);
   }
 
   saveState(state);
