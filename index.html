@@ -1,377 +1,415 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <title>Fragrance Monitor Dashboard</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <style>
-    :root {
-      --bg: #05060a;
-      --card: #111827;
-      --accent: #38bdf8;
-      --accent-soft: #0f172a;
-      --text: #e5e7eb;
-      --muted: #9ca3af;
-      --danger: #f97373;
-      --font: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif;
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fragrance Monitor</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #1a1420;
+    --surface: #241b2e;
+    --surface-hover: #2c2138;
+    --border: #3a2d47;
+    --text: #f0e6f5;
+    --text-muted: #a693b0;
+    --accent: #d4a054;
+    --accent-dim: #8a6d3a;
+    --new-arrival: #7ec9a3;
+    --restocked: #6fa8dc;
+    --price-drop: #d4a054;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    background: radial-gradient(ellipse 1200px 600px at 50% -10%, #2a1f38 0%, var(--bg) 55%);
+    color: var(--text);
+    font-family: 'Inter', system-ui, sans-serif;
+    min-height: 100vh;
+  }
+
+  header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: rgba(26, 20, 32, 0.92);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+    padding: 28px 24px 20px;
+  }
+
+  .header-inner {
+    max-width: 920px;
+    margin: 0 auto;
+  }
+
+  h1 {
+    font-family: 'Fraunces', serif;
+    font-weight: 500;
+    font-size: 28px;
+    letter-spacing: -0.01em;
+    margin: 0 0 4px;
+    background: linear-gradient(135deg, var(--text) 0%, var(--accent) 120%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .tagline {
+    color: var(--text-muted);
+    font-size: 13px;
+    margin: 0 0 20px;
+  }
+
+  .filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    align-items: center;
+  }
+
+  select, input[type="text"] {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    color: var(--text);
+    padding: 8px 12px;
+    border-radius: 8px;
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    outline: none;
+    transition: border-color 0.15s;
+  }
+
+  select:focus, input[type="text"]:focus {
+    border-color: var(--accent-dim);
+  }
+
+  input[type="text"] {
+    min-width: 160px;
+    flex: 1;
+  }
+
+  .count-badge {
+    color: var(--text-muted);
+    font-size: 12px;
+    font-family: 'JetBrains Mono', monospace;
+    margin-left: auto;
+    white-space: nowrap;
+  }
+
+  main {
+    max-width: 920px;
+    margin: 0 auto;
+    padding: 24px;
+  }
+
+  .day-group {
+    margin-bottom: 28px;
+  }
+
+  .day-header {
+    font-family: 'Fraunces', serif;
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--accent);
+    margin: 0 0 10px;
+    padding-left: 2px;
+  }
+
+  .event-row {
+    display: grid;
+    grid-template-columns: 70px 100px 1fr auto;
+    gap: 14px;
+    align-items: center;
+    padding: 12px 14px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--border-type, var(--accent));
+    border-radius: 8px;
+    margin-bottom: 6px;
+    transition: background 0.12s;
+  }
+
+  .event-row:hover {
+    background: var(--surface-hover);
+  }
+
+  .event-time {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    color: var(--text-muted);
+  }
+
+  .event-type {
+    font-size: 11px;
+    font-weight: 500;
+    padding: 3px 8px;
+    border-radius: 5px;
+    text-align: center;
+    white-space: nowrap;
+  }
+
+  .type-new { background: rgba(126, 201, 163, 0.15); color: var(--new-arrival); }
+  .type-restock { background: rgba(111, 168, 220, 0.15); color: var(--restocked); }
+  .type-drop { background: rgba(212, 160, 84, 0.15); color: var(--price-drop); }
+
+  .event-main {
+    min-width: 0;
+  }
+
+  .event-title {
+    font-size: 14px;
+    color: var(--text);
+    text-decoration: none;
+    font-weight: 500;
+  }
+
+  .event-title:hover {
+    color: var(--accent);
+  }
+
+  .event-meta {
+    font-size: 12px;
+    color: var(--text-muted);
+    margin-top: 2px;
+  }
+
+  .event-price {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 13px;
+    color: var(--text-muted);
+    text-align: right;
+    white-space: nowrap;
+  }
+
+  .event-price .new-price {
+    color: var(--accent);
+    font-weight: 500;
+  }
+
+  .empty-state {
+    text-align: center;
+    padding: 80px 20px;
+    color: var(--text-muted);
+  }
+
+  .empty-state .icon {
+    font-size: 32px;
+    margin-bottom: 12px;
+    opacity: 0.6;
+  }
+
+  @media (max-width: 600px) {
+    .event-row {
+      grid-template-columns: 1fr;
+      gap: 6px;
     }
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: var(--font);
-      background: radial-gradient(circle at top, #0f172a 0, #020617 55%, #000 100%);
-      color: var(--text);
-    }
-    .shell {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 16px 12px 32px;
-    }
-    h1 {
-      font-size: 1.4rem;
-      margin: 0 0 8px;
-    }
-    .subtitle {
-      font-size: 0.85rem;
-      color: var(--muted);
-      margin-bottom: 16px;
-    }
-    .filters {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-      gap: 8px;
-      margin-bottom: 16px;
-    }
-    .filter-group {
-      background: var(--accent-soft);
-      border-radius: 8px;
-      padding: 8px 10px;
-      border: 1px solid #1f2937;
-    }
-    .filter-label {
-      font-size: 0.75rem;
-      color: var(--muted);
-      margin-bottom: 4px;
-    }
-    select, input[type="date"] {
-      width: 100%;
-      padding: 6px 8px;
-      border-radius: 6px;
-      border: 1px solid #374151;
-      background: #020617;
-      color: var(--text);
-      font-size: 0.8rem;
-    }
-    select:focus, input[type="date"]:focus {
-      outline: 1px solid var(--accent);
-      border-color: var(--accent);
-    }
-    .events-card {
-      background: var(--card);
-      border-radius: 10px;
-      border: 1px solid #1f2937;
-      padding: 10px 10px 6px;
-    }
-    .events-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: baseline;
-      margin-bottom: 8px;
-    }
-    .events-header span {
-      font-size: 0.8rem;
-      color: var(--muted);
-    }
-    .events-list {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      max-height: 70vh;
-      overflow-y: auto;
-    }
-    .event {
-      padding: 8px 6px;
-      border-radius: 8px;
-      border: 1px solid #1f2937;
-      margin-bottom: 6px;
-      display: grid;
-      grid-template-columns: minmax(0, 1fr);
-      row-gap: 4px;
-    }
-    .event-type {
-      font-size: 0.75rem;
-      font-weight: 600;
-      letter-spacing: 0.03em;
-      text-transform: uppercase;
-    }
-    .event-type[data-kind="Price Drop"] {
-      color: var(--danger);
-    }
-    .event-type[data-kind="New Arrival"],
-    .event-type[data-kind="Restocked"] {
-      color: var(--accent);
-    }
-    .event-main {
-      font-size: 0.85rem;
-    }
-    .event-main a {
-      color: var(--text);
-      text-decoration: none;
-    }
-    .event-main a:hover {
-      text-decoration: underline;
-      color: var(--accent);
-    }
-    .event-meta {
-      font-size: 0.75rem;
-      color: var(--muted);
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-    }
-    .pill {
-      padding: 2px 6px;
-      border-radius: 999px;
-      border: 1px solid #374151;
-      background: #020617;
-    }
-    .empty {
-      font-size: 0.85rem;
-      color: var(--muted);
-      padding: 10px 4px 6px;
-    }
-  </style>
+    .event-time, .event-type { justify-self: start; }
+    .event-price { text-align: left; }
+  }
+</style>
 </head>
 <body>
-  <div class="shell">
+
+<header>
+  <div class="header-inner">
     <h1>Fragrance Monitor</h1>
-    <div class="subtitle">
-      Live feed of new arrivals, restocks, and price drops from your monitored sites.
-    </div>
-
+    <p class="tagline">New arrivals, restocks, and price drops across your tracked stores.</p>
     <div class="filters">
-      <div class="filter-group">
-        <div class="filter-label">Date</div>
-        <input type="date" id="filter-date" />
-      </div>
-      <div class="filter-group">
-        <div class="filter-label">Site</div>
-        <select id="filter-site">
-          <option value="">All sites</option>
-        </select>
-      </div>
-      <div class="filter-group">
-        <div class="filter-label">Event type</div>
-        <select id="filter-type">
-          <option value="">All types</option>
-          <option>New Arrival</option>
-          <option>Restocked</option>
-          <option>Price Drop</option>
-        </select>
-      </div>
-      <div class="filter-group">
-        <div class="filter-label">Brand</div>
-        <select id="filter-brand">
-          <option value="">All brands</option>
-        </select>
-      </div>
-    </div>
-
-    <div class="events-card">
-      <div class="events-header">
-        <strong>Events</strong>
-        <span id="events-count"></span>
-      </div>
-      <ul class="events-list" id="events-list"></ul>
-      <div class="empty" id="events-empty" hidden>
-        No events match the current filters.
-      </div>
+      <select id="dateFilter">
+        <option value="today">Today</option>
+        <option value="7">Last 7 days</option>
+        <option value="30">Last 30 days</option>
+        <option value="all">All time</option>
+      </select>
+      <select id="siteFilter">
+        <option value="all">All sites</option>
+      </select>
+      <select id="typeFilter">
+        <option value="all">All types</option>
+        <option value="New Arrival">New Arrivals</option>
+        <option value="Restocked">Restocked</option>
+        <option value="Price Drop">Price Drops</option>
+      </select>
+      <input type="text" id="brandFilter" placeholder="Filter by brand…">
+      <span class="count-badge" id="countBadge"></span>
     </div>
   </div>
+</header>
 
-  <script>
-    const filters = {
-      date: null,
-      site: '',
-      type: '',
-      brand: '',
-    };
+<main id="main">
+  <div class="empty-state">
+    <div class="icon">⏳</div>
+    <div>Loading events…</div>
+  </div>
+</main>
 
-    let allEvents = [];
+<script>
+let allEvents = [];
 
-    function normalizeType(type) {
-      if (!type) return '';
-      if (type.includes('Price Drop')) return 'Price Drop';
-      return type;
-    }
+function fmtTime(iso) {
+  const d = new Date(iso);
+  return d.toLocaleTimeString(undefined, { hour: 'numeric', minute: '2-digit' });
+}
 
-    function loadEvents() {
-      fetch('events.json', { cache: 'no-store' })
-        .then((res) => {
-          if (!res.ok) throw new Error('Failed to load events.json');
-          return res.json();
-        })
-        .then((data) => {
-          if (!Array.isArray(data)) {
-            console.warn('events.json is not an array');
-            allEvents = [];
-          } else {
-            allEvents = data;
-          }
-          initFilterOptions();
-          renderEvents();
-        })
-        .catch((err) => {
-          console.error(err);
-          document.getElementById('events-empty').hidden = false;
-          document.getElementById('events-empty').textContent =
-            'Unable to load events.json from the repo.';
-        });
-    }
+function fmtDayLabel(iso) {
+  const d = new Date(iso);
+  const today = new Date();
+  const isToday = d.toDateString() === today.toDateString();
+  if (isToday) return 'Today';
+  const yesterday = new Date(today);
+  yesterday.setDate(yesterday.getDate() - 1);
+  if (d.toDateString() === yesterday.toDateString()) return 'Yesterday';
+  return d.toLocaleDateString(undefined, { weekday: 'long', month: 'long', day: 'numeric' });
+}
 
-    function initFilterOptions() {
-      const siteSelect = document.getElementById('filter-site');
-      const brandSelect = document.getElementById('filter-brand');
+function typeClass(type) {
+  if (type === 'New Arrival') return 'type-new';
+  if (type === 'Restocked') return 'type-restock';
+  return 'type-drop'; // "N% Price Drop"
+}
 
-      const sites = Array.from(
-        new Set(
-          allEvents
-            .map((e) => e.domain || '')
-            .filter(Boolean)
-        )
-      ).sort();
+function typeLabel(type) {
+  if (type.endsWith('Price Drop')) return type.replace(' Price Drop', '% off');
+  return type;
+}
 
-      const brands = Array.from(
-        new Set(
-          allEvents
-            .map((e) => (e.brand || '').trim())
-            .filter(Boolean)
-        )
-      ).sort();
+function borderColorVar(type) {
+  if (type === 'New Arrival') return 'var(--new-arrival)';
+  if (type === 'Restocked') return 'var(--restocked)';
+  return 'var(--price-drop)';
+}
 
-      siteSelect.innerHTML = '<option value=\"\">All sites</option>' +
-        sites.map((s) => `<option>${s}</option>`).join('');
+function matchesTypeFilter(eventType, filterValue) {
+  if (filterValue === 'all') return true;
+  if (filterValue === 'Price Drop') return eventType.endsWith('Price Drop');
+  return eventType === filterValue;
+}
 
-      brandSelect.innerHTML = '<option value=\"\">All brands</option>' +
-        brands.map((b) => `<option>${b}</option>`).join('');
+function populateSiteFilter(events) {
+  const sites = [...new Set(events.map((e) => e.domain))].sort();
+  const select = document.getElementById('siteFilter');
+  sites.forEach((site) => {
+    const opt = document.createElement('option');
+    opt.value = site;
+    opt.textContent = site;
+    select.appendChild(opt);
+  });
+}
 
-      const today = new Date();
-      const iso = today.toISOString().slice(0, 10);
-      const dateInput = document.getElementById('filter-date');
-      dateInput.value = iso;
-      filters.date = iso;
-    }
+function render() {
+  const dateFilter = document.getElementById('dateFilter').value;
+  const siteFilter = document.getElementById('siteFilter').value;
+  const typeFilter = document.getElementById('typeFilter').value;
+  const brandFilter = document.getElementById('brandFilter').value.trim().toLowerCase();
 
-    function applyFilters() {
-      return allEvents.filter((e) => {
-        const ts = e.timestamp || '';
-        const datePart = ts.slice(0, 10);
+  const now = new Date();
+  let cutoff = null;
+  if (dateFilter === 'today') {
+    cutoff = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+  } else if (dateFilter !== 'all') {
+    cutoff = new Date(now.getTime() - parseInt(dateFilter, 10) * 24 * 60 * 60 * 1000);
+  }
 
-        if (filters.date && datePart !== filters.date) return false;
-        if (filters.site && (e.domain || '') !== filters.site) return false;
+  let filtered = allEvents.filter((e) => {
+    const d = new Date(e.timestamp);
+    if (cutoff && d < cutoff) return false;
+    if (siteFilter !== 'all' && e.domain !== siteFilter) return false;
+    if (!matchesTypeFilter(e.type, typeFilter)) return false;
+    if (brandFilter && !(e.brand || '').toLowerCase().includes(brandFilter)) return false;
+    return true;
+  });
 
-        const kind = normalizeType(e.type || '');
-        if (filters.type && kind !== filters.type) return false;
+  filtered.sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp));
 
-        const brand = (e.brand || '').trim();
-        if (filters.brand && brand !== filters.brand) return false;
+  document.getElementById('countBadge').textContent = `${filtered.length} event${filtered.length === 1 ? '' : 's'}`;
 
-        return true;
-      });
-    }
+  const main = document.getElementById('main');
+  if (filtered.length === 0) {
+    main.innerHTML = `<div class="empty-state"><div class="icon">🔍</div><div>No events match these filters.</div></div>`;
+    return;
+  }
 
-    function renderEvents() {
-      const list = document.getElementById('events-list');
-      const empty = document.getElementById('events-empty');
-      const countLabel = document.getElementById('events-count');
+  const groups = {};
+  filtered.forEach((e) => {
+    const dayKey = new Date(e.timestamp).toDateString();
+    if (!groups[dayKey]) groups[dayKey] = [];
+    groups[dayKey].push(e);
+  });
 
-      const filtered = applyFilters();
-      list.innerHTML = '';
-
-      if (filtered.length === 0) {
-        empty.hidden = false;
-        countLabel.textContent = '0 events';
-        return;
+  let html = '';
+  Object.keys(groups).forEach((dayKey) => {
+    const dayEvents = groups[dayKey];
+    html += `<div class="day-group">`;
+    html += `<div class="day-header">${fmtDayLabel(dayEvents[0].timestamp)}</div>`;
+    dayEvents.forEach((e) => {
+      let priceHtml = '';
+      if (e.newPrice !== null && e.newPrice !== undefined) {
+        if (e.oldPrice !== null && e.oldPrice !== undefined) {
+          priceHtml = `<div class="event-price">$${e.oldPrice} → <span class="new-price">$${e.newPrice}</span></div>`;
+        } else {
+          priceHtml = `<div class="event-price"><span class="new-price">$${e.newPrice}</span></div>`;
+        }
       }
+      html += `
+        <div class="event-row" style="--border-type: ${borderColorVar(e.type)}">
+          <div class="event-time">${fmtTime(e.timestamp)}</div>
+          <div class="event-type ${typeClass(e.type)}">${typeLabel(e.type)}</div>
+          <div class="event-main">
+            <a class="event-title" href="${e.url || '#'}" target="_blank" rel="noopener">${e.title}</a>
+            <div class="event-meta">${e.brand ? e.brand + ' · ' : ''}${e.domain}</div>
+          </div>
+          ${priceHtml}
+        </div>`;
+    });
+    html += `</div>`;
+  });
 
-      empty.hidden = true;
-      countLabel.textContent = `${filtered.length} event${filtered.length === 1 ? '' : 's'}`;
+  main.innerHTML = html;
+}
 
-      filtered.forEach((e) => {
-        const li = document.createElement('li');
-        li.className = 'event';
+async function init() {
+  try {
+    const res = await fetch('events.json?t=' + Date.now());
+    if (!res.ok) throw new Error('events.json not found yet');
+    allEvents = await res.json();
+  } catch (err) {
+    document.getElementById('main').innerHTML = `
+      <div class="empty-state">
+        <div class="icon">🌙</div>
+        <div>No events recorded yet — check back after the next monitor run.</div>
+      </div>`;
+    return;
+  }
 
-        const kind = normalizeType(e.type || '');
-        const typeEl = document.createElement('div');
-        typeEl.className = 'event-type';
-        typeEl.dataset.kind = kind;
-        typeEl.textContent = kind || 'Event';
+  populateSiteFilter(allEvents);
+  ['dateFilter', 'siteFilter', 'typeFilter'].forEach((id) => {
+    document.getElementById(id).addEventListener('change', render);
+  });
+  document.getElementById('brandFilter').addEventListener('input', render);
 
-        const mainEl = document.createElement('div');
-        mainEl.className = 'event-main';
-        const title = e.title || e.summary || '(untitled product)';
-        const url = e.url || '#';
-        mainEl.innerHTML = `<a href="${url}" target="_blank" rel="noopener noreferrer">${title}</a>`;
+  render();
 
-        const metaEl = document.createElement('div');
-        metaEl.className = 'event-meta';
-
-        const site = e.domain || '';
-        if (site) {
-          const pill = document.createElement('span');
-          pill.className = 'pill';
-          pill.textContent = site;
-          metaEl.appendChild(pill);
-        }
-
-        const brand = (e.brand || '').trim();
-        if (brand) {
-          const pill = document.createElement('span');
-          pill.className = 'pill';
-          pill.textContent = brand;
-          metaEl.appendChild(pill);
-        }
-
-        if (e.discountPct != null) {
-          const pill = document.createElement('span');
-          pill.className = 'pill';
-          pill.textContent = `${e.discountPct}% off`;
-          metaEl.appendChild(pill);
-        }
-
-        if (e.timestamp) {
-          const pill = document.createElement('span');
-          pill.className = 'pill';
-          pill.textContent = e.timestamp.replace('T', ' ').slice(0, 16) + ' UTC';
-          metaEl.appendChild(pill);
-        }
-
-        li.appendChild(typeEl);
-        li.appendChild(mainEl);
-        li.appendChild(metaEl);
-        list.appendChild(li);
-      });
+  // Quietly re-check for new events every 60s so the page stays current
+  // without needing a manual reload.
+  setInterval(async () => {
+    try {
+      const res = await fetch('events.json?t=' + Date.now());
+      if (!res.ok) return;
+      allEvents = await res.json();
+      render();
+    } catch {
+      // silent — next interval will retry
     }
+  }, 60000);
+}
 
-    document.getElementById('filter-date').addEventListener('change', (e) => {
-      filters.date = e.target.value || null;
-      renderEvents();
-    });
-    document.getElementById('filter-site').addEventListener('change', (e) => {
-      filters.site = e.target.value || '';
-      renderEvents();
-    });
-    document.getElementById('filter-type').addEventListener('change', (e) => {
-      filters.type = e.target.value || '';
-      renderEvents();
-    });
-    document.getElementById('filter-brand').addEventListener('change', (e) => {
-      filters.brand = e.target.value || '';
-      renderEvents();
-    });
+init();
+</script>
 
-    loadEvents();
-    setInterval(loadEvents, 60_000);
-  </script>
 </body>
 </html>
