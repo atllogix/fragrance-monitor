@@ -1,163 +1,190 @@
-// jomashop-monitor.js — cleaned, with history + CSV
+const fs = require('fs');
+const path = require('path');
+const fetch = require('node-fetch');
 
-import fetch from 'node-fetch';
-import fs from 'fs';
-import path from 'path';
+// ---- CONFIG ----
+const DOMAIN = 'jomashop.com';
+const STATE_FILE = path.join(__dirname, 'joma-state.json');
+const EVENTS_FILE = path.join(__dirname, 'events.json');
 
-const STATE_FILE = 'jomashop-state.json';
-const EVENTS_FILE = 'events.json';
+const MIN_DISCOUNT_PCT = 5;
+const NTFY_TOPIC = process.env.NTFY_TOPIC;
 
-// GitHub Pages dashboard URL
-const pagesUrl = `https://${process.env.GITHUB_REPOSITORY.split('/')[0]}.github.io/${process.env.GITHUB_REPOSITORY.split('/')[1]}/`;
+// ---- UTIL ----
+function sleep(ms) {
+  return new Promise((resolve) => setTimeout(resolve, ms));
+}
 
-// ---------- STATE / EVENTS ----------
-
-function loadState() {
-  try {
-    return JSON.parse(fs.readFileSync(STATE_FILE, 'utf8'));
-  } catch {
-    return { firstRun: true, products: {} };
+function csvEscape(val) {
+  if (val === null || val === undefined) return '';
+  const str = String(val);
+  if (str.includes(',') || str.includes('"') || str.includes('\n')) {
+    return '"' + str.replace(/"/g, '""') + '"';
   }
+  return str;
+}
+
+function passesFilters(discountPct) {
+  if (discountPct !== null && discountPct < MIN_DISCOUNT_PCT) return false;
+  return true;
+}
+
+function githubPagesUrl() {
+  const repoFull = process.env.GITHUB_REPOSITORY;
+  if (!repoFull) return null;
+  const [owner, name] = repoFull.split('/');
+  return `https://${owner}.github.io/${name}/`;
+}
+
+// ---- DATE + HISTORY PATHS ----
+function getDateParts() {
+  const now = new Date();
+  return {
+    year: String(now.getUTCFullYear()),
+    month: String(now.getUTCMonth() + 1).padStart(2, '0'),
+    day: String(now.getUTCDate()).padStart(2, '0'),
+  };
+}
+
+// history/joma/YYYY/MM/YYYY-MM-DD.md + .csv
+function getJomaHistoryPaths() {
+  const { year, month, day } = getDateParts();
+  const folder = path.join(__dirname, 'history', 'joma', year, month);
+  const fileMd = path.join(folder, `${year}-${month}-${day}.md`);
+  const fileCsv = path.join(folder, `${year}-${month}-${day}.csv`);
+  return { folder, fileMd, fileCsv };
+}
+
+// ---- HISTORY WRITERS ----
+function appendJomaHistory(events) {
+  if (!events.length) return;
+
+  const { folder, fileMd, fileCsv } = getJomaHistoryPaths();
+  if (!fs.existsSync(folder)) fs.mkdirSync(folder, { recursive: true });
+
+  const timestamp = new Date().toISOString().replace('T', ' ').slice(0, 19) + ' UTC';
+
+  // MD
+  const mdLines = [`## ${timestamp}`, ''];
+  events.forEach((e) => {
+    mdLines.push(`- **${e.type}** — [${e.summary}](${e.url})`);
+  });
+  mdLines.push('');
+  const mdBlock = mdLines.join('\n') + '\n';
+
+  let existingMd = '';
+  if (fs.existsSync(fileMd)) {
+    existingMd = fs.readFileSync(fileMd, 'utf8');
+  }
+
+  const mdHeader = `# JOMA History — newest first\n\n`;
+  fs.writeFileSync(fileMd, mdHeader + mdBlock + existingMd);
+
+  // CSV
+  const csvHeader =
+    'Timestamp,Type,Brand,Title,OldPrice,NewPrice,DiscountPct,URL';
+
+  const newRows = events.map((e) =>
+    [
+      new Date().toISOString(),
+      e.type,
+      e.brand || '',
+      e.title,
+      e.oldPrice ?? '',
+      e.newPrice ?? '',
+      e.discountPct ?? '',
+      e.url,
+    ]
+      .map(csvEscape)
+      .join(',')
+  );
+
+  if (!fs.existsSync(fileCsv)) {
+    fs.writeFileSync(fileCsv, [csvHeader, ...newRows].join('\n') + '\n');
+  } else {
+    fs.appendFileSync(fileCsv, newRows.join('\n') + '\n');
+  }
+}
+
+// ---- EVENTS.JSON ----
+function appendEventsJson(events) {
+  if (!events.length) return;
+
+  let existing = [];
+  if (fs.existsSync(EVENTS_FILE)) {
+    try {
+      existing = JSON.parse(fs.readFileSync(EVENTS_FILE, 'utf8'));
+    } catch {
+      existing = [];
+    }
+  }
+
+  const timestamp = new Date().toISOString();
+  const enriched = events.map((e) => ({ ...e, timestamp }));
+
+  const all = [...enriched, ...existing];
+  const MAX_EVENTS = 5000;
+  const trimmed = all.slice(0, MAX_EVENTS);
+
+  fs.writeFileSync(EVENTS_FILE, JSON.stringify(trimmed, null, 2));
+}
+
+// ---- NTFY ----
+async function sendDigest(events) {
+  if (!events.length) return;
+
+  const counts = events.reduce((acc, e) => {
+    acc[e.type] = (acc[e.type] || 0) + 1;
+    return acc;
+  }, {});
+  const summaryParts = Object.entries(counts).map(([type, n]) => `${n} ${type}`);
+  const title = `JOMA Alert: ${summaryParts.join(', ')}`;
+
+  const MAX_LINES = 15;
+  const lines = events.slice(0, MAX_LINES).map((e) => `• ${e.summary}`);
+  if (events.length > MAX_LINES) {
+    const pagesUrl = githubPagesUrl();
+    lines.push(
+      `…and ${events.length - MAX_LINES} more — see dashboard: ${
+        pagesUrl || 'GitHub Pages'
+      }`
+    );
+  }
+  const body = lines.join('\n');
+
+  if (!NTFY_TOPIC) return;
+
+  try {
+    const headers = { Title: title };
+    const pagesUrl = githubPagesUrl();
+    headers.Click = pagesUrl || events[0].url;
+
+    await fetch(`https://ntfy.sh/${NTFY_TOPIC}`, {
+      method: 'POST',
+      headers,
+      body,
+    });
+  } catch (err) {
+    console.error('Failed to send ntfy notification:', err.message);
+  }
+}
+
+// ---- STATE ----
+function loadState() {
+  if (fs.existsSync(STATE_FILE)) {
+    return JSON.parse(fs.readFileSync(STATE_FILE, 'utf8'));
+  }
+  return { firstRun: true, products: {} };
 }
 
 function saveState(state) {
   fs.writeFileSync(STATE_FILE, JSON.stringify(state, null, 2));
 }
 
-function appendEventsJson(events) {
-  if (!events.length) return;
-
-  let existing = [];
-  try {
-    existing = JSON.parse(fs.readFileSync(EVENTS_FILE, 'utf8'));
-  } catch {}
-
-  const updated = [...existing, ...events];
-  fs.writeFileSync(EVENTS_FILE, JSON.stringify(updated, null, 2));
-}
-
-// ---------- HISTORY PATH HELPERS ----------
-
-function getDateParts() {
-  const now = new Date();
-  const year = now.getFullYear().toString();
-  const month = String(now.getMonth() + 1).padStart(2, '0');
-  const day = String(now.getDate()).padStart(2, '0');
-  return { year, month, day };
-}
-
-// Global history: history/YYYY/MM/YYYY-MM-DD.md
-function getGlobalHistoryPaths() {
-  const { year, month, day } = getDateParts();
-  const folder = path.join('history', year, month);
-  const fileMd = path.join(folder, `${year}-${month}-${day}.md`);
-  return { folder, fileMd };
-}
-
-// Jomashop-specific history: history/jomashop/YYYY/MM/YYYY-MM-DD.md + .csv
-function getJomaHistoryPaths() {
-  const { year, month, day } = getDateParts();
-  const folder = path.join('history', 'jomashop', year, month);
-  const fileMd = path.join(folder, `${year}-${month}-${day}.md`);
-  const fileCsv = path.join(folder, `${year}-${month}-${day}.csv`);
-  return { folder, fileMd, fileCsv };
-}
-
-// ---------- HISTORY WRITERS ----------
-
-function appendGlobalHistory(events) {
-  if (!events.length) return;
-
-  const { folder, fileMd } = getGlobalHistoryPaths();
-  fs.mkdirSync(folder, { recursive: true });
-
-  const lines = events.map(e => `- [${e.type}] ${e.summary} (${e.url})`);
-  const content = lines.join('\n') + '\n';
-
-  fs.appendFileSync(fileMd, content);
-}
-
-function appendJomaHistory(events) {
-  if (!events.length) return;
-
-  const { folder, fileMd, fileCsv } = getJomaHistoryPaths();
-  fs.mkdirSync(folder, { recursive: true });
-
-  // Markdown
-  const mdLines = events.map(
-    e => `- [${e.type}] ${e.summary} (${e.url})`
-  );
-  const mdContent = mdLines.join('\n') + '\n';
-  fs.appendFileSync(fileMd, mdContent);
-
-  // CSV
-  const headers = [
-    'type',
-    'summary',
-    'url',
-    'brand',
-    'name',
-    'oldPrice',
-    'newPrice',
-    'discountPct'
-  ];
-
-  let csv = '';
-  if (!fs.existsSync(fileCsv)) {
-    csv += headers.join(',') + '\n';
-  }
-
-  for (const e of events) {
-    const row = [
-      e.type ?? '',
-      e.summary ?? '',
-      e.url ?? '',
-      e.brand ?? '',
-      e.name ?? '',
-      e.oldPrice ?? '',
-      e.newPrice ?? '',
-      e.discountPct ?? ''
-    ]
-      .map(v => String(v).replace(/"/g, '""'))
-      .map(v => `"${v}"`)
-      .join(',');
-
-    csv += row + '\n';
-  }
-
-  fs.appendFileSync(fileCsv, csv);
-}
-
-// ---------- NTFY DIGEST ----------
-
-async function sendDigest(events) {
-  if (!events.length) return;
-
-  const body = events.map(e => `• ${e.summary}`).join('\n');
-
-  await fetch('https://ntfy.sh/fragrance-monitor', {
-    method: 'POST',
-    headers: {
-      Title: `Jomashop Alert: ${events.length} New Arrival`,
-      Click: pagesUrl, // always dashboard, not history.md
-      Tags: 'label,price_tag',
-    },
-    body,
-  });
-}
-
-// ---------- FILTERS ----------
-
-function passesFilters(brand, pct) {
-  // adjust as needed
-  return pct >= 10;
-}
-
-// ---------- JOMASHOP SCRAPER ----------
-
-async function fetchJomashop() {
+// ---- JOMA SCRAPER ----
+async function fetchJoma() {
   const url = 'https://www.jomashop.com/sitemap_products_1.xml';
-  console.log('Checking jomashop.com (this can take a few minutes, ~437+ pages)...');
+  console.log('Checking JOMA (this can take a few minutes)…');
 
   const res = await fetch(url);
   const xml = await res.text();
@@ -182,19 +209,16 @@ async function fetchJomashop() {
     });
   }
 
-  console.log(`[jomashop] total products: ${products.length}`);
   return products;
 }
 
-// ---------- MAIN ----------
-
+// ---- MAIN ----
 (async () => {
   const state = loadState();
   const newData = {};
   const events = [];
 
-  console.log('Fetching Jomashop…');
-  const products = await fetchJomashop();
+  const products = await fetchJoma();
 
   for (const p of products) {
     const productUrl = p.url;
@@ -208,13 +232,13 @@ async function fetchJomashop() {
     if (!state.firstRun) {
       if (prev.price !== null && finalPrice < prev.price) {
         const pct = Math.round((1 - finalPrice / prev.price) * 100);
-        if (passesFilters(brand, pct)) {
+        if (passesFilters(pct)) {
           events.push({
             type: `${pct}% Price Drop`,
             summary: `jomashop.com: ${p.name} — $${prev.price} to $${finalPrice}`,
             url: productUrl,
             brand,
-            name: p.name,
+            title: p.name,
             oldPrice: prev.price,
             newPrice: finalPrice,
             discountPct: pct,
@@ -227,19 +251,16 @@ async function fetchJomashop() {
   state.products = newData;
 
   if (state.firstRun) {
-    console.log('Baseline established. Notifications start from the next run onward.');
+    console.log('JOMA baseline established. Notifications start next run.');
     state.firstRun = false;
   } else {
-    console.log(`Check complete. ${events.length} qualifying event(s) found.`);
+    console.log(`JOMA check complete. ${events.length} qualifying event(s).`);
 
-    await sendDigest(events);
-
-    // history: global + jomashop-specific
-    appendGlobalHistory(events);
-    appendJomaHistory(events);
-
-    // dashboard data
-    appendEventsJson(events);
+    if (events.length) {
+      await sendDigest(events);
+      appendJomaHistory(events);
+      appendEventsJson(events);
+    }
   }
 
   saveState(state);
