@@ -271,7 +271,7 @@ function saveState(state) {
 
     saveState(state);
   }
-})();}
+})();
 
 async function sendDigest(events) {
   if (events.length === 0) {
