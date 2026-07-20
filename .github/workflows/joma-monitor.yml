@@ -1,0 +1,40 @@
+name: Joma Monitor
+
+on:
+  schedule:
+    - cron: '*/20 * * * *'
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+
+      - name: Run Joma monitor
+        env:
+          NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
+        run: node joma-monitor.js
+
+      - name: Commit updated state + history
+        run: |
+          git config user.name "fragrance-monitor-bot"
+          git config user.email "actions@github.com"
+
+          git add joma-state.json
+          git add events.json
+
+          if [ -d history ]; then git add history; fi
+
+          git diff --quiet --cached || git commit -m "Joma monitor update [skip ci]"
+          git push || (git pull --rebase && git push)
