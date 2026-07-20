@@ -23,7 +23,7 @@ jobs:
       - name: Run Jomashop monitor script
         env:
           NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
-        run: node jomashop-monitor.js
+        run: node joma-monitor.js
 
       - name: Commit updated state
         run: |
