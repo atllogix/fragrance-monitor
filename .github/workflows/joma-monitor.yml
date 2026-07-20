@@ -1,4 +1,4 @@
-name: Joma Monitor
+name: Jomashop Monitor
 
 on:
   schedule:
@@ -11,7 +11,6 @@ permissions:
 jobs:
   check:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4
@@ -21,20 +20,18 @@ jobs:
         with:
           node-version: 24
 
-      - name: Run Joma monitor
+      - name: Run Jomashop monitor script
         env:
           NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
-        run: node joma-monitor.js
+        run: node jomashop-monitor.js
 
-      - name: Commit updated state + history
+      - name: Commit updated state
         run: |
           git config user.name "fragrance-monitor-bot"
           git config user.email "actions@github.com"
-
-          git add joma-state.json
-          git add events.json
-
+          git add jomashop-state.json
           if [ -d history ]; then git add history; fi
-
-          git diff --quiet --cached || git commit -m "Joma monitor update [skip ci]"
+          if [ -f price-history.csv ]; then git add price-history.csv; fi
+          if [ -f events.json ]; then git add events.json; fi
+          git diff --quiet --cached || git commit -m "Update jomashop state [skip ci]"
           git push || (git pull --rebase && git push)
