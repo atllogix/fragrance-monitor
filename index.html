@@ -1,0 +1,377 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Fragrance Monitor Dashboard</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    :root {
+      --bg: #05060a;
+      --card: #111827;
+      --accent: #38bdf8;
+      --accent-soft: #0f172a;
+      --text: #e5e7eb;
+      --muted: #9ca3af;
+      --danger: #f97373;
+      --font: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif;
+    }
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: var(--font);
+      background: radial-gradient(circle at top, #0f172a 0, #020617 55%, #000 100%);
+      color: var(--text);
+    }
+    .shell {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 16px 12px 32px;
+    }
+    h1 {
+      font-size: 1.4rem;
+      margin: 0 0 8px;
+    }
+    .subtitle {
+      font-size: 0.85rem;
+      color: var(--muted);
+      margin-bottom: 16px;
+    }
+    .filters {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 8px;
+      margin-bottom: 16px;
+    }
+    .filter-group {
+      background: var(--accent-soft);
+      border-radius: 8px;
+      padding: 8px 10px;
+      border: 1px solid #1f2937;
+    }
+    .filter-label {
+      font-size: 0.75rem;
+      color: var(--muted);
+      margin-bottom: 4px;
+    }
+    select, input[type="date"] {
+      width: 100%;
+      padding: 6px 8px;
+      border-radius: 6px;
+      border: 1px solid #374151;
+      background: #020617;
+      color: var(--text);
+      font-size: 0.8rem;
+    }
+    select:focus, input[type="date"]:focus {
+      outline: 1px solid var(--accent);
+      border-color: var(--accent);
+    }
+    .events-card {
+      background: var(--card);
+      border-radius: 10px;
+      border: 1px solid #1f2937;
+      padding: 10px 10px 6px;
+    }
+    .events-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 8px;
+    }
+    .events-header span {
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+    .events-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      max-height: 70vh;
+      overflow-y: auto;
+    }
+    .event {
+      padding: 8px 6px;
+      border-radius: 8px;
+      border: 1px solid #1f2937;
+      margin-bottom: 6px;
+      display: grid;
+      grid-template-columns: minmax(0, 1fr);
+      row-gap: 4px;
+    }
+    .event-type {
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+    }
+    .event-type[data-kind="Price Drop"] {
+      color: var(--danger);
+    }
+    .event-type[data-kind="New Arrival"],
+    .event-type[data-kind="Restocked"] {
+      color: var(--accent);
+    }
+    .event-main {
+      font-size: 0.85rem;
+    }
+    .event-main a {
+      color: var(--text);
+      text-decoration: none;
+    }
+    .event-main a:hover {
+      text-decoration: underline;
+      color: var(--accent);
+    }
+    .event-meta {
+      font-size: 0.75rem;
+      color: var(--muted);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .pill {
+      padding: 2px 6px;
+      border-radius: 999px;
+      border: 1px solid #374151;
+      background: #020617;
+    }
+    .empty {
+      font-size: 0.85rem;
+      color: var(--muted);
+      padding: 10px 4px 6px;
+    }
+  </style>
+</head>
+<body>
+  <div class="shell">
+    <h1>Fragrance Monitor</h1>
+    <div class="subtitle">
+      Live feed of new arrivals, restocks, and price drops from your monitored sites.
+    </div>
+
+    <div class="filters">
+      <div class="filter-group">
+        <div class="filter-label">Date</div>
+        <input type="date" id="filter-date" />
+      </div>
+      <div class="filter-group">
+        <div class="filter-label">Site</div>
+        <select id="filter-site">
+          <option value="">All sites</option>
+        </select>
+      </div>
+      <div class="filter-group">
+        <div class="filter-label">Event type</div>
+        <select id="filter-type">
+          <option value="">All types</option>
+          <option>New Arrival</option>
+          <option>Restocked</option>
+          <option>Price Drop</option>
+        </select>
+      </div>
+      <div class="filter-group">
+        <div class="filter-label">Brand</div>
+        <select id="filter-brand">
+          <option value="">All brands</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="events-card">
+      <div class="events-header">
+        <strong>Events</strong>
+        <span id="events-count"></span>
+      </div>
+      <ul class="events-list" id="events-list"></ul>
+      <div class="empty" id="events-empty" hidden>
+        No events match the current filters.
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const filters = {
+      date: null,
+      site: '',
+      type: '',
+      brand: '',
+    };
+
+    let allEvents = [];
+
+    function normalizeType(type) {
+      if (!type) return '';
+      if (type.includes('Price Drop')) return 'Price Drop';
+      return type;
+    }
+
+    function loadEvents() {
+      fetch('events.json', { cache: 'no-store' })
+        .then((res) => {
+          if (!res.ok) throw new Error('Failed to load events.json');
+          return res.json();
+        })
+        .then((data) => {
+          if (!Array.isArray(data)) {
+            console.warn('events.json is not an array');
+            allEvents = [];
+          } else {
+            allEvents = data;
+          }
+          initFilterOptions();
+          renderEvents();
+        })
+        .catch((err) => {
+          console.error(err);
+          document.getElementById('events-empty').hidden = false;
+          document.getElementById('events-empty').textContent =
+            'Unable to load events.json from the repo.';
+        });
+    }
+
+    function initFilterOptions() {
+      const siteSelect = document.getElementById('filter-site');
+      const brandSelect = document.getElementById('filter-brand');
+
+      const sites = Array.from(
+        new Set(
+          allEvents
+            .map((e) => e.domain || '')
+            .filter(Boolean)
+        )
+      ).sort();
+
+      const brands = Array.from(
+        new Set(
+          allEvents
+            .map((e) => (e.brand || '').trim())
+            .filter(Boolean)
+        )
+      ).sort();
+
+      siteSelect.innerHTML = '<option value=\"\">All sites</option>' +
+        sites.map((s) => `<option>${s}</option>`).join('');
+
+      brandSelect.innerHTML = '<option value=\"\">All brands</option>' +
+        brands.map((b) => `<option>${b}</option>`).join('');
+
+      const today = new Date();
+      const iso = today.toISOString().slice(0, 10);
+      const dateInput = document.getElementById('filter-date');
+      dateInput.value = iso;
+      filters.date = iso;
+    }
+
+    function applyFilters() {
+      return allEvents.filter((e) => {
+        const ts = e.timestamp || '';
+        const datePart = ts.slice(0, 10);
+
+        if (filters.date && datePart !== filters.date) return false;
+        if (filters.site && (e.domain || '') !== filters.site) return false;
+
+        const kind = normalizeType(e.type || '');
+        if (filters.type && kind !== filters.type) return false;
+
+        const brand = (e.brand || '').trim();
+        if (filters.brand && brand !== filters.brand) return false;
+
+        return true;
+      });
+    }
+
+    function renderEvents() {
+      const list = document.getElementById('events-list');
+      const empty = document.getElementById('events-empty');
+      const countLabel = document.getElementById('events-count');
+
+      const filtered = applyFilters();
+      list.innerHTML = '';
+
+      if (filtered.length === 0) {
+        empty.hidden = false;
+        countLabel.textContent = '0 events';
+        return;
+      }
+
+      empty.hidden = true;
+      countLabel.textContent = `${filtered.length} event${filtered.length === 1 ? '' : 's'}`;
+
+      filtered.forEach((e) => {
+        const li = document.createElement('li');
+        li.className = 'event';
+
+        const kind = normalizeType(e.type || '');
+        const typeEl = document.createElement('div');
+        typeEl.className = 'event-type';
+        typeEl.dataset.kind = kind;
+        typeEl.textContent = kind || 'Event';
+
+        const mainEl = document.createElement('div');
+        mainEl.className = 'event-main';
+        const title = e.title || e.summary || '(untitled product)';
+        const url = e.url || '#';
+        mainEl.innerHTML = `<a href="${url}" target="_blank" rel="noopener noreferrer">${title}</a>`;
+
+        const metaEl = document.createElement('div');
+        metaEl.className = 'event-meta';
+
+        const site = e.domain || '';
+        if (site) {
+          const pill = document.createElement('span');
+          pill.className = 'pill';
+          pill.textContent = site;
+          metaEl.appendChild(pill);
+        }
+
+        const brand = (e.brand || '').trim();
+        if (brand) {
+          const pill = document.createElement('span');
+          pill.className = 'pill';
+          pill.textContent = brand;
+          metaEl.appendChild(pill);
+        }
+
+        if (e.discountPct != null) {
+          const pill = document.createElement('span');
+          pill.className = 'pill';
+          pill.textContent = `${e.discountPct}% off`;
+          metaEl.appendChild(pill);
+        }
+
+        if (e.timestamp) {
+          const pill = document.createElement('span');
+          pill.className = 'pill';
+          pill.textContent = e.timestamp.replace('T', ' ').slice(0, 16) + ' UTC';
+          metaEl.appendChild(pill);
+        }
+
+        li.appendChild(typeEl);
+        li.appendChild(mainEl);
+        li.appendChild(metaEl);
+        list.appendChild(li);
+      });
+    }
+
+    document.getElementById('filter-date').addEventListener('change', (e) => {
+      filters.date = e.target.value || null;
+      renderEvents();
+    });
+    document.getElementById('filter-site').addEventListener('change', (e) => {
+      filters.site = e.target.value || '';
+      renderEvents();
+    });
+    document.getElementById('filter-type').addEventListener('change', (e) => {
+      filters.type = e.target.value || '';
+      renderEvents();
+    });
+    document.getElementById('filter-brand').addEventListener('change', (e) => {
+      filters.brand = e.target.value || '';
+      renderEvents();
+    });
+
+    loadEvents();
+    setInterval(loadEvents, 60_000);
+  </script>
+</body>
+</html>
