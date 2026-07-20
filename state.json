@@ -3825,6 +3825,24 @@
     },
     "beautyliv.com": {},
     "aurafragrance.com": {
+      "8264360755263": {
+        "title": "Love Shot Ex Nihilo Unisex EDP",
+        "handle": "love-shot-ex-nihilo-unisex-edp",
+        "variants": {
+          "43552090488895": {
+            "available": true,
+            "price": 179.98
+          },
+          "43552090521663": {
+            "available": false,
+            "price": 39.98
+          },
+          "43552090554431": {
+            "available": false,
+            "price": 149.98
+          }
+        }
+      },
       "8262085607487": {
         "title": "Chrome United for Men EDT",
         "handle": "chrome-united-for-men-edt",
@@ -4632,7 +4650,7 @@
         "handle": "gisada-ambassador-intense-for-men-edp",
         "variants": {
           "43402266148927": {
-            "available": true,
+            "available": false,
             "price": 68.98
           },
           "43402266181695": {
@@ -5552,7 +5570,7 @@
         "handle": "tom-ford-eau-dombre-leather-for-men-edt",
         "variants": {
           "43146971873343": {
-            "available": false,
+            "available": true,
             "price": 129.98
           },
           "43146971906111": {
@@ -7962,16 +7980,6 @@
             "price": 64.98
           }
         }
-      },
-      "7946918559807": {
-        "title": "Coach Women Gift Set 3oz EDP & Pouch & 3.3oz Body Lotion",
-        "handle": "coach-women-gift-set-3oz-edp-pouch-33oz-body-lotion",
-        "variants": {
-          "42498503245887": {
-            "available": true,
-            "price": 64.98
-          }
-        }
       }
     },
     "venbafragrance.com": {
@@ -10216,7 +10224,7 @@
         "handle": "andrea-maack-soft-tension-edp-tester",
         "variants": {
           "48382790598878": {
-            "available": true,
+            "available": false,
             "price": 185
           }
         }
