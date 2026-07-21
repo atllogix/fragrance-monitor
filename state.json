@@ -1607,7 +1607,7 @@
             "price": 224.98
           },
           "43019434033211": {
-            "available": true,
+            "available": false,
             "price": 3.99
           },
           "43073181515835": {
@@ -5570,7 +5570,7 @@
         "handle": "tom-ford-eau-dombre-leather-for-men-edt",
         "variants": {
           "43146971873343": {
-            "available": true,
+            "available": false,
             "price": 129.98
           },
           "43146971906111": {
@@ -6333,7 +6333,7 @@
         "variants": {
           "43065569509439": {
             "available": false,
-            "price": 125
+            "price": 124.49
           },
           "43065569542207": {
             "available": false,
@@ -8504,7 +8504,7 @@
         "handle": "fugazzi-angel-dust-extrait-tester",
         "variants": {
           "48041537306846": {
-            "available": true,
+            "available": false,
             "price": 220
           }
         }
@@ -8514,7 +8514,7 @@
         "handle": "ex-nihilo-devil-tender-edp-tester-1",
         "variants": {
           "48430209597662": {
-            "available": true,
+            "available": false,
             "price": 249.99
           }
         }
@@ -8524,7 +8524,7 @@
         "handle": "ex-nihilo-jasmine-fauve-edp-tester",
         "variants": {
           "48430030717150": {
-            "available": true,
+            "available": false,
             "price": 249.99
           }
         }
@@ -16694,7 +16694,7 @@
             "price": 90.99
           },
           "45974080651321": {
-            "available": false,
+            "available": true,
             "price": 453.99
           }
         }
@@ -17080,7 +17080,7 @@
             "price": 63.99
           },
           "45916705718329": {
-            "available": false,
+            "available": true,
             "price": 421.99
           }
         }

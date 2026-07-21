@@ -1,0 +1,24 @@
+[
+  {
+    "timestamp": "2026-07-21T03:36:55.243Z",
+    "domain": "theparfums.com",
+    "type": "Restocked",
+    "brand": "AMOUAGE",
+    "title": "Elsewhere (Last Pre-Order)",
+    "oldPrice": null,
+    "newPrice": 453.99,
+    "discountPct": null,
+    "url": "https://theparfums.com/products/elsewhere-pre-order"
+  },
+  {
+    "timestamp": "2026-07-21T03:36:55.243Z",
+    "domain": "theparfums.com",
+    "type": "Restocked",
+    "brand": "EX NIHILO",
+    "title": "Speed Legends Night Drive (pre-order)",
+    "oldPrice": null,
+    "newPrice": 421.99,
+    "discountPct": null,
+    "url": "https://theparfums.com/products/speed-legends-night-drive"
+  }
+]
