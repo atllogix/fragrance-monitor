@@ -8385,24 +8385,6 @@
           }
         }
       },
-      "8832267157726": {
-        "title": "Roja Parfums Enigma Parfum Cologne",
-        "handle": "sample-roja-parfums-enigma-parfum-cologne",
-        "variants": {
-          "46334168629470": {
-            "available": false,
-            "price": 7.99
-          },
-          "46971032305886": {
-            "available": false,
-            "price": 35.99
-          },
-          "46334168662238": {
-            "available": false,
-            "price": 62.99
-          }
-        }
-      },
       "8508651929822": {
         "title": "Roja Parfums Isola Sol Parfum",
         "handle": "sample-roja-parfums-isola-sol-edp",
@@ -11560,6 +11542,16 @@
           "48422396428510": {
             "available": false,
             "price": 40.99
+          }
+        }
+      },
+      "9228645794014": {
+        "title": "Meo Fusciuni Narcotico Parfum",
+        "handle": "meo-fusciuni-narcotico",
+        "variants": {
+          "48285765435614": {
+            "available": true,
+            "price": 275
           }
         }
       }
@@ -16956,7 +16948,7 @@
         }
       },
       "8306595627065": {
-        "title": "Elsewhere (Last Pre-Order)",
+        "title": "Elsewhere (2nd Pre-Order)",
         "handle": "elsewhere-pre-order",
         "variants": {
           "45974080520249": {
