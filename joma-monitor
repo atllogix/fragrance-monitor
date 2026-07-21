@@ -44,10 +44,16 @@ function csvEscape(val) {
 }
 
 function eventSummary(e) {
+  let base;
   if (e.type.endsWith('Price Drop')) {
-    return `jomashop.com: ${e.title} — $${e.oldPrice} to $${e.newPrice}`;
+    base = `jomashop.com: ${e.title} — $${e.oldPrice} to $${e.newPrice}`;
+  } else {
+    base = `jomashop.com: ${e.title}`;
   }
-  return `jomashop.com: ${e.title}`;
+  if (e.promoCode && e.effectivePrice !== null && e.effectivePrice !== undefined) {
+    base += ` (code ${e.promoCode} → $${e.effectivePrice})`;
+  }
+  return base;
 }
 
 function isRealProductUrl(url) {
@@ -221,6 +227,8 @@ function appendEventsJson(events) {
       newPrice: e.newPrice,
       discountPct: e.discountPct,
       url: e.url,
+      promoCode: e.promoCode || null,
+      effectivePrice: e.effectivePrice ?? null,
     }));
 
     const cutoff = Date.now() - EVENTS_JSON_MAX_AGE_DAYS * 24 * 60 * 60 * 1000;
@@ -346,6 +354,19 @@ function saveState(state) {
       const productUrl = p.url_key ? `https://www.jomashop.com/${p.url_key}.html` : '';
       if (!p.url_key) missingUrlKeyCount++;
 
+      // Promo/coupon code, if any — Jomashop exposes this per-product.
+      const promoCode = p?.promotext_data_info?.promotext_code || '';
+      const promoType = p?.promotext_data_info?.promotext_type || ''; // e.g. "percent" or "fixed"
+      const promoValue = toNum(p?.promotext_data_info?.promotext_value);
+      let effectivePrice = finalPrice;
+      if (finalPrice !== null && promoCode && promoValue !== null) {
+        if (promoType.toLowerCase().includes('percent')) {
+          effectivePrice = Math.round(finalPrice * (1 - promoValue / 100) * 100) / 100;
+        } else {
+          effectivePrice = Math.round((finalPrice - promoValue) * 100) / 100;
+        }
+      }
+
       newData[p.id] = { name: p.name, stockStatus, price: finalPrice };
 
       const prev = prevData[p.id];
@@ -369,6 +390,8 @@ function saveState(state) {
             newPrice: finalPrice,
             discountPct: null,
             url: productUrl,
+            promoCode: promoCode || null,
+            effectivePrice: promoCode ? effectivePrice : null,
           });
         }
       }
@@ -384,6 +407,8 @@ function saveState(state) {
               newPrice: finalPrice,
               discountPct: null,
               url: productUrl,
+              promoCode: promoCode || null,
+              effectivePrice: promoCode ? effectivePrice : null,
             });
           }
         }
@@ -398,6 +423,8 @@ function saveState(state) {
               newPrice: finalPrice,
               discountPct: pct,
               url: productUrl,
+              promoCode: promoCode || null,
+              effectivePrice: promoCode ? effectivePrice : null,
             });
           }
         }
