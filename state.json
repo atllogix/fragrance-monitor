@@ -8497,6 +8497,10 @@
         "title": "Fugazzi Angel Dust Extrait (Tester)",
         "handle": "fugazzi-angel-dust-extrait-tester",
         "variants": {
+          "48457636675806": {
+            "available": false,
+            "price": 150
+          },
           "48041537306846": {
             "available": false,
             "price": 220
@@ -16774,7 +16778,7 @@
         "handle": "odyssey-the-legend-returns-extrait",
         "variants": {
           "46033771331641": {
-            "available": true,
+            "available": false,
             "price": 9.99
           },
           "46033771364409": {
@@ -17412,7 +17416,7 @@
         }
       },
       "8287384895545": {
-        "title": "Perseveranza",
+        "title": "Perseveranza (pre-order)",
         "handle": "perseveranza",
         "variants": {
           "45915998322745": {
@@ -17438,7 +17442,7 @@
         }
       },
       "8287380734009": {
-        "title": "Fierezza",
+        "title": "Fierezza (pre-order)",
         "handle": "fierezza",
         "variants": {
           "45915986034745": {
