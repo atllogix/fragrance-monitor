@@ -356,8 +356,11 @@ function render() {
         }
       }
       let promoHtml = '';
-      if (e.promoCode && e.effectivePrice !== null && e.effectivePrice !== undefined) {
-        promoHtml = `<div class="event-price" style="margin-top:2px;">code <strong>${e.promoCode}</strong> → <span class="new-price">$${e.effectivePrice}</span></div>`;
+      if (e.effectivePrice !== null && e.effectivePrice !== undefined) {
+        const promoLabel = e.promoCode
+          ? `code <strong>${e.promoCode}</strong>`
+          : `auto-applied discount`;
+        promoHtml = `<div class="event-price" style="margin-top:2px;">${promoLabel} → <span class="new-price">$${e.effectivePrice}</span></div>`;
       }
       html += `
         <div class="event-row" style="--border-type: ${borderColorVar(e.type)}">
