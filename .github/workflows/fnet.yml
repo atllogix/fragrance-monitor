@@ -27,7 +27,7 @@ jobs:
       - name: Run FragranceNet monitor
         env:
           NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
-        run: node fragrancenet-monitor.js
+        run: node fnet-monitor.js
 
       - name: Commit updated state
         run: |
