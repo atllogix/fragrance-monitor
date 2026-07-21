@@ -22,6 +22,31 @@ const BRAND_WATCHLIST = [];
 const MIN_DISCOUNT_PCT = 5;
 const SKIP_PRICE_MONITORING = ['olfactoryfactoryllc.com', 'aurafragrance.com'];
 
+// Sites confirmed to run an always-on sitewide promo banner (e.g. "48% off sitewide.
+// Code TPBTS48") — fetched once per run (not per-product) and applied uniformly.
+const SITEWIDE_PROMO_SITES = ['theparfums.com'];
+
+async function fetchSitewidePromo(domain) {
+  try {
+    const res = await fetch(`https://${domain}/`, {
+      headers: { 'User-Agent': 'Mozilla/5.0 (fragrance-monitor bot)' },
+    });
+    if (!res.ok) return null;
+    const html = await res.text();
+    // Matches patterns like "48% off sitewide. Code TPBTS48" — flexible on wording,
+    // strict on capturing a percentage and an adjacent all-caps/alphanumeric code.
+    const match = html.match(/(\d{1,2})%\s*off\s*sitewide[^A-Za-z0-9]{0,20}code\s+([A-Z0-9]{3,15})/i);
+    if (!match) {
+      console.warn(`[${domain}] sitewide promo banner not found this run (site copy may have changed).`);
+      return null;
+    }
+    return { pct: parseInt(match[1], 10), code: match[2].toUpperCase() };
+  } catch (err) {
+    console.warn(`[${domain}] sitewide promo fetch failed: ${err.message}`);
+    return null;
+  }
+}
+
 function sleep(ms) {
   return new Promise((resolve) => setTimeout(resolve, ms));
 }
@@ -45,10 +70,16 @@ function csvEscape(val) {
 }
 
 function eventSummary(e) {
+  let base;
   if (e.type.endsWith('Price Drop')) {
-    return `${e.domain}: ${e.title} — $${e.oldPrice} to $${e.newPrice}`;
+    base = `${e.domain}: ${e.title} — $${e.oldPrice} to $${e.newPrice}`;
+  } else {
+    base = `${e.domain}: ${e.title}`;
   }
-  return `${e.domain}: ${e.title}`;
+  if (e.promoCode && e.effectivePrice !== null && e.effectivePrice !== undefined) {
+    base += ` (code ${e.promoCode} → $${e.effectivePrice})`;
+  }
+  return base;
 }
 
 // A URL only counts as "real" if it's non-empty and isn't just the bare domain root
@@ -231,6 +262,8 @@ function appendEventsJson(events) {
       newPrice: e.newPrice,
       discountPct: e.discountPct,
       url: e.url,
+      promoCode: e.promoCode || null,
+      effectivePrice: e.effectivePrice ?? null,
     }));
 
     const cutoff = Date.now() - EVENTS_JSON_MAX_AGE_DAYS * 24 * 60 * 60 * 1000;
@@ -314,7 +347,7 @@ function saveState(state) {
   fs.writeFileSync(STATE_FILE, JSON.stringify(state, null, 2));
 }
 
-async function checkSite(domain, state, events, priceHistoryRows) {
+async function checkSite(domain, state, events, priceHistoryRows, sitewidePromo) {
   const products = await fetchAllProducts(domain);
   if (products === null) {
     console.warn(`[${domain}] SKIPPED this cycle (fetch failed)`);
@@ -342,6 +375,13 @@ async function checkSite(domain, state, events, priceHistoryRows) {
     const currentPrice = firstVariant ? parseFloat(firstVariant.price) : null;
     const currentAvailable = firstVariant ? firstVariant.available : false;
 
+    let promoCode = null;
+    let effectivePrice = null;
+    if (sitewidePromo && currentPrice !== null) {
+      promoCode = sitewidePromo.code;
+      effectivePrice = Math.round(currentPrice * (1 - sitewidePromo.pct / 100) * 100) / 100;
+    }
+
     if (priceHistoryRows && currentPrice !== null && !SKIP_PRICE_MONITORING.includes(domain)) {
       const prevFirstVariant = prevProduct && firstVariant ? prevProduct.variants[firstVariant.id] : null;
       const isNew = !prevProduct;
@@ -364,6 +404,8 @@ async function checkSite(domain, state, events, priceHistoryRows) {
           newPrice: currentPrice,
           discountPct: null,
           url: productUrl,
+          promoCode,
+          effectivePrice,
         });
       }
     }
@@ -383,6 +425,8 @@ async function checkSite(domain, state, events, priceHistoryRows) {
                 newPrice: v.price,
                 discountPct: null,
                 url: productUrl,
+                promoCode,
+                effectivePrice,
               });
             }
           }
@@ -398,6 +442,8 @@ async function checkSite(domain, state, events, priceHistoryRows) {
                 newPrice: v.price,
                 discountPct: pct,
                 url: productUrl,
+                promoCode,
+                effectivePrice,
               });
             }
           }
@@ -420,7 +466,14 @@ async function checkSite(domain, state, events, priceHistoryRows) {
 
   for (const domain of SITES) {
     console.log(`Checking ${domain}...`);
-    await checkSite(domain, state, events, priceHistoryRows);
+    let sitewidePromo = null;
+    if (SITEWIDE_PROMO_SITES.includes(domain)) {
+      sitewidePromo = await fetchSitewidePromo(domain);
+      if (sitewidePromo) {
+        console.log(`[${domain}] active sitewide promo: ${sitewidePromo.pct}% off, code ${sitewidePromo.code}`);
+      }
+    }
+    await checkSite(domain, state, events, priceHistoryRows, sitewidePromo);
     await sleep(SITE_DELAY_MS);
   }
 
