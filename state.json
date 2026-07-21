@@ -123,7 +123,7 @@
         "handle": "elie-saab-girl-of-now-rose-petal",
         "variants": {
           "43798212509755": {
-            "available": true,
+            "available": false,
             "price": 55
           }
         }
@@ -10684,7 +10684,7 @@
         "handle": "house-of-bo-xuxu-parfum",
         "variants": {
           "48413115056350": {
-            "available": true,
+            "available": false,
             "price": 195
           },
           "48437298364638": {
@@ -10702,7 +10702,7 @@
         "handle": "house-of-bo-cosmos-parfum",
         "variants": {
           "48413095166174": {
-            "available": true,
+            "available": false,
             "price": 195
           },
           "48437409415390": {
@@ -17390,19 +17390,19 @@
         "handle": "avanguardia",
         "variants": {
           "45916007202873": {
-            "available": false,
+            "available": true,
             "price": 9.99
           },
           "45916007235641": {
-            "available": false,
+            "available": true,
             "price": 18.99
           },
           "45916007268409": {
-            "available": false,
+            "available": true,
             "price": 39.99
           },
           "45916007301177": {
-            "available": false,
+            "available": true,
             "price": 62.99
           },
           "45916007333945": {
@@ -17416,23 +17416,23 @@
         "handle": "perseveranza",
         "variants": {
           "45915998322745": {
-            "available": false,
+            "available": true,
             "price": 9.99
           },
           "45915998355513": {
-            "available": false,
+            "available": true,
             "price": 18.99
           },
           "45915998388281": {
-            "available": false,
+            "available": true,
             "price": 39.99
           },
           "45915998421049": {
-            "available": false,
+            "available": true,
             "price": 62.99
           },
           "45915998453817": {
-            "available": false,
+            "available": true,
             "price": 379.99
           }
         }
