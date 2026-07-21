@@ -809,7 +809,7 @@
             "price": 239
           },
           "42337623670843": {
-            "available": true,
+            "available": false,
             "price": 6.99
           },
           "43080826847291": {
@@ -1267,11 +1267,11 @@
         "handle": "parfums-de-marly-safanad",
         "variants": {
           "40703979323451": {
-            "available": false,
+            "available": true,
             "price": 4.5
           },
           "40848140107835": {
-            "available": false,
+            "available": true,
             "price": 215
           },
           "42138325549115": {
@@ -1279,7 +1279,7 @@
             "price": 4.5
           },
           "42158987771963": {
-            "available": false,
+            "available": true,
             "price": 199
           }
         }
@@ -1319,7 +1319,7 @@
         "handle": "parfums-de-marly-meliora",
         "variants": {
           "40703978930235": {
-            "available": false,
+            "available": true,
             "price": 4.99
           },
           "40703978995771": {
@@ -1353,7 +1353,7 @@
             "price": 155
           },
           "41596982001723": {
-            "available": false,
+            "available": true,
             "price": 189
           },
           "41845725331515": {
@@ -1361,7 +1361,7 @@
             "price": 269.99
           },
           "41900500975675": {
-            "available": false,
+            "available": true,
             "price": 3.99
           },
           "41897077178427": {
@@ -1453,7 +1453,7 @@
             "price": 999
           },
           "43825690869819": {
-            "available": false,
+            "available": true,
             "price": 4.5
           }
         }
@@ -1477,7 +1477,7 @@
             "price": 279.99
           },
           "43233890140219": {
-            "available": false,
+            "available": true,
             "price": 245
           },
           "43233890172987": {
@@ -1499,7 +1499,7 @@
             "price": 265
           },
           "43233890041915": {
-            "available": false,
+            "available": true,
             "price": 245
           },
           "43233890074683": {
@@ -1525,11 +1525,11 @@
             "price": 449
           },
           "43233890435131": {
-            "available": false,
+            "available": true,
             "price": 275
           },
           "43754020372539": {
-            "available": false,
+            "available": true,
             "price": 3.99
           },
           "43779111878715": {
@@ -1547,7 +1547,7 @@
             "price": 198
           },
           "42428637380667": {
-            "available": false,
+            "available": true,
             "price": 195
           },
           "42513124917307": {
@@ -1555,7 +1555,7 @@
             "price": 159
           },
           "43754018963515": {
-            "available": false,
+            "available": true,
             "price": 3.99
           }
         }
@@ -1611,11 +1611,11 @@
             "price": 224.98
           },
           "43019434033211": {
-            "available": false,
+            "available": true,
             "price": 3.99
           },
           "43073181515835": {
-            "available": false,
+            "available": true,
             "price": 215
           },
           "43293755179067": {
@@ -1719,11 +1719,11 @@
         "handle": "parfums-de-marly-valaya",
         "variants": {
           "41681822056507": {
-            "available": false,
+            "available": true,
             "price": 215
           },
           "41704542208059": {
-            "available": false,
+            "available": true,
             "price": 209
           },
           "41883473543227": {
@@ -1907,7 +1907,7 @@
             "price": 3.99
           },
           "41078041706555": {
-            "available": false,
+            "available": true,
             "price": 169
           },
           "41224846180411": {
@@ -1915,11 +1915,11 @@
             "price": 11.99
           },
           "41708671434811": {
-            "available": false,
+            "available": true,
             "price": 209
           },
           "41744092332091": {
-            "available": false,
+            "available": true,
             "price": 299
           },
           "42225163796539": {
@@ -2023,7 +2023,7 @@
         "handle": "parfums-de-marly-galloway",
         "variants": {
           "40848582279227": {
-            "available": false,
+            "available": true,
             "price": 199
           },
           "40886050095163": {
@@ -2043,11 +2043,11 @@
             "price": 125
           },
           "41897740533819": {
-            "available": false,
+            "available": true,
             "price": 185
           },
           "43754020995131": {
-            "available": false,
+            "available": true,
             "price": 3.5
           }
         }
@@ -2069,7 +2069,7 @@
             "price": 155
           },
           "41845726871611": {
-            "available": false,
+            "available": true,
             "price": 195
           },
           "42225169563707": {
@@ -2091,11 +2091,11 @@
         "handle": "parfums-de-marly-sedley",
         "variants": {
           "40848104128571": {
-            "available": false,
+            "available": true,
             "price": 215
           },
           "40885980790843": {
-            "available": false,
+            "available": true,
             "price": 169
           },
           "40897869316155": {
@@ -2107,7 +2107,7 @@
             "price": 310
           },
           "41708671467579": {
-            "available": false,
+            "available": true,
             "price": 209
           },
           "41884856647739": {
@@ -2141,7 +2141,7 @@
             "price": 215
           },
           "41078039576635": {
-            "available": false,
+            "available": true,
             "price": 159
           },
           "41521096097851": {
@@ -2227,7 +2227,7 @@
             "price": 149
           },
           "41897738502203": {
-            "available": false,
+            "available": true,
             "price": 199
           }
         }
@@ -2279,7 +2279,7 @@
             "price": 3.5
           },
           "41552389603387": {
-            "available": false,
+            "available": true,
             "price": 199
           },
           "41596944089147": {
@@ -2377,15 +2377,15 @@
         "handle": "parfums-de-marly-athalia",
         "variants": {
           "40703983648827": {
-            "available": false,
+            "available": true,
             "price": 3.99
           },
           "40848157048891": {
-            "available": false,
+            "available": true,
             "price": 199
           },
           "41897742598203": {
-            "available": false,
+            "available": true,
             "price": 179
           },
           "42138326007867": {
@@ -3992,7 +3992,7 @@
             "price": 39.98
           },
           "43497739288639": {
-            "available": false,
+            "available": true,
             "price": 12.98
           }
         }
@@ -4694,7 +4694,7 @@
             "price": 44.98
           },
           "43392843808831": {
-            "available": false,
+            "available": true,
             "price": 9.98
           }
         }
@@ -4998,7 +4998,7 @@
             "price": 31.98
           },
           "43270310723647": {
-            "available": false,
+            "available": true,
             "price": 9.98
           }
         }
@@ -5864,7 +5864,7 @@
             "price": 35.98
           },
           "43142268190783": {
-            "available": false,
+            "available": true,
             "price": 9.98
           }
         }
