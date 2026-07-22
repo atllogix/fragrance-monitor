@@ -235,7 +235,10 @@
         <option value="Restocked">Restocked</option>
         <option value="Price Drop">Price Drops</option>
       </select>
-      <input type="text" id="brandFilter" placeholder="Filter by brand…">
+      <select id="brandSelect">
+        <option value="">All brands</option>
+      </select>
+      <input type="text" id="brandFilter" placeholder="Or type to search brand…">
       <span class="count-badge" id="countBadge"></span>
     </div>
   </div>
@@ -297,6 +300,19 @@ function populateSiteFilter(events) {
     const opt = document.createElement('option');
     opt.value = site;
     opt.textContent = site;
+    select.appendChild(opt);
+  });
+}
+
+function populateBrandFilter(events) {
+  const brands = [...new Set(events.map((e) => e.brand).filter(Boolean))].sort((a, b) =>
+    a.localeCompare(b)
+  );
+  const select = document.getElementById('brandSelect');
+  brands.forEach((brand) => {
+    const opt = document.createElement('option');
+    opt.value = brand;
+    opt.textContent = brand;
     select.appendChild(opt);
   });
 }
@@ -395,10 +411,19 @@ async function init() {
   }
 
   populateSiteFilter(allEvents);
+  populateBrandFilter(allEvents);
   ['dateFilter', 'siteFilter', 'typeFilter'].forEach((id) => {
     document.getElementById(id).addEventListener('change', render);
   });
-  document.getElementById('brandFilter').addEventListener('input', render);
+  document.getElementById('brandFilter').addEventListener('input', () => {
+    document.getElementById('brandSelect').value = '';
+    render();
+  });
+  document.getElementById('brandSelect').addEventListener('change', () => {
+    const selected = document.getElementById('brandSelect').value;
+    document.getElementById('brandFilter').value = selected;
+    render();
+  });
 
   render();
 
