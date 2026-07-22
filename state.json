@@ -7993,7 +7993,7 @@
         "variants": {
           "47703003562206": {
             "available": false,
-            "price": 209.99
+            "price": 355.99
           },
           "48453236261086": {
             "available": false,
@@ -8013,6 +8013,10 @@
         "title": "Amouage Journey Man EDP",
         "handle": "sample-amouage-journey-man-edp-1",
         "variants": {
+          "48459844288734": {
+            "available": false,
+            "price": 354.99
+          },
           "46687320965342": {
             "available": false,
             "price": 6.99
@@ -8033,7 +8037,7 @@
         "variants": {
           "46611307757790": {
             "available": false,
-            "price": 179.99
+            "price": 354.99
           },
           "48453175443678": {
             "available": false,
@@ -8055,7 +8059,7 @@
         "variants": {
           "47950830174430": {
             "available": false,
-            "price": 239.99
+            "price": 354.99
           },
           "48453153849566": {
             "available": false,
@@ -8586,7 +8590,7 @@
         "handle": "fugazzi-angel-dust-extrait-tester",
         "variants": {
           "48457636675806": {
-            "available": false,
+            "available": true,
             "price": 150
           },
           "48041537306846": {
@@ -9187,7 +9191,7 @@
         "variants": {
           "48437433598174": {
             "available": true,
-            "price": 200
+            "price": 190
           },
           "48445644996830": {
             "available": false,
@@ -9209,7 +9213,7 @@
         "variants": {
           "48375555162334": {
             "available": true,
-            "price": 200
+            "price": 190
           },
           "48445687070942": {
             "available": false,
@@ -9231,7 +9235,7 @@
         "variants": {
           "48375506534622": {
             "available": true,
-            "price": 200
+            "price": 190
           },
           "48445671145694": {
             "available": false,
@@ -9253,7 +9257,7 @@
         "variants": {
           "48375436935390": {
             "available": true,
-            "price": 200
+            "price": 190
           },
           "48445971595486": {
             "available": false,
@@ -9275,7 +9279,7 @@
         "variants": {
           "48375396368606": {
             "available": true,
-            "price": 200
+            "price": 190
           },
           "48445765779678": {
             "available": false,
@@ -9297,7 +9301,7 @@
         "variants": {
           "48375293575390": {
             "available": true,
-            "price": 200
+            "price": 190
           },
           "48445663183070": {
             "available": false,
@@ -9319,7 +9323,7 @@
         "variants": {
           "48375232659678": {
             "available": true,
-            "price": 200
+            "price": 190
           },
           "48445682548958": {
             "available": false,
@@ -9341,7 +9345,7 @@
         "variants": {
           "48375173873886": {
             "available": true,
-            "price": 200
+            "price": 190
           },
           "48445621436638": {
             "available": false,
@@ -9363,7 +9367,7 @@
         "variants": {
           "48375108993246": {
             "available": true,
-            "price": 200
+            "price": 190
           },
           "48445875847390": {
             "available": false,
@@ -9385,7 +9389,7 @@
         "variants": {
           "48375056171230": {
             "available": true,
-            "price": 200
+            "price": 190
           },
           "48445985652958": {
             "available": false,
