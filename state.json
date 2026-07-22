@@ -2,23 +2,51 @@
   "firstRun": false,
   "sites": {
     "olfactoryfactoryllc.com": {
-      "7716170596411": {
-        "title": "Amouage - Sequence",
-        "handle": "amouage-sequence",
+      "7721177055291": {
+        "title": "Amouage - Gold Woman Edp",
+        "handle": "amouage-gold-woman-edp",
         "variants": {
-          "43810211725371": {
+          "43829799551035": {
+            "available": false,
+            "price": 225
+          },
+          "43829799583803": {
             "available": false,
             "price": 999
           }
         }
       },
+      "7721114501179": {
+        "title": "Amouage - Lustre Essence De Parfum",
+        "handle": "amouage-lustre-essence-de-parfum",
+        "variants": {
+          "43829429338171": {
+            "available": false,
+            "price": 309.99
+          },
+          "43829429370939": {
+            "available": false,
+            "price": 239
+          }
+        }
+      },
+      "7716170596411": {
+        "title": "Amouage - The Essences - Sequence",
+        "handle": "amouage-sequence",
+        "variants": {
+          "43810211725371": {
+            "available": false,
+            "price": 399
+          }
+        }
+      },
       "7716170563643": {
-        "title": "Amouage - Remain",
+        "title": "Amouage - The Essences - Remain",
         "handle": "amouage-remain",
         "variants": {
           "43810211692603": {
             "available": false,
-            "price": 999
+            "price": 399
           }
         }
       },
@@ -28,7 +56,7 @@
         "variants": {
           "43810211495995": {
             "available": false,
-            "price": 999
+            "price": 335
           }
         }
       },
@@ -396,7 +424,7 @@
         "variants": {
           "43748192747579": {
             "available": false,
-            "price": 415
+            "price": 399
           }
         }
       },
@@ -3801,26 +3829,6 @@
         "handle": "dorin-paris-un-air-de-paris-spicy",
         "variants": {
           "43543784685627": {
-            "available": false,
-            "price": 70
-          }
-        }
-      },
-      "7610266812475": {
-        "title": "Dorin Paris - Un Air de Paris Floral",
-        "handle": "dorin-paris-un-air-de-paris-floral",
-        "variants": {
-          "43543784652859": {
-            "available": false,
-            "price": 64
-          }
-        }
-      },
-      "7610266779707": {
-        "title": "Dorin Paris - Un Air de Damas Tubéreuse",
-        "handle": "dorin-paris-un-air-de-damas-tubereuse",
-        "variants": {
-          "43543784620091": {
             "available": false,
             "price": 70
           }
