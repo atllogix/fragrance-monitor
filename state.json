@@ -8,7 +8,7 @@
         "variants": {
           "43829799551035": {
             "available": false,
-            "price": 225
+            "price": 239
           },
           "43829799583803": {
             "available": false,
@@ -35,7 +35,7 @@
         "handle": "amouage-sequence",
         "variants": {
           "43810211725371": {
-            "available": false,
+            "available": true,
             "price": 399
           }
         }
@@ -45,7 +45,7 @@
         "handle": "amouage-remain",
         "variants": {
           "43810211692603": {
-            "available": false,
+            "available": true,
             "price": 399
           }
         }
@@ -55,7 +55,7 @@
         "handle": "amouage-timber",
         "variants": {
           "43810211495995": {
-            "available": false,
+            "available": true,
             "price": 335
           }
         }
@@ -423,7 +423,7 @@
         "handle": "amouage-the-essences-line-618",
         "variants": {
           "43748192747579": {
-            "available": false,
+            "available": true,
             "price": 399
           }
         }
@@ -1505,7 +1505,7 @@
             "price": 279.99
           },
           "43233890140219": {
-            "available": true,
+            "available": false,
             "price": 245
           },
           "43233890172987": {
@@ -8000,7 +8000,7 @@
         "handle": "amouage-meander-edp",
         "variants": {
           "47703003562206": {
-            "available": false,
+            "available": true,
             "price": 355.99
           },
           "48453236261086": {
@@ -8022,7 +8022,7 @@
         "handle": "sample-amouage-journey-man-edp-1",
         "variants": {
           "48459844288734": {
-            "available": false,
+            "available": true,
             "price": 354.99
           },
           "46687320965342": {
@@ -8044,7 +8044,7 @@
         "handle": "amouage-epic-man-edp",
         "variants": {
           "46611307757790": {
-            "available": false,
+            "available": true,
             "price": 354.99
           },
           "48453175443678": {
@@ -8066,7 +8066,7 @@
         "handle": "amouage-lyric-man-edp",
         "variants": {
           "47950830174430": {
-            "available": false,
+            "available": true,
             "price": 354.99
           },
           "48453153849566": {
