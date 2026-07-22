@@ -1266,21 +1266,21 @@
         "title": "Parfums de Marly - Safanad",
         "handle": "parfums-de-marly-safanad",
         "variants": {
-          "40703979323451": {
-            "available": true,
-            "price": 4.5
-          },
           "40848140107835": {
             "available": true,
             "price": 215
           },
-          "42138325549115": {
-            "available": false,
-            "price": 4.5
-          },
           "42158987771963": {
             "available": false,
             "price": 199
+          },
+          "40703979323451": {
+            "available": true,
+            "price": 4.5
+          },
+          "42138325549115": {
+            "available": false,
+            "price": 4.5
           }
         }
       },
@@ -15113,7 +15113,7 @@
           },
           "46227029590073": {
             "available": true,
-            "price": 480
+            "price": 460
           }
         }
       },
