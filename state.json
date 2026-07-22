@@ -14771,6 +14771,32 @@
       }
     },
     "theparfums.com": {
+      "8352741883961": {
+        "title": "Ambre Latte",
+        "handle": "ambre-latte",
+        "variants": {
+          "46236650209337": {
+            "available": true,
+            "price": 8.99
+          },
+          "46236650242105": {
+            "available": true,
+            "price": 17.99
+          },
+          "46236650274873": {
+            "available": true,
+            "price": 13.99
+          },
+          "46236650307641": {
+            "available": true,
+            "price": 28.99
+          },
+          "46236650340409": {
+            "available": true,
+            "price": 179
+          }
+        }
+      },
       "8350966251577": {
         "title": "Lovebird",
         "handle": "lovebird",
@@ -20882,32 +20908,6 @@
           "45631258132537": {
             "available": false,
             "price": 166.99
-          }
-        }
-      },
-      "8215376822329": {
-        "title": "Nevermore",
-        "handle": "nevermore",
-        "variants": {
-          "45631166480441": {
-            "available": false,
-            "price": 3.99
-          },
-          "45631166513209": {
-            "available": false,
-            "price": 6.99
-          },
-          "45631166545977": {
-            "available": false,
-            "price": 16.99
-          },
-          "45631166578745": {
-            "available": false,
-            "price": 29.99
-          },
-          "45631166611513": {
-            "available": true,
-            "price": 148.99
           }
         }
       }
