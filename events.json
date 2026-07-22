@@ -10355,5 +10355,31 @@
     "url": "https://www.jomashop.com/costume-national-unisex-scent-edp-spray-3-4-oz-fragrances-8034041522957.html",
     "promoCode": null,
     "effectivePrice": null
+  },
+  {
+    "timestamp": "2026-07-22T05:43:27.367Z",
+    "domain": "aurafragrance.com",
+    "type": "Restocked",
+    "brand": "Acqua Di Parma",
+    "title": "Acqua di Parma Mandorlo di Sicilia Unisex EDT",
+    "oldPrice": null,
+    "newPrice": 59.98,
+    "discountPct": null,
+    "url": "https://aurafragrance.com/products/acqua-di-parma-mandorlo-di-sicilia",
+    "promoCode": null,
+    "effectivePrice": null
+  },
+  {
+    "timestamp": "2026-07-22T05:43:27.367Z",
+    "domain": "aurafragrance.com",
+    "type": "Restocked",
+    "brand": "Cartier",
+    "title": "Cartier Declaration Parfum for Men",
+    "oldPrice": null,
+    "newPrice": 89.98,
+    "discountPct": null,
+    "url": "https://aurafragrance.com/products/cartier-declaration-parfum-for-men",
+    "promoCode": null,
+    "effectivePrice": null
   }
 ]
