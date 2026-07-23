@@ -229,7 +229,7 @@
         "handle": "lorenzo-pazzaglia-tropikalys-karma",
         "variants": {
           "43777053884475": {
-            "available": true,
+            "available": false,
             "price": 155
           }
         }
@@ -8726,7 +8726,7 @@
         "handle": "sample-amouage-journey-man-edp-1",
         "variants": {
           "48459844288734": {
-            "available": true,
+            "available": false,
             "price": 354.99
           },
           "46687320965342": {
