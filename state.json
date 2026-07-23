@@ -6752,7 +6752,7 @@
             "price": 189.98
           },
           "42933215428671": {
-            "available": false,
+            "available": true,
             "price": 39.98
           }
         }
@@ -7258,7 +7258,7 @@
         "handle": "odyssey-mega-for-men-by-armaf-edp",
         "variants": {
           "42761032302655": {
-            "available": false,
+            "available": true,
             "price": 17.98
           },
           "42761032335423": {
