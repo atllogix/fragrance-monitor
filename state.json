@@ -4258,7 +4258,7 @@
         "handle": "acqua-di-parma-mandorlo-di-sicilia",
         "variants": {
           "39669986328639": {
-            "available": true,
+            "available": false,
             "price": 59.98
           },
           "43474903728191": {
@@ -6270,7 +6270,7 @@
             "price": 79.98
           },
           "43065641762879": {
-            "available": true,
+            "available": false,
             "price": 26.98
           }
         }
@@ -7995,6 +7995,48 @@
       }
     },
     "venbafragrance.com": {
+      "9087312625886": {
+        "title": "The Harmonist Florae Nebulae Parfum (Tester)",
+        "handle": "the-harmonist-florae-nebulae-parfum-tester",
+        "variants": {
+          "47786398744798": {
+            "available": true,
+            "price": 229.99
+          }
+        }
+      },
+      "9269731819742": {
+        "title": "Sospiro Mezzo EDP (Tester)",
+        "handle": "sospiro-mezzo-edp-tester",
+        "variants": {
+          "48435297026270": {
+            "available": true,
+            "price": 199.99
+          }
+        }
+      },
+      "9275182547166": {
+        "title": "Amouage Existence EDP",
+        "handle": "amouage-existence-edp",
+        "variants": {
+          "48459884855518": {
+            "available": true,
+            "price": 359.99
+          },
+          "48453206114526": {
+            "available": false,
+            "price": 6.99
+          },
+          "48453206147294": {
+            "available": false,
+            "price": 6.99
+          },
+          "48453206180062": {
+            "available": false,
+            "price": 49.99
+          }
+        }
+      },
       "9276474163422": {
         "title": "Hind Al Oud You Never Know Parfum (Tester)",
         "handle": "hind-al-oud-you-never-know-parfum-tester",
@@ -11498,52 +11540,6 @@
           "48392457191646": {
             "available": false,
             "price": 64.49
-          }
-        }
-      },
-      "9256526184670": {
-        "title": "Xerjoff Perseveranza Parfum",
-        "handle": "xerjoff-perseveranza-parfum",
-        "variants": {
-          "48392153006302": {
-            "available": true,
-            "price": 10.99
-          },
-          "48392153039070": {
-            "available": false,
-            "price": 44.99
-          },
-          "48392153071838": {
-            "available": false,
-            "price": 60.99
-          }
-        }
-      },
-      "9256350679262": {
-        "title": "Xerjoff Avanguardia Parfum",
-        "handle": "xerjoff-avanguardia-parfum",
-        "variants": {
-          "48391415267550": {
-            "available": true,
-            "price": 10.99
-          },
-          "48391415300318": {
-            "available": false,
-            "price": 48.49
-          },
-          "48391415333086": {
-            "available": false,
-            "price": 67.49
-          }
-        }
-      },
-      "9232758440158": {
-        "title": "Parfums De Marly Valaya Exclusif Parfum (Tester)",
-        "handle": "parfums-de-marly-valaya-exclusif-parfum-tester",
-        "variants": {
-          "48303977332958": {
-            "available": true,
-            "price": 224.99
           }
         }
       }
