@@ -1,4 +1,381 @@
 Timestamp,Type,Domain,Brand,Title,OldPrice,NewPrice,DiscountPct,URL
+2026-07-23T07:04:05.823Z,Restocked,aurafragrance.com,Acqua Di Parma,Acqua di Parma Mandorlo di Sicilia Unisex EDT,,59.98,,https://aurafragrance.com/products/acqua-di-parma-mandorlo-di-sicilia
+2026-07-23T07:04:05.823Z,New Arrival,venbafragrance.com,Emirates Pride,Emirates Pride Future Bakhoor Parfum,,330,,https://venbafragrance.com/products/emirates-pride-future-bakhoor-parfum
+2026-07-23T07:04:05.823Z,New Arrival,venbafragrance.com,Emirates Pride,Emirates Pride Future Oud Parfum,,330,,https://venbafragrance.com/products/emirates-pride-future-oud-parfum
+2026-07-23T07:04:05.823Z,New Arrival,venbafragrance.com,Emirates Pride,Emirates Pride Peaceful Life Parfum,,190,,https://venbafragrance.com/products/emirates-pride-peaceful-life-parfum
+2026-07-23T07:04:05.823Z,New Arrival,venbafragrance.com,Emirates Pride,Emirates Pride Masters Parfum,,245,,https://venbafragrance.com/products/emirates-pride-masters-parfum
+2026-07-23T07:04:05.823Z,New Arrival,venbafragrance.com,Emirates Pride,Emirates Pride Reflection Set Parfum,,400,,https://venbafragrance.com/products/emirates-pride-reflection-set-parfum
+2026-07-23T07:04:05.823Z,New Arrival,venbafragrance.com,Emirates Pride,Emirates Pride Midnight Glow Parfum (Tester),,180,,https://venbafragrance.com/products/emirates-pride-midnight-glow-parfum-tester
+2026-07-23T07:04:05.823Z,New Arrival,venbafragrance.com,Emirates Pride,Emirates Pride Midnight Glow Parfum,,200,,https://venbafragrance.com/products/emirates-pride-midnight-glow-parfum
+2026-07-23T07:04:05.823Z,New Arrival,venbafragrance.com,Emirates Pride,Emirates Pride Midnight Bloom Parfum (Tester),,225,,https://venbafragrance.com/products/emirates-pride-midnight-bloom-parfum-tester
+2026-07-23T07:04:05.823Z,New Arrival,venbafragrance.com,Emirates Pride,Emirates Pride Midnight Bloom Parfum,,245,,https://venbafragrance.com/products/emirates-pride-midnight-bloom-parfum
+2026-07-23T07:04:05.823Z,New Arrival,venbafragrance.com,Emirates Pride,Emirates Pride Navy Parfum (Tester),,170,,https://venbafragrance.com/products/emirates-pride-navy-parfum-tester
+2026-07-23T07:04:05.823Z,New Arrival,venbafragrance.com,Emirates Pride,Emirates Pride Navy Parfum,,190,,https://venbafragrance.com/products/emirates-pride-navy-parfum
+2026-07-23T07:04:05.823Z,New Arrival,venbafragrance.com,Emirates Pride,Emirates Pride Masters Signature Parfum (Tester),,260,,https://venbafragrance.com/products/emirates-pride-masters-signature-parfum-tester
+2026-07-23T07:04:05.823Z,New Arrival,venbafragrance.com,Emirates Pride,Emirates Pride Masters Signature Parfum,,280,,https://venbafragrance.com/products/emirates-pride-masters-signature-parfum
+2026-07-23T07:04:05.823Z,New Arrival,venbafragrance.com,The Harmonist,The Harmonist Florae Nebulae Parfum (Tester),,229.99,,https://venbafragrance.com/products/the-harmonist-florae-nebulae-parfum-tester
+2026-07-23T07:04:05.823Z,New Arrival,venbafragrance.com,Amouage,Amouage Existence EDP,,359.99,,https://venbafragrance.com/products/amouage-existence-edp
+2026-07-23T07:04:05.823Z,New Arrival,venbafragrance.com,Hind Al Oud,Hind Al Oud You Never Know Parfum (Tester),,379.99,,https://venbafragrance.com/products/hind-al-oud-you-never-know-parfum-tester
+2026-07-23T07:04:05.823Z,New Arrival,venbafragrance.com,Hind Al Oud,Hind Al Oud You Never Know Parfum,,397,,https://venbafragrance.com/products/hind-al-oud-you-never-know-parfum
+2026-07-23T07:04:05.823Z,New Arrival,venbafragrance.com,Hind Al Oud,Hind Al Oud Sheikh A Parfum (Tester),,199.99,,https://venbafragrance.com/products/hind-al-oud-sheikh-a-parfum-tester
+2026-07-23T07:04:05.823Z,New Arrival,venbafragrance.com,Hind Al Oud,Hind Al Oud Sheikh A Parfum,,215,,https://venbafragrance.com/products/hind-al-oud-sheikh-a-parfum
+2026-07-23T07:04:05.823Z,New Arrival,venbafragrance.com,Hind Al Oud,Hind Al Oud Rose Parfum (Tester),,199.99,,https://venbafragrance.com/products/hind-al-oud-rose-parfum-tester
+2026-07-23T07:04:05.823Z,New Arrival,venbafragrance.com,Hind Al Oud,Hind Al Oud Rose Parfum,,215,,https://venbafragrance.com/products/hind-al-oud-rose-parfum
+2026-07-23T07:04:05.823Z,New Arrival,venbafragrance.com,Hind Al Oud,Hind Al Oud Silver Musk Parfum (Tester),,199.99,,https://venbafragrance.com/products/hind-al-oud-silver-musk-parfum-tester
+2026-07-23T07:04:05.823Z,New Arrival,venbafragrance.com,Hind Al Oud,Hind Al Oud Silver Musk Parfum,,215,,https://venbafragrance.com/products/hind-al-oud-silver-musk-parfum
+2026-07-23T07:04:05.823Z,New Arrival,venbafragrance.com,Hind Al Oud,Hind Al Oud Pink Musk Parfum (Tester),,199.99,,https://venbafragrance.com/products/hind-al-oud-pink-musk-parfum-tester
+2026-07-23T07:04:05.823Z,New Arrival,venbafragrance.com,Hind Al Oud,Hind Al Oud Pink Musk Parfum,,215,,https://venbafragrance.com/products/hind-al-oud-pink-musk-parfum
+2026-07-23T07:04:05.823Z,New Arrival,venbafragrance.com,Hind Al Oud,Hind Al Oud Patchouli Parfum (Tester),,199.99,,https://venbafragrance.com/products/hind-al-oud-patchouli-parfum-tester
+2026-07-23T07:04:05.823Z,New Arrival,venbafragrance.com,Hind Al Oud,Hind Al Oud Patchouli Parfum,,215,,https://venbafragrance.com/products/hind-al-oud-patchouli-parfum
+2026-07-23T07:04:05.823Z,New Arrival,venbafragrance.com,Hind Al Oud,Hind Al Oud Oud Zayed Parfum (Tester),,379.99,,https://venbafragrance.com/products/hind-al-oud-oud-zayed-parfum-tester
+2026-07-23T07:04:05.823Z,New Arrival,venbafragrance.com,Hind Al Oud,Hind Al Oud Oud Zayed Parfum,,397,,https://venbafragrance.com/products/hind-al-oud-oud-zayed-parfum
+2026-07-23T07:04:05.823Z,New Arrival,venbafragrance.com,Hind Al Oud,Hind Al Oud Musk Al Shiokh Parfum (Tester),,199.99,,https://venbafragrance.com/products/hind-al-oud-musk-al-shiokh-parfum-tester
+2026-07-23T07:04:05.823Z,New Arrival,venbafragrance.com,Hind Al Oud,Hind Al Oud Musk Al Shiokh Parfum,,215,,https://venbafragrance.com/products/hind-al-oud-musk-al-shiokh-parfum
+2026-07-23T07:04:05.823Z,New Arrival,venbafragrance.com,Hind Al Oud,Hind Al Oud Musk Al Molok Parfum (Tester),,199.99,,https://venbafragrance.com/products/hind-al-oud-musk-al-molok-parfum-tester
+2026-07-23T07:04:05.823Z,New Arrival,venbafragrance.com,Hind Al Oud,Hind Al Oud Musk Al Molok Parfum,,215,,https://venbafragrance.com/products/hind-al-oud-musk-al-molok-parfum
+2026-07-23T07:04:05.823Z,New Arrival,venbafragrance.com,Hind Al Oud,Hind Al Oud Masa'ey Parfum (Tester),,199.99,,https://venbafragrance.com/products/hind-al-oud-masaey-parfum-tester
+2026-07-23T07:04:05.823Z,New Arrival,venbafragrance.com,Hind Al Oud,Hind Al Oud Masa'ey Parfum,,215,,https://venbafragrance.com/products/hind-al-oud-kohl-parfum-1
+2026-07-23T07:04:05.823Z,New Arrival,venbafragrance.com,Hind Al Oud,Hind Al Oud Kohl Parfum (Tester),,199.99,,https://venbafragrance.com/products/hind-al-oud-kohl-parfum-tester
+2026-07-23T07:04:05.823Z,New Arrival,venbafragrance.com,Hind Al Oud,Hind Al Oud Kohl Parfum,,215,,https://venbafragrance.com/products/hind-al-oud-kohl-parfum
+2026-07-23T07:04:05.823Z,New Arrival,venbafragrance.com,Hind Al Oud,Hind Al Oud Kheneen Al Fekr Parfum (Tester),,379.99,,https://venbafragrance.com/products/hind-al-oud-kheneen-al-fekr-parfum-tester
+2026-07-23T07:04:05.823Z,New Arrival,venbafragrance.com,Hind Al Oud,Hind Al Oud Kheneen Al Fekr Parfum,,397,,https://venbafragrance.com/products/hind-al-oud-kheneen-al-fekr-parfum
+2026-07-23T07:04:05.823Z,New Arrival,venbafragrance.com,Hind Al Oud,Hind Al Oud Everdeep Barari Parfum (Tester),,379.99,,https://venbafragrance.com/products/hind-al-oud-everdeep-barari-parfum-tester
+2026-07-23T07:04:05.823Z,New Arrival,venbafragrance.com,Hind Al Oud,Hind Al Oud Everdeep Barari Parfum,,397,,https://venbafragrance.com/products/hind-al-oud-everdeep-barari-parfum
+2026-07-23T07:04:05.823Z,New Arrival,venbafragrance.com,Hind Al Oud,Hind Al Oud Emarati Oud Parfum (Tester),,199.99,,https://venbafragrance.com/products/hind-al-oud-emarati-oud-parfum-tester
+2026-07-23T07:04:05.823Z,New Arrival,venbafragrance.com,Hind Al Oud,Hind Al Oud Emarati Oud Parfum,,215,,https://venbafragrance.com/products/hind-al-oud-emarati-oud-parfum
+2026-07-23T07:04:05.823Z,New Arrival,venbafragrance.com,Hind Al Oud,Hind Al Oud Emarati Musk Parfum (Tester),,199.99,,https://venbafragrance.com/products/hind-al-oud-emarati-musk-parfum-tester
+2026-07-23T07:04:05.823Z,New Arrival,venbafragrance.com,Hind Al Oud,Hind Al Oud Emarati Musk Parfum,,215,,https://venbafragrance.com/products/hind-al-oud-emarati-musk-parfum
+2026-07-23T07:04:05.823Z,New Arrival,venbafragrance.com,Hind Al Oud,Hind Al Oud Devotion Parfum (Tester),,199.99,,https://venbafragrance.com/products/hind-al-oud-devotion-parfum-tester
+2026-07-23T07:04:05.823Z,New Arrival,venbafragrance.com,Hind Al Oud,Hind Al Oud Devotion Parfum,,215,,https://venbafragrance.com/products/hind-al-oud-devotion-parfum
+2026-07-23T07:04:05.823Z,New Arrival,venbafragrance.com,Hind Al Oud,Hind Al Oud Deep Masa'ey Parfum (Tester),,379.99,,https://venbafragrance.com/products/hind-al-oud-deep-masaey-parfum-tester
+2026-07-23T07:04:05.823Z,New Arrival,venbafragrance.com,Hind Al Oud,Hind Al Oud Deep Masa'ey Parfum,,397,,https://venbafragrance.com/products/hind-al-oud-deep-masaey-parfum
+2026-07-23T07:04:05.823Z,New Arrival,venbafragrance.com,Hind Al Oud,Hind Al Oud Dalaa Parfum (Tester),,199.99,,https://venbafragrance.com/products/hind-al-oud-dalaa-parfum-tester
+2026-07-23T07:04:05.823Z,New Arrival,venbafragrance.com,Hind Al Oud,Hind Al Oud Dalaa Parfum,,215,,https://venbafragrance.com/products/hind-al-oud-dalaa-parfum
+2026-07-23T07:04:05.823Z,New Arrival,venbafragrance.com,Hind Al Oud,Hind Al Oud Burgundy Parfum (Tester),,199.99,,https://venbafragrance.com/products/hind-al-oud-burgundy-parfum-tester
+2026-07-23T07:04:05.823Z,New Arrival,venbafragrance.com,Hind Al Oud,Hind Al Oud Burgundy Parfum,,215,,https://venbafragrance.com/products/hind-al-oud-burgundy-parfum
+2026-07-23T07:04:05.823Z,New Arrival,venbafragrance.com,Hind Al Oud,Hind Al Oud Barari Parfum (Tester),,199.99,,https://venbafragrance.com/products/hind-al-oud-barari-parfum-tester
+2026-07-23T07:04:05.823Z,New Arrival,venbafragrance.com,Hind Al Oud,Hind Al Oud Barari Parfum,,215,,https://venbafragrance.com/products/hind-al-oud-barari-parfum
+2026-07-23T07:04:05.823Z,New Arrival,venbafragrance.com,Hind Al Oud,Hind Al Oud Aliya' E Parfum (Tester),,199.99,,https://venbafragrance.com/products/hind-al-oud-aliya-e-parfum-tester
+2026-07-23T07:04:05.823Z,New Arrival,venbafragrance.com,Hind Al Oud,Hind Al Oud Aliya' E Parfum,,215,,https://venbafragrance.com/products/hind-al-oud-aliya-e-parfum
+2026-07-23T07:04:05.823Z,New Arrival,venbafragrance.com,Hind Al Oud,Hind Al Oud Alifi Parfum (Tester),,199.99,,https://venbafragrance.com/products/hind-al-oud-alifi-parfum-tester-with-cap
+2026-07-23T07:04:05.823Z,New Arrival,venbafragrance.com,Hind Al Oud,Hind Al Oud Ahojas Parfum (Tester),,199.99,,https://venbafragrance.com/products/hind-al-oud-ahojas-parfum-tester
+2026-07-23T07:04:05.823Z,New Arrival,venbafragrance.com,Hind Al Oud,Hind Al Oud Alifi Parfum,,215,,https://venbafragrance.com/products/hind-al-oud-alifi-parfum
+2026-07-23T07:04:05.823Z,New Arrival,venbafragrance.com,Hind Al Oud,Hind Al Oud Ahojas Parfum,,215,,https://venbafragrance.com/products/hind-al-oud-ahojas-parfum
+2026-07-23T07:04:05.823Z,New Arrival,venbafragrance.com,Amouage,Amouage Meander EDP,,355.99,,https://venbafragrance.com/products/amouage-meander-edp
+2026-07-23T07:04:05.823Z,New Arrival,venbafragrance.com,Amouage,Amouage Journey Man EDP,,354.99,,https://venbafragrance.com/products/sample-amouage-journey-man-edp-1
+2026-07-23T07:04:05.823Z,New Arrival,venbafragrance.com,Amouage,Amouage Epic Man EDP,,354.99,,https://venbafragrance.com/products/amouage-epic-man-edp
+2026-07-23T07:04:05.823Z,New Arrival,venbafragrance.com,Amouage,Amouage Lyric Man EDP,,354.99,,https://venbafragrance.com/products/amouage-lyric-man-edp
+2026-07-23T07:04:05.823Z,New Arrival,venbafragrance.com,Argos,Argos Narcissus Obsession in Bloom Extrait,,299.99,,https://venbafragrance.com/products/argos-narcissus-obsession-in-bloom-extrait
+2026-07-23T07:04:05.823Z,New Arrival,venbafragrance.com,Roja Parfums,Roja Parfums Isola Snow Parfum,,399.99,,https://venbafragrance.com/products/roja-parfums-isola-snow-parfum
+2026-07-23T07:04:05.823Z,New Arrival,venbafragrance.com,Roja Parfums,Roja Parfums Discovery Set,,99.99,,https://venbafragrance.com/products/roja-parfums-discovery-set
+2026-07-23T07:04:05.823Z,New Arrival,venbafragrance.com,Roja Parfums,Roja Parfums Elysium Eau Intense EDP,,169.99,,https://venbafragrance.com/products/roja-parfums-elysium-eau-intense-edp
+2026-07-23T07:04:05.823Z,New Arrival,venbafragrance.com,Roja Parfums,Roja Parfums Apex Cologne EDP,,149.99,,https://venbafragrance.com/products/roja-parfums-apex-cologne-edp
+2026-07-23T07:04:05.823Z,New Arrival,venbafragrance.com,Roja Parfums,Roja Parfums Isola Verde Parfum,,15.99,,https://venbafragrance.com/products/sample-roja-parfums-isola-verde-parfum
+2026-07-23T07:04:05.823Z,New Arrival,venbafragrance.com,Roja Parfums,Roja Parfums Isola Sol Parfum,,13.99,,https://venbafragrance.com/products/sample-roja-parfums-isola-sol-edp
+2026-07-23T07:04:05.823Z,New Arrival,venbafragrance.com,L'Entropiste,L'Entropiste Ensang Noir EDP (Tester),,239.99,,https://venbafragrance.com/products/lentropiste-ensang-noir-edp-tester
+2026-07-23T07:04:05.823Z,New Arrival,venbafragrance.com,L'Entropiste,L'Entropiste Dawn Whispers EDP (Tester),,239.99,,https://venbafragrance.com/products/lentropiste-dawn-whispers-edp-tester
+2026-07-23T07:04:05.823Z,New Arrival,venbafragrance.com,L'Entropiste,L'Entropiste Altamura EDP (Tester),,239.99,,https://venbafragrance.com/products/lentropiste-altamura-edp-tester
+2026-07-23T07:04:05.823Z,New Arrival,venbafragrance.com,L'Entropiste,L'Entropiste Semence Douce EDP (Tester),,239.99,,https://venbafragrance.com/products/lentropiste-semence-douce-edp-tester
+2026-07-23T07:04:05.823Z,New Arrival,venbafragrance.com,L'Entropiste,L'Entropiste Jodhpur 6AM EDP (Tester),,239.99,,https://venbafragrance.com/products/lentropiste-jodhpur-6am-edp-tester
+2026-07-23T07:04:05.823Z,New Arrival,venbafragrance.com,L'Entropiste,L'Entropiste Blanc Sada EDP (Tester),,239.99,,https://venbafragrance.com/products/lentropiste-blanc-sada-edp-tester
+2026-07-23T07:04:05.823Z,New Arrival,venbafragrance.com,L'Entropiste,L'Entropiste Dorian's Spleen EDP (Tester),,239.99,,https://venbafragrance.com/products/lentropiste-dorians-spleen-edp-tester
+2026-07-23T07:04:05.823Z,New Arrival,venbafragrance.com,Fugazzi,Fugazzi Orange Crush Extrait (Tester),,220,,https://venbafragrance.com/products/fugazzi-orange-crush-extrait-tester
+2026-07-23T07:04:05.823Z,New Arrival,venbafragrance.com,Ex Nihilo,Ex Nihilo Citizen X EDP (Tester),,249.99,,https://venbafragrance.com/products/ex-nihilo-citizen-x-edp-tester
+2026-07-23T07:04:05.823Z,New Arrival,venbafragrance.com,Ex Nihilo,Ex Nihilo Honore Delights EDP (Tester),,249.99,,https://venbafragrance.com/products/ex-nihilo-honore-delights-edp-tester
+2026-07-23T07:04:05.823Z,New Arrival,venbafragrance.com,Ex Nihilo,Ex Nihilo Viper Green EDP (Tester),,249.99,,https://venbafragrance.com/products/ex-nihilo-green-viper-edp-tester
+2026-07-23T07:04:05.823Z,New Arrival,venbafragrance.com,Ex Nihilo,Ex Nihilo Generation(s) EDP (Tester),,249.99,,https://venbafragrance.com/products/ex-nihilo-generations-edp-tester
+2026-07-23T07:04:05.823Z,New Arrival,venbafragrance.com,Ex Nihilo,Ex Nihilo Venenum Kiss EDP (Tester),,249.99,,https://venbafragrance.com/products/ex-nihilo-venenum-kiss-edp-tester
+2026-07-23T07:04:05.823Z,New Arrival,venbafragrance.com,Ex Nihilo,Ex Nihilo French Affair EDP (Tester),,249.99,,https://venbafragrance.com/products/ex-nihilo-french-affair-edp-tester
+2026-07-23T07:04:05.823Z,New Arrival,venbafragrance.com,Ex Nihilo,Ex Nihilo Musc Infini EDP (Tester),,249.99,,https://venbafragrance.com/products/ex-nihilo-musc-infini-edp-tester
+2026-07-23T07:04:05.823Z,New Arrival,venbafragrance.com,Ex Nihilo,Ex Nihilo Rose Hubris EDP (Tester),,249.99,,https://venbafragrance.com/products/ex-nihilo-rose-hubris-edp-tester
+2026-07-23T07:04:05.823Z,New Arrival,venbafragrance.com,Ex Nihilo,Ex Nihilo Bois D'Hiver EDP (Tester),,249.99,,https://venbafragrance.com/products/ex-nihilo-bois-dhiver-edp-tester
+2026-07-23T07:04:05.823Z,New Arrival,venbafragrance.com,Ex Nihilo,Ex Nihilo Vetiver Moloko EDP (Tester),,249.99,,https://venbafragrance.com/products/ex-nihilo-vetiver-moloko-edp-tester
+2026-07-23T07:04:05.823Z,New Arrival,venbafragrance.com,Ex Nihilo,Ex Nihilo Oud Vendome EDP (Tester),,249.99,,https://venbafragrance.com/products/ex-nihilo-oud-vendome-edp-tester
+2026-07-23T07:04:05.823Z,New Arrival,venbafragrance.com,Pernoire,Pernoire Amoral Extrait (Tester),,230,,https://venbafragrance.com/products/pernoire-amoral-extrait-tester
+2026-07-23T07:04:05.823Z,New Arrival,venbafragrance.com,D'Orsay,D'Orsay Rose Blaze Extrait (Tester),,269.99,,https://venbafragrance.com/products/dorsay-rose-blaze-extrait-tester
+2026-07-23T07:04:05.823Z,New Arrival,venbafragrance.com,Sospiro,Sospiro Contralto EDP (Tester),,179.99,,https://venbafragrance.com/products/sospiro-contralto-edp
+2026-07-23T07:04:05.823Z,New Arrival,venbafragrance.com,Ella K,Ella K Musc K EDP (Tester),,179.99,,https://venbafragrance.com/products/ella-k-musc-k-edp-tester-with-cap
+2026-07-23T07:04:05.823Z,New Arrival,venbafragrance.com,Pana Dora,Pana Dora Orchestra EDP (Tester),,219.99,,https://venbafragrance.com/products/pana-dora-orchestra-edp-tester
+2026-07-23T07:04:05.823Z,New Arrival,venbafragrance.com,Pana Dora,Pana Dora Nordhaven EDP,,269.99,,https://venbafragrance.com/products/pana-dora-nordhaven-edp
+2026-07-23T07:04:05.823Z,New Arrival,venbafragrance.com,Pana Dora,Pana Dora Daydream EDP,,249.99,,https://venbafragrance.com/products/pana-dora-daydream-edp
+2026-07-23T07:04:05.823Z,New Arrival,venbafragrance.com,Pana Dora,Pana Dora Moonlight EDP (Tester),,239.99,,https://venbafragrance.com/products/pana-dora-moonlight-edp-tester
+2026-07-23T07:04:05.823Z,New Arrival,venbafragrance.com,Rania J,Rania J Shah'ryar Extrait,,270,,https://venbafragrance.com/products/rania-j-shahryar-extrait
+2026-07-23T07:04:05.823Z,New Arrival,venbafragrance.com,Rania J,Rania J Veliahtte Extrait,,270,,https://venbafragrance.com/products/rania-j-veliahtte-extrait
+2026-07-23T07:04:05.823Z,New Arrival,venbafragrance.com,Tom Ford,Tom Ford Taormina Orange EDP,,259.99,,https://venbafragrance.com/products/tom-ford-taormina-orange-edp
+2026-07-23T07:04:05.823Z,New Arrival,venbafragrance.com,Pernoire,Pernoire Anelo Extrait (Tester),,269.99,,https://venbafragrance.com/products/pernoire-anelo-extrait-tester
+2026-07-23T07:04:05.823Z,New Arrival,venbafragrance.com,Xerjoff,Xerjoff Torino 24 EDP,,144.98,,https://venbafragrance.com/products/xerjoff-torino24-edp
+2026-07-23T07:04:05.823Z,New Arrival,venbafragrance.com,Sospiro,Sospiro Vibranna EDP (Tester),,159.99,,https://venbafragrance.com/products/sospiro-vibranna-edp-tester
+2026-07-23T07:04:05.823Z,New Arrival,venbafragrance.com,Ephemeral Dyadic,Ephemeral Dyadic Discovery Set,,90,,https://venbafragrance.com/products/ephemeral-dyadic-discovery-set
+2026-07-23T07:04:05.823Z,New Arrival,venbafragrance.com,Ephemeral Dyadic,Ephemeral Dyadic Acid Aqua EDP,,190,,https://venbafragrance.com/products/ephemeral-dyadic-acid-aqua-edp
+2026-07-23T07:04:05.823Z,New Arrival,venbafragrance.com,Ephemeral Dyadic,Ephemeral Dyadic Lost Chemistry EDP,,190,,https://venbafragrance.com/products/ephemeral-dyadic-lost-chemistry-edp
+2026-07-23T07:04:05.823Z,New Arrival,venbafragrance.com,Ephemeral Dyadic,Ephemeral Dyadic No Taboos EDP,,190,,https://venbafragrance.com/products/ephemeral-dyadic-no-taboos-edp
+2026-07-23T07:04:05.823Z,New Arrival,venbafragrance.com,Ephemeral Dyadic,Ephemeral Dyadic Psychic Vibrations EDP,,190,,https://venbafragrance.com/products/ephemeral-dyadic-psychic-vibrations-edp
+2026-07-23T07:04:05.823Z,New Arrival,venbafragrance.com,Ephemeral Dyadic,Ephemeral Dyadic Dark Dreams EDP,,190,,https://venbafragrance.com/products/ephemeral-dyadic-dark-dreams-edp
+2026-07-23T07:04:05.823Z,New Arrival,venbafragrance.com,Ephemeral Dyadic,Ephemeral Dyadic Liquid Skin EDP,,190,,https://venbafragrance.com/products/ephemeral-dyadic-liquid-skin-edp
+2026-07-23T07:04:05.823Z,New Arrival,venbafragrance.com,Ephemeral Dyadic,Ephemeral Dyadic Missing Feeling EDP,,190,,https://venbafragrance.com/products/ephemeral-dyadic-missing-feeling-edp
+2026-07-23T07:04:05.823Z,New Arrival,venbafragrance.com,Ephemeral Dyadic,Ephemeral Dyadic Bodhi & Utah EDP,,190,,https://venbafragrance.com/products/ephemeral-dyadic-bodhi-utah-edp
+2026-07-23T07:04:05.823Z,New Arrival,venbafragrance.com,Ephemeral Dyadic,Ephemeral Dyadic Another World EDP,,190,,https://venbafragrance.com/products/ephemeral-dyadic-another-world-edp
+2026-07-23T07:04:05.823Z,New Arrival,venbafragrance.com,Ephemeral Dyadic,Ephemeral Dyadic Ozymandias EDP,,190,,https://venbafragrance.com/products/ephemeral-dyadic-ozymandias-edp
+2026-07-23T07:04:05.823Z,New Arrival,venbafragrance.com,Sospiro,Sospiro Mezzo EDP,,239.99,,https://venbafragrance.com/products/sospiro-mezzo-edp
+2026-07-23T07:04:05.823Z,New Arrival,venbafragrance.com,Shekor Perfumes,Shekor Sylhet Parfum,,225,,https://venbafragrance.com/products/shekor-sylhet-parfum
+2026-07-23T07:04:05.823Z,New Arrival,venbafragrance.com,Shekor Perfumes,Shekor Ashar Parfum,,225,,https://venbafragrance.com/products/shekor-ashar-parfum
+2026-07-23T07:04:05.823Z,New Arrival,venbafragrance.com,Bvlgari,Bvlgari Gyan EDP,,279.99,,https://venbafragrance.com/products/bvlgari-gyan-edp
+2026-07-23T07:04:05.823Z,New Arrival,venbafragrance.com,Bvlgari,Bvlgari Orom EDP,,279.99,,https://venbafragrance.com/products/bvlgari-orom-edp
+2026-07-23T07:04:05.823Z,New Arrival,venbafragrance.com,Bvlgari,Bvlgari Sahare EDP,,279.99,,https://venbafragrance.com/products/bvlgari-sahare-edp
+2026-07-23T07:04:05.823Z,New Arrival,venbafragrance.com,Bvlgari,Bvlgari Kobraa EDP,,399.99,,https://venbafragrance.com/products/bvlgari-kobraa-edp
+2026-07-23T07:04:05.823Z,New Arrival,venbafragrance.com,Le Persona,Le Persona LP02 Peacock Feather EDP,,5.99,,https://venbafragrance.com/products/le-persona-lp02-peacock-feather-edp
+2026-07-23T07:04:05.823Z,New Arrival,venbafragrance.com,Le Persona,Le Persona LP01 Mystic Rose EDP,,5.99,,https://venbafragrance.com/products/le-persona-lp01-mystic-rose-edp
+2026-07-23T07:04:05.823Z,New Arrival,venbafragrance.com,Le Persona,Le Persona LP04 Golden Gem EDP,,5.99,,https://venbafragrance.com/products/le-persona-lp04-golden-gem-edp
+2026-07-23T07:04:05.823Z,New Arrival,venbafragrance.com,Le Persona,Le Persona LP03 Wooden Face EDP,,5.99,,https://venbafragrance.com/products/le-persona-lp03-edp
+2026-07-23T07:04:05.823Z,New Arrival,venbafragrance.com,Le Persona,Le Persona Salty Skin Extrait,,5.99,,https://venbafragrance.com/products/le-persona-salty-skin-extrait
+2026-07-23T07:04:05.823Z,New Arrival,venbafragrance.com,Le Persona,Le Persona Masquerade Ball Extrait,,5.99,,https://venbafragrance.com/products/le-persona-masquerade-ball-extrait
+2026-07-23T07:04:05.823Z,New Arrival,venbafragrance.com,Les Indemodables,Les Indemodables Cafe Arabesque EDP,,5.99,,https://venbafragrance.com/products/les-indemodables-cafe-arabesque-edp
+2026-07-23T07:04:05.823Z,New Arrival,venbafragrance.com,Les Indemodables,Les Indemodables Chypre Azural EDP,,5.99,,https://venbafragrance.com/products/les-indemodables-chypre-azural-edp
+2026-07-23T07:04:05.823Z,New Arrival,venbafragrance.com,Amouage,Amouage Elsewhere EDP,,16.99,,https://venbafragrance.com/products/amouage-elsewhere-edp
+2026-07-23T07:04:05.823Z,New Arrival,venbafragrance.com,Louis Vuitton,Louis Vuitton Au Hasard EDP,,8.99,,https://venbafragrance.com/products/sample-louis-vuitton-au-hasard-edp
+2026-07-23T07:04:05.823Z,New Arrival,venbafragrance.com,Louis Vuitton,Louis Vuitton Rhapsody Extrait,,12.99,,https://venbafragrance.com/products/sample-louis-vuitton-rhapsody-extrait
+2026-07-23T07:04:05.823Z,New Arrival,venbafragrance.com,Louis Vuitton,Louis Vuitton Nuit de Feu EDP,,9.99,,https://venbafragrance.com/products/sample-louis-vuitton-nuit-de-feu-edp
+2026-07-23T07:04:05.823Z,New Arrival,venbafragrance.com,Louis Vuitton,Louis Vuitton eLVes EDP,,12.99,,https://venbafragrance.com/products/sample-louis-vuitton-elves-edp
+2026-07-23T07:04:05.823Z,New Arrival,venbafragrance.com,Louis Vuitton,Louis Vuitton Orage EDP,,8.99,,https://venbafragrance.com/products/sample-louis-vuitton-orage-edp
+2026-07-23T07:04:05.823Z,New Arrival,venbafragrance.com,Louis Vuitton,Louis Vuitton Apogee EDP,,8.99,,https://venbafragrance.com/products/sample-louis-vuitton-apogee-edp
+2026-07-23T07:04:05.823Z,New Arrival,venbafragrance.com,Louis Vuitton,Louis Vuitton Myriad Extrait,,12.99,,https://venbafragrance.com/products/sample-louis-vuitton-myriad-extrait
+2026-07-23T07:04:05.823Z,New Arrival,venbafragrance.com,Louis Vuitton,Louis Vuitton Lovers EDP,,10.99,,https://venbafragrance.com/products/sample-louis-vuitton-lovers-edp
+2026-07-23T07:04:05.823Z,New Arrival,venbafragrance.com,Louis Vuitton,Louis Vuitton Attrape Reves EDP,,8.99,,https://venbafragrance.com/products/sample-louis-vuitton-attrape-reves-edp
+2026-07-23T07:04:05.823Z,New Arrival,venbafragrance.com,Louis Vuitton,Louis Vuitton Les Sables Roses EDP,,9.99,,https://venbafragrance.com/products/sample-louis-vuitton-les-sables-roses-edp
+2026-07-23T07:04:05.823Z,New Arrival,venbafragrance.com,Louis Vuitton,Louis Vuitton Symphony Extrait,,13.99,,https://venbafragrance.com/products/sample-louis-vuitton-symphony-extrait
+2026-07-23T07:04:05.823Z,New Arrival,venbafragrance.com,Louis Vuitton,Louis Vuitton California Dream EDP,,8.99,,https://venbafragrance.com/products/sample-louis-vuitton-california-dream-edp
+2026-07-23T07:04:05.823Z,New Arrival,venbafragrance.com,Louis Vuitton,Louis Vuitton On The Beach EDP,,8.99,,https://venbafragrance.com/products/sample-louis-vuitton-on-the-beach-edp
+2026-07-23T07:04:05.823Z,New Arrival,venbafragrance.com,Louis Vuitton,Louis Vuitton City Of Stars EDP,,8.99,,https://venbafragrance.com/products/sample-louis-vuitton-city-of-stars-edp
+2026-07-23T07:04:05.823Z,New Arrival,venbafragrance.com,Louis Vuitton,Louis Vuitton Cactus Garden EDP,,14.99,,https://venbafragrance.com/products/sample-louis-vuitton-cactus-garden-edp
+2026-07-23T07:04:05.823Z,New Arrival,venbafragrance.com,Louis Vuitton,Louis Vuitton Sun Song EDP,,11.99,,https://venbafragrance.com/products/sample-louis-vuitton-sun-song-edp
+2026-07-23T07:04:05.823Z,New Arrival,venbafragrance.com,Louis Vuitton,Louis Vuitton Meteore EDP,,8.99,,https://venbafragrance.com/products/sample-louis-vuitton-meteore-edp
+2026-07-23T07:04:05.823Z,New Arrival,venbafragrance.com,Louis Vuitton,Louis Vuitton L'Immensité EDP,,8.99,,https://venbafragrance.com/products/sample-louis-vuitton-limmensite-edp
+2026-07-23T07:04:05.823Z,New Arrival,venbafragrance.com,Louis Vuitton,Louis Vuitton Pacific Chill EDP,,8.99,,https://venbafragrance.com/products/sample-louis-vuitton-pacific-chill-edp
+2026-07-23T07:04:05.823Z,New Arrival,venbafragrance.com,Louis Vuitton,Louis Vuitton Imagination EDP,,8.99,,https://venbafragrance.com/products/sample-louis-vuitton-imagination-edp
+2026-07-23T07:04:05.823Z,New Arrival,venbafragrance.com,Louis Vuitton,Louis Vuitton Afternoon Swim EDP,,8.99,,https://venbafragrance.com/products/sample-louis-vuitton-afternoon-swim-edp
+2026-07-23T07:04:05.823Z,New Arrival,venbafragrance.com,Louis Vuitton,Louis Vuitton Ombre Nomade EDP,,9.99,,https://venbafragrance.com/products/sample-louis-vuitton-ombre-nomade-edp
+2026-07-23T07:04:05.823Z,New Arrival,venbafragrance.com,Louis Vuitton,Louis Vuitton Discovery Set,,44.99,,https://venbafragrance.com/products/louis-vuitton-discovery-set
+2026-07-23T07:04:05.823Z,New Arrival,venbafragrance.com,Fragrance du Bois,Fragrance du Bois PM Extrait (Tester),,319.99,,https://venbafragrance.com/products/fragrance-du-bois-pm-extrait-tester
+2026-07-23T07:04:05.823Z,New Arrival,venbafragrance.com,Fragrance du Bois,Fragrance du Bois Solstis Extrait (Tester),,319.99,,https://venbafragrance.com/products/fragrance-du-bois-solstis-edp-tester
+2026-07-23T07:04:05.823Z,New Arrival,venbafragrance.com,Fragrance du Bois,Fragrance Du Bois Oud Violet Intense EDP (Tester),,329.99,,https://venbafragrance.com/products/fragrance-du-bois-oud-violet-intense-edp-tester
+2026-07-23T07:04:05.823Z,New Arrival,venbafragrance.com,Fragrance du Bois,Fragrance Du Bois Cannabis Intense Extrait (Tester),,329.99,,https://venbafragrance.com/products/fragrance-du-bois-cannabis-intense-extrait-tester
+2026-07-23T07:04:05.823Z,New Arrival,venbafragrance.com,Fragrance du Bois,Fragrance Du Bois Secret Tryst Extrait (Tester),,329.99,,https://venbafragrance.com/products/fragrance-du-bois-secret-tryst-extrait-tester
+2026-07-23T07:04:05.823Z,New Arrival,venbafragrance.com,Akro,Akro East EDP (Tester),,99.99,,https://venbafragrance.com/products/akro-east-edp-tester
+2026-07-23T07:04:05.823Z,New Arrival,venbafragrance.com,Fragrance du Bois,Fragrance Du Bois Oud Orange Intense EDP (Tester),,329.99,,https://venbafragrance.com/products/fragrance-du-bois-oud-orange-intense-edp-tester
+2026-07-23T07:04:05.823Z,New Arrival,venbafragrance.com,Clive Christian,Clive Christian Town & Country EDP (Tester),,329.99,,https://venbafragrance.com/products/clive-christian-town-and-country-edp-tester-with-cap
+2026-07-23T07:04:05.823Z,New Arrival,venbafragrance.com,Fragrance du Bois,Fragrance Du Bois Oud Noir Intense Extrait (Tester),,379.99,,https://venbafragrance.com/products/fragrance-du-bois-oud-noir-intense-extrait-3-4-oz-tester-with-cap
+2026-07-23T07:04:05.823Z,New Arrival,venbafragrance.com,Pernoire,Pernoire Melos Extrait (Tester),,280,,https://venbafragrance.com/products/pernoire-melos-extrait-tester
+2026-07-23T07:04:05.823Z,New Arrival,venbafragrance.com,Pernoire,Pernoire Poka Extrait (Tester),,280,,https://venbafragrance.com/products/pernoire-poka-extrait-tester
+2026-07-23T07:04:05.823Z,New Arrival,venbafragrance.com,Pernoire,Pernoire Otimo Extrait (Tester),,230,,https://venbafragrance.com/products/pernoire-otimo-extrait-tester
+2026-07-23T07:04:05.823Z,New Arrival,venbafragrance.com,Pernoire,Pernoire Kama Extrait (Tester),,240,,https://venbafragrance.com/products/pernoire-kama-extrait-tester
+2026-07-23T07:04:05.823Z,New Arrival,venbafragrance.com,Pernoire,Pernoire Naki Extrait (Tester),,230,,https://venbafragrance.com/products/pernoire-naki-extrait-tester
+2026-07-23T07:04:05.823Z,New Arrival,venbafragrance.com,Pernoire,Pernoire Mansa Extrait (Tester),,240,,https://venbafragrance.com/products/pernoire-mansa-extrait-tester
+2026-07-23T07:04:05.823Z,New Arrival,venbafragrance.com,Pernoire,Pernoire Tierra Extrait (Tester),,230,,https://venbafragrance.com/products/pernoire-tierra-extrait-tester
+2026-07-23T07:04:05.823Z,New Arrival,venbafragrance.com,Pernoire,Pernoire Vitias Extrait (Tester),,210,,https://venbafragrance.com/products/pernoire-vitias-extrait-tester
+2026-07-23T07:04:05.823Z,New Arrival,venbafragrance.com,Pernoire,Pernoire Masar Extrait (Tester),,230,,https://venbafragrance.com/products/pernoire-masar-extrait-tester
+2026-07-23T07:04:05.823Z,New Arrival,venbafragrance.com,Fragrance du Bois,Fragrance Du Bois Oud Parisian Extrait (Tester),,379.99,,https://venbafragrance.com/products/fragrance-du-bois-oud-parisian-extrait-tester
+2026-07-23T07:04:05.823Z,New Arrival,venbafragrance.com,Gritti,Gritti Monica Extrait (Tester),,129.99,,https://venbafragrance.com/products/gritti-adele-edp-copy
+2026-07-23T07:04:05.823Z,New Arrival,venbafragrance.com,Gritti,Gritti Because I'm Free Extrait (Tester),,129.99,,https://venbafragrance.com/products/gritti-because-im-free-extrait-copy
+2026-07-23T07:04:05.823Z,New Arrival,venbafragrance.com,Akro,Akro Dark EDP (Tester),,89.99,,https://venbafragrance.com/products/akro-dark-edp-tester-with-cap
+2026-07-23T07:04:05.823Z,New Arrival,venbafragrance.com,Akro,Akro Awake EDP (Tester),,84.99,,https://venbafragrance.com/products/akro-awake-edp-tester-with-cap
+2026-07-23T07:04:05.823Z,New Arrival,venbafragrance.com,Akro,Akro Smile EDP (Tester),,84.99,,https://venbafragrance.com/products/akro-smile-edp-tester-with-cap
+2026-07-23T07:04:05.823Z,New Arrival,venbafragrance.com,Clive Christian,Clive Christian Blonde Amber Parfum (Tester),,399.99,,https://venbafragrance.com/products/tester-clive-christian-blonde-amber-parfum-1-7-oz-with-cap
+2026-07-23T07:04:05.823Z,New Arrival,venbafragrance.com,The House of Oud,The House of Oud Keep Glazed EDP (Tester),,119.99,,https://venbafragrance.com/products/the-house-of-oud-keep-glazed-edp-tester
+2026-07-23T07:04:05.823Z,New Arrival,venbafragrance.com,Pernoire,Pernoire Yuma Extrait (Tester),,280,,https://venbafragrance.com/products/pernoire-yuma-extrait-tester
+2026-07-23T07:04:05.823Z,New Arrival,venbafragrance.com,Fragrance du Bois,Fragrance du Bois Santal Complet Parfum (Tester),,189.99,,https://venbafragrance.com/products/fragrance-du-bois-santal-complet-edp-tester-with-cap
+2026-07-23T07:04:05.823Z,New Arrival,venbafragrance.com,Fragrance du Bois,Fragrance du Bois Cavort Extrait (Tester),,199.99,,https://venbafragrance.com/products/tester-fragrance-du-covort-edp-3-4-oz-no-cap
+2026-07-23T07:04:05.823Z,New Arrival,venbafragrance.com,Sospiro,Sospiro Vibrato EDP (Tester),,174.99,,https://venbafragrance.com/products/sospiro-vibrato-edp-tester-with-cap
+2026-07-23T07:04:05.823Z,New Arrival,venbafragrance.com,Indult,Indult Manakara EDP (Tester),,189.99,,https://venbafragrance.com/products/indult-manakara-edp-tester
+2026-07-23T07:04:05.823Z,New Arrival,venbafragrance.com,Twentysecondofmay,Twentysecondofmay Roots of Kente EDP (Tester),,230,,https://venbafragrance.com/products/twentysecondofmay-roots-of-kente-edp-tester
+2026-07-23T07:04:05.823Z,New Arrival,venbafragrance.com,Fugazzi,Fugazzi Pomegranoudh Extrait,,149,,https://venbafragrance.com/products/fugazzi-pomegranoudh-extrait
+2026-07-23T07:04:05.823Z,New Arrival,venbafragrance.com,Room 1015,Room 1015 Wasabi Klub EDP,,159.99,,https://venbafragrance.com/products/room-1015-wasabi-klub-edp
+2026-07-23T07:04:05.823Z,New Arrival,venbafragrance.com,House Of Bo,House of Bo Casa Blanca Parfum,,195,,https://venbafragrance.com/products/house-of-bo-casa-blanca-parfum
+2026-07-23T07:04:05.823Z,New Arrival,venbafragrance.com,House Of Bo,House of Bo La Mar Parfum,,195,,https://venbafragrance.com/products/house-of-bo-la-mar-parfum
+2026-07-23T07:04:05.823Z,New Arrival,fragrapedia.com,LORD MILANO,BELLA Eau de Parfum - Lord Milano,,143.5,,https://fragrapedia.com/products/bella-eau-de-parfum-lord-milano
+2026-07-23T07:04:05.823Z,New Arrival,fragrapedia.com,Michael Cinco,Velluria Elixir Parfum - Michael Cinco,,245,,https://fragrapedia.com/products/velluria-elixir-parfum-michael-cinco
+2026-07-23T07:04:05.823Z,New Arrival,fragrapedia.com,Michael Cinco,Valeine Elixir Parfum - Michael Cinco,,245,,https://fragrapedia.com/products/valeine-elixir-parfum-michael-cinco
+2026-07-23T07:04:05.823Z,New Arrival,fragrapedia.com,Michael Cinco,Silvanor Elixir Parfum - Michael Cinco,,245,,https://fragrapedia.com/products/silvanor-elixir-parfum-michael-cinco
+2026-07-23T07:04:05.823Z,New Arrival,fragrapedia.com,Michael Cinco,Metamoura Elixir Parfum - Michael Cinco,,245,,https://fragrapedia.com/products/metamoura-elixir-parfum-michael-cinco
+2026-07-23T07:04:05.823Z,New Arrival,fragrapedia.com,Michael Cinco,Marveine Elixir Parfum - Michael Cinco,,245,,https://fragrapedia.com/products/marveine-elixir-parfum-michael-cinco
+2026-07-23T07:04:05.823Z,New Arrival,fragrapedia.com,Michael Cinco,Celore Elixir Parfum - Michael Cinco,,245,,https://fragrapedia.com/products/celore-elixir-parfum-michael-cinco
+2026-07-23T07:04:05.823Z,New Arrival,fragrapedia.com,Michael Cinco,Arsielle Elixir Parfum - Michael Cinco,,245,,https://fragrapedia.com/products/arsielle-elixir-parfum-michael-cinco
+2026-07-23T07:04:05.823Z,New Arrival,fragrapedia.com,Profumo Di Firenze,A TUTTO CARAMELLO! Extrait de Parfum - Profumo di Firenze,,150,,https://fragrapedia.com/products/a-tutto-caramello-extrait-de-parfum-profumo-di-firenze
+2026-07-23T07:04:05.823Z,New Arrival,fragrapedia.com,Profumo Di Firenze,Plumbeo Extrait de Parfum - Profumo di Firenze,,150,,https://fragrapedia.com/products/plumbeo-extrait-de-parfum-profumo-di-firenze
+2026-07-23T07:04:05.823Z,New Arrival,fragrapedia.com,Scentologia,Nitro Musk Eau de Parfum - Scentologia,,240,,https://fragrapedia.com/products/nitro-musk-eau-de-parfum-scentologia
+2026-07-23T07:04:05.823Z,New Arrival,fragrapedia.com,Fragrapedia Haus,8 Days a Week Extrait de Parfum - Astrophil & Stella,,170,,https://fragrapedia.com/products/8-days-a-week-extrait-de-parfum-astrophil-stella
+2026-07-23T07:04:05.823Z,New Arrival,fragrapedia.com,Fragrapedia Haus,Into The Oud Extrait de Parfum - Astrophil & Stella,,170,,https://fragrapedia.com/products/into-the-oud-extrait-de-parfum-astrophil-stella
+2026-07-23T07:04:05.823Z,New Arrival,fragrapedia.com,Fragrapedia Haus,Amberliveable Extrait de Parfum - Astrophil & Stella,,170,,https://fragrapedia.com/products/amberliveable-extrait-de-parfum-astrophil-stella
+2026-07-23T07:04:05.823Z,New Arrival,fragrapedia.com,Fragrapedia Haus,Love Is Lost Extrait de Parfum - Astrophil & Stella,,170,,https://fragrapedia.com/products/love-is-lost-extrait-de-parfum-astrophil-stella
+2026-07-23T07:04:05.823Z,New Arrival,fragrapedia.com,Fragrapedia Haus,Mellow Yellow Extrait de Parfum - Astrophil & Stella,,170,,https://fragrapedia.com/products/mellow-yellow-extrait-de-parfum-astrophil-stella
+2026-07-23T07:04:05.823Z,New Arrival,fragrapedia.com,Fragrapedia Haus,Paris Cheri Extrait de Parfum - Astrophil & Stella,,190,,https://fragrapedia.com/products/paris-cheri-extrait-de-parfum-astrophil-stella
+2026-07-23T07:04:05.823Z,New Arrival,fragrapedia.com,Fragrapedia Haus,Nabati Extrait de Parfum - Astrophil & Stella,,190,,https://fragrapedia.com/products/nabati-extrait-de-parfum-astrophil-stella
+2026-07-23T07:04:05.823Z,New Arrival,fragrapedia.com,Fragrapedia Haus,Madame M Extrait de Parfum - Astrophil & Stella,,190,,https://fragrapedia.com/products/madame-m-extrait-de-parfum-astrophil-stella
+2026-07-23T07:04:05.823Z,New Arrival,fragrapedia.com,Fragrapedia Haus,Shanghai 1930 Extrait de Parfum - Astrophil & Stella,,190,,https://fragrapedia.com/products/shanghai-1930-extrait-de-parfum-astrophil-stella
+2026-07-23T07:04:05.823Z,New Arrival,fragrapedia.com,Fragrapedia Haus,Sweet Pulp Extrait de Parfum - Astrophil & Stella,,190,,https://fragrapedia.com/products/sweet-pulp-extrait-de-parfum-astrophil-stella
+2026-07-23T07:04:05.823Z,New Arrival,fragrapedia.com,Fragrapedia Haus,In Extremis Extrait de Parfum - Astrophil & Stella,,190,,https://fragrapedia.com/products/in-extremis-extrait-de-parfum-astrophil-stella
+2026-07-23T07:04:05.823Z,New Arrival,fragrapedia.com,Fragrapedia Haus,Chromodoro Extrait de Parfum - Astrophil & Stella,,170,,https://fragrapedia.com/products/chromodoro-extrait-de-parfum-astrophil-stella
+2026-07-23T07:04:05.823Z,New Arrival,fragrapedia.com,Fragrapedia Haus,Nabati Oud Extrait de Parfum - Astrophil & Stella,,210,,https://fragrapedia.com/products/nabati-oud-extrait-de-parfum-astrophil-stella
+2026-07-23T07:04:05.823Z,New Arrival,fragrapedia.com,Fragrapedia Haus,Mon Santal Extrait de Parfum - Astrophil & Stella,,190,,https://fragrapedia.com/products/mon-santal-extrait-de-parfum-astrophil-stella
+2026-07-23T07:04:05.823Z,New Arrival,fragrapedia.com,Fragrapedia Haus,Sambalia Extrait de Parfum - Astrophil & Stella,,190,,https://fragrapedia.com/products/sambalia-extrait-de-parfum-astrophil-stella
+2026-07-23T07:04:05.823Z,New Arrival,fragrapedia.com,Fragrapedia Haus,Pepperkorn Extrait de Parfum - Astrophil & Stella,,190,,https://fragrapedia.com/products/pepperkorn-extrait-de-parfum-astrophil-stella
+2026-07-23T07:04:05.823Z,New Arrival,fragrapedia.com,Filippo Sorcinelli,Panna-sotto! Eau de Parfum- Filippo Sorcinelli,,155,,https://fragrapedia.com/products/panna-sotto-filippo-sorcinelli
+2026-07-23T07:04:05.823Z,New Arrival,fragrapedia.com,SOSPIRO,Mezzo Eau de Parfum - Sospiro,,325,,https://fragrapedia.com/products/mezzo-eau-de-parfum-sospiro
+2026-07-23T07:04:05.823Z,New Arrival,fragrapedia.com,Dara Caro,Love Passion - Dara Caro,,235,,https://fragrapedia.com/products/love-passion-dara-caro
+2026-07-23T07:04:05.823Z,New Arrival,fragrapedia.com,Dara Caro,Chily Parfum - Dara Caro,,235,,https://fragrapedia.com/products/chily-parfum-dara-caro
+2026-07-23T07:04:05.823Z,New Arrival,fragrapedia.com,Dara Caro,Ima-Gyn - Dara Caro,,211,,https://fragrapedia.com/products/ima-gyn-dara-caro
+2026-07-23T07:04:05.823Z,New Arrival,fragrapedia.com,Dara Caro,Oud Coffee - Dara Caro,,235,,https://fragrapedia.com/products/oud-coffee-dara-caro
+2026-07-23T07:04:05.823Z,New Arrival,fragrapedia.com,Dara Caro,Oud Coconut - Dara Caro,,235,,https://fragrapedia.com/products/oud-coconut-dara-caro
+2026-07-23T07:04:05.823Z,New Arrival,fragrapedia.com,Dara Caro,Bananoud - Dara Caro,,235,,https://fragrapedia.com/products/bananoud-dara-caro
+2026-07-23T07:04:05.823Z,New Arrival,fragrapedia.com,Dara Caro,Paradise Oud - Dara Caro,,181,,https://fragrapedia.com/products/paradise-oud-dara-caro
+2026-07-23T07:04:05.823Z,New Arrival,fragrapedia.com,Dara Caro,Oud Dubai - Dara Caro,,235,,https://fragrapedia.com/products/oud-dubai-dara-caro
+2026-07-23T07:04:05.823Z,New Arrival,fragrapedia.com,Dara Caro,Soul of the night - Dara Caro,,235,,https://fragrapedia.com/products/soul-of-the-night-dara-caro
+2026-07-23T07:04:05.823Z,New Arrival,fragrapedia.com,Dara Caro,Heavenly Wood - Dara Caro,,235,,https://fragrapedia.com/products/heavenly-wood-dara-caro
+2026-07-23T07:04:05.823Z,New Arrival,fragrapedia.com,Dara Caro,Oud Roses - Dara Caro,,235,,https://fragrapedia.com/products/oud-roses-dara-caro
+2026-07-23T07:04:05.823Z,New Arrival,fragrapedia.com,Dara Caro,Discovery Set - Dara Caro,,108,,https://fragrapedia.com/products/discovery-set-dara-caro
+2026-07-23T07:04:05.823Z,New Arrival,fragrapedia.com,Dara Caro,Aazaadee - Dara Caro,,235,,https://fragrapedia.com/products/aazaadee-dara-caro
+2026-07-23T07:04:05.823Z,New Arrival,fragrapedia.com,Dara Caro,Sweet Obssesion - Dara Caro,,235,,https://fragrapedia.com/products/sweet-obssesion-dara-caro
+2026-07-23T07:04:05.823Z,New Arrival,fragrapedia.com,Dara Caro,Darkness Bites - Dara Caro,,235,,https://fragrapedia.com/products/darkness-bites-dara-caro
+2026-07-23T07:04:05.823Z,New Arrival,fragrapedia.com,EPICO,Discovery Set - Epico Parfum,,45,,https://fragrapedia.com/products/discovery-set-epico-parfum
+2026-07-23T07:04:05.823Z,New Arrival,fragrapedia.com,EPICO,Mon Amour Body Cream - Epico Parfum,,45,,https://fragrapedia.com/products/mon-amour-body-cream-epico-parfum
+2026-07-23T07:04:05.823Z,New Arrival,fragrapedia.com,EPICO,Midnight Body Cream - Epico Parfum,,45,,https://fragrapedia.com/products/midnight-body-cream-epico-parfum
+2026-07-23T07:04:05.823Z,New Arrival,fragrapedia.com,EPICO,Macaron Body Cream - Epico Parfum,,45,,https://fragrapedia.com/products/macaron-body-cream-epico-parfum
+2026-07-23T07:04:05.823Z,New Arrival,fragrapedia.com,EPICO,Thelycheeus Eau de Parfum - Epico Parfum,,108,,https://fragrapedia.com/products/thelycheeus-eau-de-parfum-epico-parfum
+2026-07-23T07:04:05.823Z,New Arrival,fragrapedia.com,Narcotica,Maniac Eau de Parfum - Narcotica,,300,,https://fragrapedia.com/products/maniac-eau-de-parfum-narcotica
+2026-07-23T07:04:05.823Z,New Arrival,fragrapedia.com,Alfred Ritchy,Bocagrande Eau de Parfum - Alfred Ritchy,,175,,https://fragrapedia.com/products/bocagrande-eau-de-parfum-alfred-ritchy
+2026-07-23T07:04:05.823Z,New Arrival,fragrapedia.com,PARADIS DES SENS,Anela Eau de Parfum - Paradis Des Sense,,172,,https://fragrapedia.com/products/anela-eau-de-parfum-paradis-des-sense
+2026-07-23T07:04:05.823Z,New Arrival,fragrapedia.com,SOSPIRO,Accento Viola Eau de Parfum - Sospiro,,325,,https://fragrapedia.com/products/accento-viola-eau-de-parfum-sospiro
+2026-07-23T07:04:05.823Z,New Arrival,fragrapedia.com,SOSPIRO,Afgano Puro Eau de Parfum - Sospiro,,362,,https://fragrapedia.com/products/afgano-puro-eau-de-parfum-sospiro
+2026-07-23T07:04:05.823Z,New Arrival,fragrapedia.com,SOSPIRO,Basso Eau de Parfum - Sospiro,,325,,https://fragrapedia.com/products/basso-eau-de-parfum-sospiro
+2026-07-23T07:04:05.823Z,New Arrival,fragrapedia.com,SOSPIRO,Bel Canto Eau de Parfum - Sospiro,,295,,https://fragrapedia.com/products/bel-canto-eau-de-parfum-sospiro
+2026-07-23T07:04:05.823Z,New Arrival,fragrapedia.com,SOSPIRO,Cadenza Eau de Parfum - Sospiro,,295,,https://fragrapedia.com/products/cadenza-eau-de-parfum-sospiro
+2026-07-23T07:04:05.823Z,New Arrival,fragrapedia.com,SOSPIRO,Contralto Eau de Parfum - Sospiro,,295,,https://fragrapedia.com/products/contralto-eau-de-parfum-sospiro
+2026-07-23T07:04:05.823Z,New Arrival,fragrapedia.com,SOSPIRO,Erba Oud Eau de Parfum - Sospiro,,295,,https://fragrapedia.com/products/erba-oud-eau-de-parfum-sospiro
+2026-07-23T07:04:05.823Z,New Arrival,fragrapedia.com,SOSPIRO,Erba Pura Magica Eau de Parfum - Sospiro,,295,,https://fragrapedia.com/products/erba-pura-magica-eau-de-parfum-sospiro
+2026-07-23T07:04:05.823Z,New Arrival,fragrapedia.com,SOSPIRO,Vibrato Eau de Parfum - Sospiro,,325,,https://fragrapedia.com/products/vibrato-eau-de-parfum-sospiro
+2026-07-23T07:04:05.823Z,New Arrival,fragrapedia.com,SOSPIRO,Liberto Eau de Parfum - Sospiro,,325,,https://fragrapedia.com/products/liberato-eau-de-parfum-sospiro
+2026-07-23T07:04:05.823Z,New Arrival,fragrapedia.com,SOSPIRO,Opera Grande Eau de Parfum - Sospiro,,375,,https://fragrapedia.com/products/opera-grande-eau-de-parfum-sospiro
+2026-07-23T07:04:05.823Z,New Arrival,fragrapedia.com,SOSPIRO,Pasticcio Eau de Parfum - Sospiro,,295,,https://fragrapedia.com/products/pasticcio-eau-de-parfum-sospiro
+2026-07-23T07:04:05.823Z,New Arrival,fragrapedia.com,SOSPIRO,Prima Donna Eau de Parfum - Sospiro,,295,,https://fragrapedia.com/products/prima-donna-eau-de-parfum-sospiro
+2026-07-23T07:04:05.823Z,New Arrival,fragrapedia.com,SOSPIRO,Deep Ocean Amber Eau de Parfum - Sospiro,,375,,https://fragrapedia.com/products/deep-ocean-amber-eau-de-parfum-sospiro
+2026-07-23T07:04:05.823Z,New Arrival,fragrapedia.com,SOSPIRO,Dolce Melodia Eau de Parfum - Sospiro,,325,,https://fragrapedia.com/products/dolce-melodia-eau-de-parfum-sospiro
+2026-07-23T07:04:05.823Z,New Arrival,fragrapedia.com,SOSPIRO,Erba Leather Eau de Parfum - Sospiro,,325,,https://fragrapedia.com/products/erba-leather-eau-de-parfum-sospiro
+2026-07-23T07:04:05.823Z,New Arrival,fragrapedia.com,SOSPIRO,Tenore Eau de Parfum - Sospiro,,325,,https://fragrapedia.com/products/tenore-eau-de-parfum-sospiro
+2026-07-23T07:04:05.823Z,New Arrival,fragrapedia.com,SOSPIRO,Dolce Sonata Eau de Parfum - Sospiro,,325,,https://fragrapedia.com/products/dolce-sonata-eau-de-parfum-sospiro
+2026-07-23T07:04:05.823Z,New Arrival,fragrapedia.com,SOSPIRO,Maraschino Eau de Parfum - Sospiro,,325,,https://fragrapedia.com/products/maraschino-eau-de-parfum-sospiro
+2026-07-23T07:04:05.823Z,New Arrival,fragrapedia.com,SOSPIRO,Traviata Eau de Parfum - Sospiro,,325,,https://fragrapedia.com/products/traviata-eau-de-parfum-sospiro
+2026-07-23T07:04:05.823Z,New Arrival,fragrapedia.com,SOSPIRO,Sospiro Discovery Set - Sospiro,,55,,https://fragrapedia.com/products/sospiro-discovery-set-sospiro
+2026-07-23T07:04:05.823Z,New Arrival,fragrapedia.com,SOSPIRO,Cavatina Eau de Parfum - Sospiro,,220,,https://fragrapedia.com/products/cavatina-eau-de-parfum-sospiro
+2026-07-23T07:04:05.823Z,New Arrival,fragrapedia.com,SOSPIRO,Farsa Eau de Parfum - Sospiro,,220,,https://fragrapedia.com/products/farsa-eau-de-parfum-sospiro
+2026-07-23T07:04:05.823Z,New Arrival,fragrapedia.com,SOSPIRO,Viola Eau de Parfum - Sospiro,,220,,https://fragrapedia.com/products/viola-eau-de-parfum-sospiro
+2026-07-23T07:04:05.823Z,New Arrival,fragrapedia.com,SOSPIRO,Diva Eau de Parfum - Sospiro,,220,,https://fragrapedia.com/products/diva-eau-de-parfum-sospiro
+2026-07-23T07:04:05.823Z,New Arrival,fragrapedia.com,SOSPIRO,Aira Eau de Parfum - Sospiro,,220,,https://fragrapedia.com/products/aira-eau-de-parfum-sospiro
+2026-07-23T07:04:05.823Z,New Arrival,fragrapedia.com,SOSPIRO,Il Padrino Eau de Parfum - Sospiro,,325,,https://fragrapedia.com/products/il-padrino-eau-de-parfum-sospiro
+2026-07-23T07:04:05.823Z,New Arrival,fragrapedia.com,SOSPIRO,Vibranna Eau de Parfum - Sospiro,,325,,https://fragrapedia.com/products/vibranna-eau-de-parfum-sospiro
+2026-07-23T07:04:05.823Z,New Arrival,fragrapedia.com,Eau De Moe,ADAM Eau de Parfum - Eau De Moe,,150,,https://fragrapedia.com/products/adam-eau-de-parfum
+2026-07-23T07:04:05.823Z,New Arrival,fragrapedia.com,Eau De Moe,LULU Eau de Parfum - Eau De Moe,,150,,https://fragrapedia.com/products/lulu-eau-de-parfum
+2026-07-23T07:04:05.823Z,New Arrival,fragrapedia.com,Eau De Moe,CECE Eau de Parfum - Eau De Moe,,150,,https://fragrapedia.com/products/cece-eau-de-parfum
+2026-07-23T07:04:05.823Z,New Arrival,fragrapedia.com,Eau De Moe,SOLOMON Eau de Parfum - Eau De Moe,,150,,https://fragrapedia.com/products/solomon-eau-de-parfum
+2026-07-23T07:04:05.823Z,New Arrival,fragrapedia.com,Laboratorio Olfattivo,Tantrico - Laboratorio Olfattivo,,185,,https://fragrapedia.com/products/tantrico-laboratorio-olfattivo
+2026-07-23T07:04:05.823Z,New Arrival,fragrapedia.com,Laboratorio Olfattivo,Tuberosis - Laboratorio Olfattivo,,185,,https://fragrapedia.com/products/tuberosis-laboratorio-olfattivo
+2026-07-23T07:04:05.823Z,New Arrival,fragrapedia.com,Laboratorio Olfattivo,Sacreste - Laboratorio Olfattivo,,165,,https://fragrapedia.com/products/sacreste-laboratorio-olfattivo
+2026-07-23T07:04:05.823Z,New Arrival,fragrapedia.com,Laboratorio Olfattivo,Vanhera - Laboratorio Olfattivo,,165,,https://fragrapedia.com/products/vanhera-laboratorio-olfattivo
+2026-07-23T07:04:05.823Z,New Arrival,fragrapedia.com,Laboratorio Olfattivo,Patchouliful - Laboratorio Olfattivo,,165,,https://fragrapedia.com/products/patchouliful-laboratorio-olfattivo
+2026-07-23T07:04:05.823Z,New Arrival,fragrapedia.com,Laboratorio Olfattivo,Kashnoir - Laboratorio Olfattivo,,165,,https://fragrapedia.com/products/kashnoir-laboratorio-olfattivo
+2026-07-23T07:04:05.823Z,New Arrival,fragrapedia.com,Laboratorio Olfattivo,Alambar - Laboratorio Olfattivo,,145,,https://fragrapedia.com/products/alambar-laboratorio-olfattivo
+2026-07-23T07:04:05.823Z,New Arrival,fragrapedia.com,Maison Tahite,Arabican Rose Eau de Parfum - Maison Tahite,,145,,https://fragrapedia.com/products/arabican-rose-eau-de-parfum-maison-tahite
+2026-07-23T07:04:05.823Z,New Arrival,fragrapedia.com,Amouage,Love Delight Eau de Parfum - Amouage,,335.75,,https://fragrapedia.com/products/love-delight-eau-de-parfum-amouage
+2026-07-23T07:04:05.823Z,New Arrival,fragrapedia.com,Amouage,Opus XIV Royal Tobacco Eau de Parfum - Amouage,,335.75,,https://fragrapedia.com/products/opus-xiv-royal-tobacco-eau-de-parfum-amouage
+2026-07-23T07:04:05.823Z,New Arrival,fragrapedia.com,Amouage,Jubilation XXV Man Eau de Parfum - Amouage,,335.75,,https://fragrapedia.com/products/jubilation-xxv-man-eau-de-parfum-amouage
+2026-07-23T07:04:05.823Z,New Arrival,fragrapedia.com,Amouage,Purpose Eau de Parfum - Amouage,,335.75,,https://fragrapedia.com/products/purpose-eau-de-parfum-amouage
+2026-07-23T07:04:05.823Z,New Arrival,fragrapedia.com,Amouage,Dia 40 Woman Eau de Parfum - Amouage,,467.75,,https://fragrapedia.com/products/dia-40-eau-de-parfum-amouage
+2026-07-23T07:04:05.823Z,New Arrival,fragrapedia.com,Amouage,Epic Woman Eau de Parfum - Amouage,,335.75,,https://fragrapedia.com/products/epic-woman-eau-de-parfum-amouage
+2026-07-23T07:04:05.823Z,New Arrival,fragrapedia.com,Amouage,Opus VII Reckless Leather Eau de Parfum - Amouage,,335.75,,https://fragrapedia.com/products/opus-vii-reckless-eau-de-parfum-amouage
+2026-07-23T07:04:05.823Z,New Arrival,fragrapedia.com,Amouage,Interlude Man Eau de Parfum - Amouage,,335.75,,https://fragrapedia.com/products/interlude-man-eau-de-parfum-amouage
+2026-07-23T07:04:05.823Z,New Arrival,fragrapedia.com,Amouage,Lineage Eau de Parfum - Amouage,,335.75,,https://fragrapedia.com/products/lineage-eau-de-parfum-amouage
+2026-07-23T07:04:05.823Z,New Arrival,fragrapedia.com,Amouage,Honour Man Eau de Parfum - Amouage,,335.75,,https://fragrapedia.com/products/honour-man-eau-de-parfum-amouage
+2026-07-23T07:04:05.823Z,New Arrival,fragrapedia.com,Amouage,Overtrue Man Eau de Parfum - Amouage,,335.75,,https://fragrapedia.com/products/overtrue-man-eau-de-parfum-amouage
+2026-07-23T07:04:05.823Z,New Arrival,fragrapedia.com,Amouage,Honour Woman Eau de Parfum - Amouage,,335.75,,https://fragrapedia.com/products/honour-woman-eau-de-parfum-amouage
+2026-07-23T07:04:05.823Z,New Arrival,fragrapedia.com,XERJOFF,Torino 24 Eau de Parfum - Xerjoff,,195.5,,https://fragrapedia.com/products/torino-24-eau-de-parfum-xerjoff
+2026-07-23T07:04:05.823Z,New Arrival,fragrapedia.com,XERJOFF,Black Moonlight Eau de Parfum - Xerjoff,,298.35,,https://fragrapedia.com/products/black-moonlight-eau-de-parfum-xerjoff
+2026-07-23T07:04:05.823Z,New Arrival,fragrapedia.com,XERJOFF,Louis XV Eau de Parfum - Xerjoff,,261.8,,https://fragrapedia.com/products/louis-xv-eau-de-parfum-xerjoff
+2026-07-23T07:04:05.823Z,New Arrival,fragrapedia.com,XERJOFF,Apollonia Eau de Parfum - Xerjoff,,233.75,,https://fragrapedia.com/products/apollonia-eau-de-parfum-xerjoff
+2026-07-23T07:04:05.823Z,New Arrival,fragrapedia.com,XERJOFF,Starlight Eau de Parfum - Xerjoff,,233.75,,https://fragrapedia.com/products/starlight-eau-de-parfum-xerjoff
+2026-07-23T07:04:05.823Z,New Arrival,fragrapedia.com,XERJOFF,NeoRio Fluo Pink Eau de Parfum - Xerjoff,,298.35,,https://fragrapedia.com/products/neorio-fluo-pink-eau-de-parfum-xerjoff
+2026-07-23T07:04:05.823Z,New Arrival,fragrapedia.com,XERJOFF,NeoRio Fluo Green Eau de Parfum - Xerjoff,,298.35,,https://fragrapedia.com/products/neorio-fluo-green-eau-de-parfum-xerjoff
+2026-07-23T07:04:05.823Z,New Arrival,fragrapedia.com,XERJOFF,NeoRio Fluo Orange Eau de Parfum - Xerjoff,,298.35,,https://fragrapedia.com/products/neorio-fluo-orange-eau-de-parfum-xerjoff
+2026-07-23T07:04:05.823Z,New Arrival,fragrapedia.com,XERJOFF,NeoRio Fluo Yellow Eau de Parfum - Xerjoff,,298.35,,https://fragrapedia.com/products/neorio-fluo-yellow-eau-de-parfum-xerjoff
+2026-07-23T07:04:05.823Z,New Arrival,fragrapedia.com,XERJOFF,Cruz del Sur II Eau de Parfum - Xerjoff,,250.75,,https://fragrapedia.com/products/cruz-del-sur-ii-eau-de-parfum-xerjoff
+2026-07-23T07:04:05.823Z,New Arrival,fragrapedia.com,XERJOFF,La Capitale Eau de Parfum - Xerjoff,,250.75,,https://fragrapedia.com/products/la-capitale-eau-de-parfum-xerjoff
+2026-07-23T07:04:05.823Z,New Arrival,fragrapedia.com,XERJOFF,Tony Iommi Eau de Parfum - Xerjoff,,276.25,,https://fragrapedia.com/products/tony-iommi-eau-de-parfum-xerjoff
+2026-07-23T07:04:05.823Z,New Arrival,fragrapedia.com,XERJOFF,Torino 21 Eau de Parfum - Xerjoff,,306,,https://fragrapedia.com/products/torino-21-eau-de-parfum-xerjoff
+2026-07-23T07:04:05.823Z,New Arrival,fragrapedia.com,XERJOFF,Torino 22 Eau de Parfum - Xerjoff,,195.5,,https://fragrapedia.com/products/torino-22-eau-de-parfum-xerjoff
+2026-07-23T07:04:05.823Z,New Arrival,fragrapedia.com,XERJOFF,Quattro Pizzi Eau de Parfum - Xerjoff,,280.5,,https://fragrapedia.com/products/quattro-pizzi-eau-de-parfum-xerjoff
+2026-07-23T07:04:05.823Z,New Arrival,fragrapedia.com,XERJOFF,Accento Eau de Parfum - Xerjoff,,280.5,,https://fragrapedia.com/products/accento-eau-de-parfum-xerjoff-1
+2026-07-23T07:04:05.823Z,New Arrival,fragrapedia.com,XERJOFF,Purple Accento Eau de Parfum - Xerjoff,,279.65,,https://fragrapedia.com/products/purple-accento-eau-de-parfum-xerjoff
+2026-07-23T07:04:05.823Z,New Arrival,fragrapedia.com,XERJOFF,Bouquet Ideale Eau de Parfum - Xerjoff,,280.5,,https://fragrapedia.com/products/bouquet-ideale-eau-de-parfum-xerjoff
+2026-07-23T07:04:05.823Z,New Arrival,fragrapedia.com,XERJOFF,Erba Gold Eau de Parfum - Xerjoff,,306,,https://fragrapedia.com/products/erba-gold-eau-de-parfum-xerjoff
+2026-07-23T07:04:05.823Z,New Arrival,fragrapedia.com,XERJOFF,Italica Eau de Parfum - Xerjoff,,280.5,,https://fragrapedia.com/products/italica-eau-de-parfum-xerjoff
+2026-07-23T07:04:05.823Z,New Arrival,fragrapedia.com,XERJOFF,Mefisto Eau de Parfum - Xerjoff,,280.5,,https://fragrapedia.com/products/mefisto-eau-de-parfum-xerjoff
+2026-07-23T07:04:05.823Z,New Arrival,fragrapedia.com,XERJOFF,Lira Eau de Parfum - Xerjoff,,280.5,,https://fragrapedia.com/products/lira-eau-de-parfum-xerjoff
+2026-07-23T07:04:05.823Z,New Arrival,fragrapedia.com,Indult,Isvaraya Eau de Parfum - Indult,,191.25,,https://fragrapedia.com/products/isvaraya-eau-de-parfum-indult
+2026-07-23T07:04:05.823Z,New Arrival,fragrapedia.com,Indult,Cuir 404 Eau de Parfum - Indult,,191.25,,https://fragrapedia.com/products/cuir-404-eau-de-parfum-indult
+2026-07-23T07:04:05.823Z,New Arrival,fragrapedia.com,Nishane,Shem Extrait de Parfum - Nishane,,497.25,,https://fragrapedia.com/products/shem-extrait-de-parfum-nishane
+2026-07-23T07:04:05.823Z,New Arrival,fragrapedia.com,Nishane,Mana Extrait de Parfum - Nishane,,497.25,,https://fragrapedia.com/products/mana-extrait-de-parfum-nishane
+2026-07-23T07:04:05.823Z,New Arrival,fragrapedia.com,Nishane,Tuberoza X Extrait de Parfum - Nishane,,307.7,,https://fragrapedia.com/products/tuberoza-x-extrait-de-parfum-nishane
+2026-07-23T07:04:05.823Z,New Arrival,fragrapedia.com,Nishane,Hacivat X Extrait de Parfum - Nishane,,317.05,,https://fragrapedia.com/products/hacivat-x-extrait-de-parfum-nishane
+2026-07-23T07:04:05.823Z,New Arrival,fragrapedia.com,Nishane,Fan Your Flames Extrait de Parfum - Nishane,,296.65,,https://fragrapedia.com/products/fan-your-flames-extrait-de-parfum-nishane
+2026-07-23T07:04:05.823Z,New Arrival,fragrapedia.com,Nishane,Deziro Extrait de Parfum - Nishane,,306,,https://fragrapedia.com/products/deziro-extrait-de-parfum-nishane
+2026-07-23T07:04:05.823Z,New Arrival,fragrapedia.com,Nishane,Favonius London Extrait de Parfum - Nishane,,335.7,,https://fragrapedia.com/products/favonius-extrait-de-parfum-nishane
+2026-07-23T07:04:05.823Z,New Arrival,fragrapedia.com,Widian,Melogold Eau de Parfum - Widian,,168.3,,https://fragrapedia.com/products/melogold-eau-de-parfum-widian
+2026-07-23T07:04:05.823Z,New Arrival,fragrapedia.com,Widian,Almond Eau de Parfum - Widian,,168.3,,https://fragrapedia.com/products/almond-eau-de-parfum-widian
+2026-07-23T07:04:05.823Z,New Arrival,fragrapedia.com,Widian,Cotton Eau de Parfum - Widian,,168.3,,https://fragrapedia.com/products/cotton-eau-de-parfum-widian
+2026-07-23T07:04:05.823Z,New Arrival,fragrapedia.com,Widian,White Eau de Parfum - Widian,,168.3,,https://fragrapedia.com/products/white-eau-de-parfum-widian
+2026-07-23T07:04:05.823Z,New Arrival,fragrapedia.com,Widian,Samar Extrait de Parfum - Widian,,230.35,,https://fragrapedia.com/products/samar-extrait-de-parfum-widian
+2026-07-23T07:04:05.823Z,New Arrival,fragrapedia.com,Widian,Granada Extrait de Parfum - Widian,,230.35,,https://fragrapedia.com/products/granada-extrait-de-parfum-widian
+2026-07-23T07:04:05.823Z,New Arrival,fragrapedia.com,Widian,Liwa Eau de Parfum - Widian,,307.7,,https://fragrapedia.com/products/liwa-eau-de-parfum-widian
+2026-07-23T07:04:05.823Z,New Arrival,fragrapedia.com,Thameen London,Sceptre Extrait de Parfum - Thameen London,,239.7,,https://fragrapedia.com/products/sceptre-extrait-de-parfum-thameen-london
+2026-07-23T07:04:05.823Z,New Arrival,fragrapedia.com,Thameen London,Imperial Crown Extrait de Parfum - Thameen London,,239.7,,https://fragrapedia.com/products/imperial-crown-extrait-de-parfum-thameen-london
+2026-07-23T07:04:05.823Z,New Arrival,fragrapedia.com,Thameen London,Carved Oud Extrait de Parfum - Thameen London,,289,,https://fragrapedia.com/products/carved-oud-extrait-de-parfum-thameen-london
+2026-07-23T07:04:05.823Z,New Arrival,fragrapedia.com,Thameen London,Patiala Extrait de Parfum - Thameen London,,289,,https://fragrapedia.com/products/patiala-extrait-de-parfum-thameen-london
+2026-07-23T07:04:05.823Z,New Arrival,fragrapedia.com,Thameen London,Peregrina Extrait de Parfum - Thameen London,,289,,https://fragrapedia.com/products/peregrina-extrait-de-parfum-thameen-london
+2026-07-23T07:04:05.823Z,New Arrival,fragrapedia.com,Thameen London,Blue Heart Extrait de Parfum - Thameen London,,183.6,,https://fragrapedia.com/products/blue-heart-extrait-de-parfum-thameen-london
+2026-07-23T07:04:05.823Z,New Arrival,fragrapedia.com,Thameen London,Bold As Love Eau de Cologne - Thameen London,,236.3,,https://fragrapedia.com/products/bold-as-love-eau-de-cologne-thameen-london
+2026-07-23T07:04:05.823Z,New Arrival,fragrapedia.com,Nasomatto,Sado Naso Extrait de Parfum - Nasomatto,,163.8,,https://fragrapedia.com/products/sado-naso-extrait-de-parfum-nasomatto
+2026-07-23T07:04:05.823Z,New Arrival,fragrapedia.com,Nasomatto,Silver Musk Extrait de Parfum - Nasomatto,,163.8,,https://fragrapedia.com/products/silver-musk-extrait-de-parfum-nasomatto
+2026-07-23T07:04:05.823Z,New Arrival,fragrapedia.com,Nasomatto,Pardon Extrait de Parfum - Nasomatto,,163.8,,https://fragrapedia.com/products/pardon-extrait-de-parfum-nasomatto
+2026-07-23T07:04:05.823Z,New Arrival,fragrapedia.com,Nasomatto,Duro Extrait de Parfum - Nasomatto,,163.8,,https://fragrapedia.com/products/duro-extrait-de-parfum-nasomatto
+2026-07-23T07:04:05.823Z,New Arrival,fragrapedia.com,Nasomatto,Black Afgano Extrait de Parfum - Nasomatto,,163.8,,https://fragrapedia.com/products/black-afgano-extrait-de-parfum-nasomatto
+2026-07-23T07:04:05.823Z,New Arrival,fragrapedia.com,Orto Parisi,Risvelium Eau de Parfum - Orto Parisi,,161.5,,https://fragrapedia.com/products/risvelium-eau-de-parfum-orto-parisi
+2026-07-23T07:04:05.823Z,New Arrival,fragrapedia.com,Orto Parisi,Viridi Eau de Parfum - Orto Parisi,,161.5,,https://fragrapedia.com/products/viridi-eau-de-parfum-orto-parisi
+2026-07-23T07:04:05.823Z,New Arrival,fragrapedia.com,Orto Parisi,Terroni Eau de Parfum - Orto Parisi,,161.5,,https://fragrapedia.com/products/terroni-eau-de-parfum-orto-parisi
+2026-07-23T07:04:05.823Z,New Arrival,fragrapedia.com,Argentum,Ruler Eau de Parfum - Argentum,,148.75,,https://fragrapedia.com/products/ruler-eau-de-parfum-argentum
+2026-07-23T07:04:05.823Z,New Arrival,fragrapedia.com,Argentum,Creator Eau de Parfum - Argentum,,148.75,,https://fragrapedia.com/products/creator-eau-de-parfum-argentum
+2026-07-23T07:04:05.823Z,New Arrival,fragrapedia.com,Argentum,Lover Eau de Parfum - Argentum,,148.75,,https://fragrapedia.com/products/lover-eau-de-parfum-argentum
+2026-07-23T07:04:05.823Z,New Arrival,fragrapedia.com,Argentum,Jester Eau de Parfum - Argentum,,148.75,,https://fragrapedia.com/products/jester-eau-de-parfum-argentum
+2026-07-23T07:04:05.823Z,New Arrival,fragrapedia.com,Argentum,Explorer Eau de Parfum - Argentum,,148.75,,https://fragrapedia.com/products/explorer-eau-de-parfum-argentum
+2026-07-23T07:04:05.823Z,New Arrival,fragrapedia.com,Argentum,Innocent Eau de Parfum - Argentum,,148.75,,https://fragrapedia.com/products/innocent-eau-de-parfum-argentum
+2026-07-23T07:04:05.823Z,New Arrival,fragrapedia.com,Argentum,Hero Eau de Parfum - Argentum,,148.75,,https://fragrapedia.com/products/hero-eau-de-parfum-argentum
+2026-07-23T07:04:05.823Z,New Arrival,fragrapedia.com,Argentum,Rebel Eau de Parfum - Argentum,,148.75,,https://fragrapedia.com/products/rebel-eau-de-parfum-argentum
+2026-07-23T07:04:05.823Z,New Arrival,fragrapedia.com,Argentum,Sage Eau de Parfum - Argentum,,148.75,,https://fragrapedia.com/products/sage-eau-de-parfum-argentum
+2026-07-23T07:04:05.823Z,New Arrival,fragrapedia.com,Stephane Humbert Lucas,Rose de Petra Eau de Parfum - Stephane Humbert Lucas,,157.25,,https://fragrapedia.com/products/rose-de-petra-eau-de-parfum-stephane-humbert-lucas
+2026-07-23T07:04:05.823Z,New Arrival,fragrapedia.com,Stephane Humbert Lucas,Lady White Snake Eau de Parfum - Stephane Humbert Lucas,,195.5,,https://fragrapedia.com/products/lady-white-snake-eau-de-parfum-stephane-humbert-lucas
+2026-07-23T07:04:05.823Z,New Arrival,fragrapedia.com,Stephane Humbert Lucas,Sea My Love Eau de Parfum - Stephane Humbert Lucas,,216.75,,https://fragrapedia.com/products/sea-my-love-eau-de-parfum-stephane-humbert-lucas
+2026-07-23T07:04:05.823Z,New Arrival,fragrapedia.com,Stephane Humbert Lucas,Soleil de Jeddah Mango Kiss Eau de Parfum - Stephane Humbert Lucas,,246.5,,https://fragrapedia.com/products/soleil-de-jeddah-mango-kiss-eau-de-parfum-stephane-humbert-lucas
+2026-07-23T07:04:05.823Z,New Arrival,fragrapedia.com,Stephane Humbert Lucas,Panthea Eau de Parfum - Stephane Humbert Lucas,,157.25,,https://fragrapedia.com/products/panthea-eau-de-parfum-stephane-humbert-lucas
+2026-07-23T07:04:05.823Z,New Arrival,fragrapedia.com,Stephane Humbert Lucas,Wish Come True Eau de Parfum - Stephane Humbert Lucas,,191.25,,https://fragrapedia.com/products/wish-come-true-eau-de-parfum-stephane-humbert-lucas
+2026-07-23T07:04:05.823Z,New Arrival,fragrapedia.com,Stephane Humbert Lucas,Venom Incarnat Eau de Parfum - Stephane Humbert Lucas,,246.5,,https://fragrapedia.com/products/venom-incarnat-eau-de-parfum-stephane-humbert-lucas
+2026-07-23T07:04:05.823Z,New Arrival,fragrapedia.com,Stephane Humbert Lucas,Soleil de Jeddah L'Original Eau de Parfum - Stephane Humbert Lucas,,246.5,,https://fragrapedia.com/products/soleil-de-jeddah-loriginal-eau-de-parfum-stephane-humbert-lucas
+2026-07-23T07:04:05.823Z,New Arrival,fragrapedia.com,Eight and Bob,Cap d'Antibes Eau de Parfum - Eight and Bob,,216.75,,https://fragrapedia.com/products/cap-dantibes-eau-de-parfum-eight-and-bob
+2026-07-23T07:04:05.823Z,New Arrival,fragrapedia.com,Eight and Bob,Eight and Bob Eau de Parfum - Eight and Bob,,216.75,,https://fragrapedia.com/products/eight-and-bob-eau-de-parfum-eight-and-bob
+2026-07-23T07:04:05.823Z,New Arrival,fragrapedia.com,Eight and Bob,Egypt Eau de Parfum - Eight and Bob,,216.75,,https://fragrapedia.com/products/egypt-eau-de-parfum-eight-and-bob
+2026-07-23T07:04:05.823Z,New Arrival,fragrapedia.com,Eight and Bob,Annicke 6 Eau de Parfum - Eight and Bob,,216.75,,https://fragrapedia.com/products/annicke-6-eau-de-parfum-eight-and-bob
+2026-07-23T07:04:05.823Z,New Arrival,fragrapedia.com,Eight and Bob,Annicke 4 Eau de Parfum - Eight and Bob,,216.75,,https://fragrapedia.com/products/annicke-4-eau-de-parfum-eight-and-bob
+2026-07-23T07:04:05.823Z,New Arrival,fragrapedia.com,Eight and Bob,Annicke 3 Eau de Parfum - Eight and Bob,,216.75,,https://fragrapedia.com/products/annicke-3-eau-de-parfum-eight-and-bob
+2026-07-23T07:04:05.823Z,New Arrival,fragrapedia.com,Eight and Bob,Annicke 2 Eau de Parfum - Eight and Bob,,216.75,,https://fragrapedia.com/products/annicke-2-eau-de-parfum-eight-and-bob
+2026-07-23T07:04:05.823Z,New Arrival,fragrapedia.com,Laboratorio Olfattivo,Amberbomb Eau de Parfum - Laboratorio Olfattivo,,205,,https://fragrapedia.com/products/amberbomb-eau-de-parfum-laboratorio-olfattivo
+2026-07-23T07:04:05.823Z,New Arrival,fragrapedia.com,Laboratorio Olfattivo,Nerosa Eau de Parfum - Laboratorio Olfattivo,,165,,https://fragrapedia.com/products/nerosa-eau-de-parfum-laboratorio-olfattivo
+2026-07-23T07:04:05.823Z,New Arrival,fragrapedia.com,Laboratorio Olfattivo,NUN Eau de Parfum - Laboratorio Olfattivo,,145,,https://fragrapedia.com/products/nun-eau-de-parfum-laboratorio-olfattivo
+2026-07-23T07:04:05.823Z,New Arrival,fragrapedia.com,Laboratorio Olfattivo,MISS U Eau de Parfum - Laboratorio Olfattivo,,145,,https://fragrapedia.com/products/miss-u-eau-de-parfum-laboratorio-olfattivo
 2026-07-23T04:43:48.301Z,19% Price Drop,jomashop.com,Boucheron,Quatre / Boucheron EDT Spray 1.7 oz (50 ml) (m),30.99,24.99,19,https://www.jomashop.com/boucheron-perfume-quamts17.html
 2026-07-23T04:43:48.301Z,11% Price Drop,jomashop.com,Creed,Creed Bois Du Portugal / Creed EDP Spray 3.3 oz (100 ml) (m),309.99,274.99,11,https://www.jomashop.com/creed-perfume-cbpmes33.html
 2026-07-23T04:43:48.301Z,11% Price Drop,jomashop.com,Yves Saint Laurent,Paris / Ysl EDT Spray 4.2 oz (w),94.99,84.99,11,https://www.jomashop.com/ysl-pasts4-a.html
