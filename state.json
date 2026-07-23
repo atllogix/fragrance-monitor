@@ -1473,7 +1473,7 @@
         "handle": "parfums-de-marly-athenais",
         "variants": {
           "43230858248251": {
-            "available": true,
+            "available": false,
             "price": 299.99
           },
           "43659603476539": {
@@ -15172,7 +15172,7 @@
             "price": 55.99
           },
           "46226430951481": {
-            "available": true,
+            "available": false,
             "price": 79.99
           },
           "46226430984249": {
