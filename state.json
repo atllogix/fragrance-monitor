@@ -1381,7 +1381,7 @@
             "price": 155
           },
           "41596982001723": {
-            "available": true,
+            "available": false,
             "price": 189
           },
           "41845725331515": {
@@ -3187,7 +3187,7 @@
         "handle": "escentric-molecules-molecule-01-black-tea",
         "variants": {
           "43543790485563": {
-            "available": true,
+            "available": false,
             "price": 117
           },
           "43543790518331": {
@@ -9146,7 +9146,7 @@
             "price": 47.99
           },
           "47975745454302": {
-            "available": true,
+            "available": false,
             "price": 80.99
           }
         }
