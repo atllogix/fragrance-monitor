@@ -8005,15 +8005,15 @@
           },
           "48459764793566": {
             "available": false,
-            "price": 185
+            "price": 3.99
           },
           "48459767087326": {
             "available": false,
-            "price": 185
+            "price": 13.99
           },
           "48459768922334": {
             "available": false,
-            "price": 185
+            "price": 18.49
           }
         }
       },
@@ -8027,15 +8027,15 @@
           },
           "48459790221534": {
             "available": false,
-            "price": 215
+            "price": 3.99
           },
           "48459794514142": {
             "available": false,
-            "price": 215
+            "price": 13.99
           },
           "48459798282462": {
             "available": false,
-            "price": 215
+            "price": 18.49
           }
         }
       },
@@ -8049,15 +8049,15 @@
           },
           "48460331024606": {
             "available": false,
-            "price": 125
+            "price": 3.99
           },
           "48460331811038": {
             "available": false,
-            "price": 125
+            "price": 13.99
           },
           "48460333416670": {
             "available": false,
-            "price": 125
+            "price": 18.49
           }
         }
       },
@@ -8067,6 +8067,18 @@
         "variants": {
           "48453522129118": {
             "available": true,
+            "price": 245
+          },
+          "48464658956510": {
+            "available": false,
+            "price": 245
+          },
+          "48464672882910": {
+            "available": false,
+            "price": 245
+          },
+          "48464685367518": {
+            "available": false,
             "price": 245
           }
         }
@@ -8101,15 +8113,15 @@
           },
           "48459819483358": {
             "available": false,
-            "price": 125
+            "price": 3.99
           },
           "48459822366942": {
             "available": false,
-            "price": 125
+            "price": 13.99
           },
           "48459827904734": {
             "available": false,
-            "price": 125
+            "price": 16.99
           }
         }
       },
@@ -8133,15 +8145,15 @@
           },
           "48460256936158": {
             "available": false,
-            "price": 155
+            "price": 3.99
           },
           "48460311068894": {
             "available": false,
-            "price": 155
+            "price": 13.99
           },
           "48460311757022": {
             "available": false,
-            "price": 155
+            "price": 18.49
           }
         }
       },
@@ -8165,15 +8177,15 @@
           },
           "48459922276574": {
             "available": false,
-            "price": 92
+            "price": 3.99
           },
           "48459941282014": {
             "available": false,
-            "price": 92
+            "price": 13.99
           },
           "48459951866078": {
             "available": false,
-            "price": 92
+            "price": 18.49
           }
         }
       },
@@ -9590,7 +9602,7 @@
             "price": 270
           },
           "48443151941854": {
-            "available": false,
+            "available": true,
             "price": 7.99
           },
           "48443153154270": {
@@ -9612,7 +9624,7 @@
             "price": 270
           },
           "48443133984990": {
-            "available": false,
+            "available": true,
             "price": 7.99
           },
           "48443134705886": {
@@ -9630,7 +9642,7 @@
         "handle": "xerjoff-accento-edp",
         "variants": {
           "48443077558494": {
-            "available": false,
+            "available": true,
             "price": 5.49
           },
           "48443077591262": {
@@ -9652,7 +9664,7 @@
             "price": 259.99
           },
           "48442920763614": {
-            "available": false,
+            "available": true,
             "price": 13.99
           },
           "48442921386206": {
@@ -9670,7 +9682,7 @@
         "handle": "toskovat-last-birthday-cake-extrait",
         "variants": {
           "48442838941918": {
-            "available": false,
+            "available": true,
             "price": 6.99
           },
           "48442838974686": {
@@ -9688,7 +9700,7 @@
         "handle": "ex-nihilo-my-sweetest-morphine-edp",
         "variants": {
           "48437961064670": {
-            "available": false,
+            "available": true,
             "price": 6.99
           },
           "48437961097438": {
@@ -9706,7 +9718,7 @@
         "handle": "ex-nihilo-amber-sky-edp",
         "variants": {
           "48437911650526": {
-            "available": false,
+            "available": true,
             "price": 8.99
           },
           "48437911683294": {
@@ -9724,7 +9736,7 @@
         "handle": "ex-nihilo-outcast-blue-edp",
         "variants": {
           "48437882257630": {
-            "available": false,
+            "available": true,
             "price": 6.99
           },
           "48437882290398": {
@@ -9742,7 +9754,7 @@
         "handle": "ex-nihilo-gold-immortals-edp",
         "variants": {
           "48437718548702": {
-            "available": false,
+            "available": true,
             "price": 6.99
           },
           "48437718581470": {
@@ -9760,7 +9772,7 @@
         "handle": "ex-nihilo-chandigarh-express-edp",
         "variants": {
           "48437563490526": {
-            "available": false,
+            "available": true,
             "price": 8.99
           },
           "48437563523294": {
@@ -9778,7 +9790,7 @@
         "handle": "ex-nihilo-stellar-dreamers-edp",
         "variants": {
           "48437532000478": {
-            "available": false,
+            "available": true,
             "price": 15.99
           },
           "48437532033246": {
@@ -9796,7 +9808,7 @@
         "handle": "ex-nihilo-brompton-immortals-edp",
         "variants": {
           "48437479735518": {
-            "available": false,
+            "available": true,
             "price": 14.99
           },
           "48437479768286": {
@@ -9864,7 +9876,7 @@
             "price": 149.99
           },
           "48442968604894": {
-            "available": false,
+            "available": true,
             "price": 12.99
           },
           "48442969293022": {
@@ -9906,7 +9918,7 @@
             "price": 190
           },
           "48445644996830": {
-            "available": false,
+            "available": true,
             "price": 6.99
           },
           "48445645881566": {
@@ -9928,7 +9940,7 @@
             "price": 190
           },
           "48445687070942": {
-            "available": false,
+            "available": true,
             "price": 6.99
           },
           "48445687431390": {
@@ -9950,7 +9962,7 @@
             "price": 190
           },
           "48445671145694": {
-            "available": false,
+            "available": true,
             "price": 6.99
           },
           "48445671276766": {
@@ -9972,7 +9984,7 @@
             "price": 190
           },
           "48445971595486": {
-            "available": false,
+            "available": true,
             "price": 6.99
           },
           "48445972414686": {
@@ -9994,7 +10006,7 @@
             "price": 190
           },
           "48445765779678": {
-            "available": false,
+            "available": true,
             "price": 6.99
           },
           "48445769023710": {
@@ -10016,7 +10028,7 @@
             "price": 190
           },
           "48445663183070": {
-            "available": false,
+            "available": true,
             "price": 6.99
           },
           "48445663248606": {
@@ -10038,7 +10050,7 @@
             "price": 190
           },
           "48445682548958": {
-            "available": false,
+            "available": true,
             "price": 6.99
           },
           "48445682778334": {
@@ -10060,7 +10072,7 @@
             "price": 190
           },
           "48445621436638": {
-            "available": false,
+            "available": true,
             "price": 6.99
           },
           "48445622321374": {
@@ -10082,7 +10094,7 @@
             "price": 190
           },
           "48445875847390": {
-            "available": false,
+            "available": true,
             "price": 6.99
           },
           "48445916905694": {
@@ -10104,7 +10116,7 @@
             "price": 190
           },
           "48445985652958": {
-            "available": false,
+            "available": true,
             "price": 6.99
           },
           "48445986930910": {
@@ -10136,7 +10148,7 @@
             "price": 225
           },
           "48443237859550": {
-            "available": false,
+            "available": true,
             "price": 7.99
           },
           "48443253752030": {
@@ -10158,7 +10170,7 @@
             "price": 225
           },
           "48443291697374": {
-            "available": false,
+            "available": true,
             "price": 7.99
           },
           "48443292483806": {
@@ -10206,7 +10218,7 @@
             "price": 279.99
           },
           "48443056357598": {
-            "available": false,
+            "available": true,
             "price": 7.99
           },
           "48443059077342": {
@@ -11460,7 +11472,7 @@
             "price": 195
           },
           "48437393621214": {
-            "available": false,
+            "available": true,
             "price": 7.99
           },
           "48437394866398": {
@@ -11478,7 +11490,7 @@
             "price": 195
           },
           "48437446082782": {
-            "available": false,
+            "available": true,
             "price": 195
           },
           "48437447131358": {
@@ -11496,7 +11508,7 @@
             "price": 195
           },
           "48437298364638": {
-            "available": false,
+            "available": true,
             "price": 195
           },
           "48437298626782": {
@@ -11514,7 +11526,7 @@
             "price": 195
           },
           "48437409415390": {
-            "available": false,
+            "available": true,
             "price": 7.99
           },
           "48437410758878": {
