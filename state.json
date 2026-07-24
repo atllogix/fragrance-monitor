@@ -2,6 +2,20 @@
   "firstRun": false,
   "sites": {
     "olfactoryfactoryllc.com": {
+      "7725205585979": {
+        "title": "Rosendo Mateu - Olfactive Expressions - N° 10",
+        "handle": "rosendo-mateu-olfactive-expressions-n-10",
+        "variants": {
+          "43855704424507": {
+            "available": false,
+            "price": 999
+          },
+          "43855704457275": {
+            "available": false,
+            "price": 999
+          }
+        }
+      },
       "7721177055291": {
         "title": "Amouage - Gold Woman Edp",
         "handle": "amouage-gold-woman-edp",
@@ -3823,16 +3837,6 @@
             "price": 145
           }
         }
-      },
-      "7610266845243": {
-        "title": "Dorin Paris - Un Air de Paris Spicy",
-        "handle": "dorin-paris-un-air-de-paris-spicy",
-        "variants": {
-          "43543784685627": {
-            "available": false,
-            "price": 70
-          }
-        }
       }
     },
     "beautyliv.com": {},
@@ -4731,7 +4735,7 @@
         "variants": {
           "43382953705535": {
             "available": true,
-            "price": 62.98
+            "price": 64.98
           }
         }
       },
@@ -4869,7 +4873,7 @@
         "variants": {
           "43351142662207": {
             "available": true,
-            "price": 89.98
+            "price": 85.98
           },
           "43351142694975": {
             "available": true,
@@ -6013,7 +6017,7 @@
         "variants": {
           "43129078349887": {
             "available": false,
-            "price": 22.98
+            "price": 23.98
           },
           "43129078382655": {
             "available": false,
@@ -6344,12 +6348,12 @@
         "handle": "bianco-latte-by-giardini-di-toscana-unisex-edp-spray",
         "variants": {
           "43065569509439": {
-            "available": false,
+            "available": true,
             "price": 124.49
           },
           "43065569542207": {
             "available": false,
-            "price": 26.98
+            "price": 24.98
           }
         }
       },
@@ -7258,7 +7262,7 @@
         "handle": "odyssey-mega-for-men-by-armaf-edp",
         "variants": {
           "42761032302655": {
-            "available": true,
+            "available": false,
             "price": 17.98
           },
           "42761032335423": {
@@ -8246,7 +8250,7 @@
         "handle": "amouage-existence-edp",
         "variants": {
           "48459884855518": {
-            "available": true,
+            "available": false,
             "price": 359.99
           },
           "48453206114526": {
