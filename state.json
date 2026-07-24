@@ -4324,7 +4324,7 @@
             "price": 84.98
           },
           "43461347639359": {
-            "available": true,
+            "available": false,
             "price": 19.98
           }
         }
@@ -7999,6 +7999,42 @@
       }
     },
     "venbafragrance.com": {
+      "9279229821150": {
+        "title": "Yves Saint Laurent Libre L’Eau Nue",
+        "handle": "yves-saint-laurent-libre-l-eau-nue",
+        "variants": {
+          "48465200513246": {
+            "available": false,
+            "price": 5.99
+          },
+          "48465200546014": {
+            "available": false,
+            "price": 14.99
+          },
+          "48465200578782": {
+            "available": false,
+            "price": 23.99
+          }
+        }
+      },
+      "9279167987934": {
+        "title": "Yves Saint Laurent Libre Flowers & Flames EDP",
+        "handle": "yves-saint-laurent-libre-flowers-flames-edp",
+        "variants": {
+          "48464985358558": {
+            "available": false,
+            "price": 5.99
+          },
+          "48464985391326": {
+            "available": false,
+            "price": 14.99
+          },
+          "48464985424094": {
+            "available": false,
+            "price": 26.99
+          }
+        }
+      },
       "9275304214750": {
         "title": "Emirates Pride Future Bakhoor Parfum",
         "handle": "emirates-pride-future-bakhoor-parfum",
@@ -8075,15 +8111,15 @@
           },
           "48464658956510": {
             "available": false,
-            "price": 245
+            "price": 3.99
           },
           "48464672882910": {
             "available": false,
-            "price": 245
+            "price": 13.99
           },
           "48464685367518": {
             "available": false,
-            "price": 245
+            "price": 18.49
           }
         }
       },
@@ -8213,15 +8249,15 @@
           },
           "48464864084190": {
             "available": false,
-            "price": 280
+            "price": 3.99
           },
           "48464881746142": {
             "available": false,
-            "price": 280
+            "price": 13.99
           },
           "48464908124382": {
             "available": false,
-            "price": 280
+            "price": 18.49
           }
         }
       },
@@ -11512,42 +11548,6 @@
           "48437447131358": {
             "available": false,
             "price": 195
-          }
-        }
-      },
-      "9263493841118": {
-        "title": "House of Bo Xuxu Parfum",
-        "handle": "house-of-bo-xuxu-parfum",
-        "variants": {
-          "48413115056350": {
-            "available": false,
-            "price": 195
-          },
-          "48437298364638": {
-            "available": true,
-            "price": 195
-          },
-          "48437298626782": {
-            "available": false,
-            "price": 33.99
-          }
-        }
-      },
-      "9263491678430": {
-        "title": "House of Bo Cosmos Parfum",
-        "handle": "house-of-bo-cosmos-parfum",
-        "variants": {
-          "48413095166174": {
-            "available": false,
-            "price": 195
-          },
-          "48437409415390": {
-            "available": true,
-            "price": 7.99
-          },
-          "48437410758878": {
-            "available": false,
-            "price": 33.99
           }
         }
       }
