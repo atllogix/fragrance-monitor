@@ -239,7 +239,7 @@
         "handle": "christian-provenzano-colosseum",
         "variants": {
           "43777053589563": {
-            "available": true,
+            "available": false,
             "price": 285
           }
         }
@@ -19344,7 +19344,7 @@
             "price": 25.99
           },
           "45729997881401": {
-            "available": true,
+            "available": false,
             "price": 45.99
           },
           "45729997914169": {
