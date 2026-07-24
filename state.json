@@ -9474,7 +9474,7 @@
         "handle": "ex-nihilo-musc-infini-edp-tester",
         "variants": {
           "48422209224926": {
-            "available": true,
+            "available": false,
             "price": 249.99
           }
         }
