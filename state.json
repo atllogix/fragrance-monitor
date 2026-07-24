@@ -1309,7 +1309,7 @@
         "handle": "parfums-de-marly-safanad",
         "variants": {
           "40848140107835": {
-            "available": true,
+            "available": false,
             "price": 215
           },
           "42158987771963": {
@@ -3918,7 +3918,7 @@
         "handle": "rasasi-hawas-kobra-for-men-edp",
         "variants": {
           "43528223195199": {
-            "available": true,
+            "available": false,
             "price": 27.98
           },
           "43528223227967": {
