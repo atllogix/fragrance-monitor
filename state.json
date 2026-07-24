@@ -4262,7 +4262,7 @@
         "handle": "acqua-di-parma-mandorlo-di-sicilia",
         "variants": {
           "39669986328639": {
-            "available": true,
+            "available": false,
             "price": 59.98
           },
           "43474903728191": {
@@ -6016,7 +6016,7 @@
         "handle": "afnan-9am-dive-unisex-edp",
         "variants": {
           "43129078349887": {
-            "available": false,
+            "available": true,
             "price": 23.98
           },
           "43129078382655": {
@@ -6052,7 +6052,7 @@
         "handle": "bad-boy-cobalt-absolute-for-men-carolina-herrera-edp",
         "variants": {
           "43067207712831": {
-            "available": false,
+            "available": true,
             "price": 99.98
           },
           "43067207745599": {
