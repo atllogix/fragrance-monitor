@@ -4302,7 +4302,7 @@
             "price": 89.98
           },
           "43461387911231": {
-            "available": false,
+            "available": true,
             "price": 14.98
           },
           "43461388009535": {
@@ -7888,7 +7888,7 @@
             "price": 52.98
           },
           "42563142352959": {
-            "available": false,
+            "available": true,
             "price": 9.98
           }
         }
